@@ -30,18 +30,6 @@ const Hero: React.FC = () => {
           >
             EXPLORE PROJECTS →
           </button>
-
-          {/* Stats cards */}
-          <div className="mt-12 flex gap-8">
-            <div className="border-4 border-black p-4 bg-teal-100 shadow-[4px_4px_0px_0px_#000]">
-              <div className="text-3xl font-black">5+</div>
-              <div className="text-sm font-semibold">Projects</div>
-            </div>
-            <div className="border-4 border-black p-4 bg-pink-100 shadow-[4px_4px_0px_0px_#000]">
-              <div className="text-3xl font-black">3+</div>
-              <div className="text-sm font-semibold">Certs</div>
-            </div>
-          </div>
         </div>
 
         {/* RIGHT: VISUAL FOCUSED */}
@@ -55,7 +43,7 @@ const Hero: React.FC = () => {
             </div>
 
             {/* Status badge */}
-            <div className="absolute -top-4 -right-4 border-4 border-black bg-teal-300 px-6 py-3 font-black text-sm shadow-[4px_4px_0px_0px_#000] status-badge">
+            <div className="absolute -top-4 -right-12 border-4 border-black bg-teal-300 px-6 py-3 font-black text-sm shadow-[4px_4px_0px_0px_#000] status-badge">
               ✓ OPEN FOR INTERNSHIPS
             </div>
           </div>
