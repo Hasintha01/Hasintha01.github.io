@@ -5,12 +5,13 @@
  */
 
 /**
- * Import Google Fonts
+ * Import Google Fonts with optimizations
  * Inter: Primary body font
  * Space Grotesk: Display/heading font for bold impact
  * Note: @import must come before @import "tailwindcss"
+ * Display=swap ensures text is visible while fonts load
  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@700;900&display=swap&subset=latin&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%20→✓&().,!?:-/&');
 
 @import "tailwindcss";
 
