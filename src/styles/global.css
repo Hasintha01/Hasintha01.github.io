@@ -1,0 +1,65 @@
+/**
+ * Global Styles
+ * Tailwind CSS imports and custom styles for the portfolio
+ * Includes neo-brutalist design tokens and utility classes
+ */
+
+/**
+ * Import Google Fonts
+ * Inter: Primary body font
+ * Space Grotesk: Display/heading font for bold impact
+ * Note: @import must come before @import "tailwindcss"
+ */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Space+Grotesk:wght@700;900&display=swap');
+
+@import "tailwindcss";
+
+/**
+ * Custom CSS Variables
+ * Define reusable design tokens
+ */
+:root {
+  /* Typography */
+  --font-inter: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-grotesk: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+}
+
+/**
+ * Base styles
+ * Set default font and smooth scrolling
+ */
+body {
+  font-family: var(--font-inter);
+  scroll-behavior: smooth;
+}
+
+/**
+ * Apply display font to headings and specific elements
+ */
+.font-grotesk {
+  font-family: var(--font-grotesk);
+}
+
+/**
+ * Status badge animation (optional)
+ * Subtle pulse effect for the "Open for Internships" badge
+ */
+.status-badge {
+  animation: pulse-subtle 3s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+/**
+ * Ensure smooth scrolling for anchor links
+ */
+html {
+  scroll-behavior: smooth;
+}

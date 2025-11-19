@@ -1,0 +1,44 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "articles": [
+    {
+      "id": "article-1",
+      "title": "Getting Started with Docker & CI/CD",
+      "description": "A beginner's guide to containerization and building automated deployment pipelines.",
+      "icon": "📝",
+      "bgGradient": "from-yellow-200 to-yellow-400",
+      "category": "MEDIUM",
+      "categoryBg": "bg-yellow-400",
+      "readTime": "5 min read",
+      "date": "Dec 2024",
+      "url": "https://medium.com/@hasintha",
+      "tags": ["Docker", "CI/CD", "DevOps"]
+    },
+    {
+      "id": "article-2",
+      "title": "Kubernetes Basics for Beginners",
+      "description": "Understanding pods, services, and deployments in Kubernetes orchestration.",
+      "icon": "☸️",
+      "bgGradient": "from-teal-200 to-teal-400",
+      "category": "MEDIUM",
+      "categoryBg": "bg-teal-400",
+      "readTime": "8 min read",
+      "date": "Nov 2024",
+      "url": "https://medium.com/@hasintha",
+      "tags": ["Kubernetes", "Container Orchestration", "DevOps"]
+    },
+    {
+      "id": "article-3",
+      "title": "Monitoring with Prometheus & Grafana",
+      "description": "Setting up observability for your applications with open-source tools.",
+      "icon": "📊",
+      "bgGradient": "from-pink-200 to-pink-400",
+      "category": "MEDIUM",
+      "categoryBg": "bg-pink-400",
+      "readTime": "10 min read",
+      "date": "Oct 2024",
+      "url": "https://medium.com/@hasintha",
+      "tags": ["Prometheus", "Grafana", "Monitoring", "Observability"]
+    }
+  ]
+}

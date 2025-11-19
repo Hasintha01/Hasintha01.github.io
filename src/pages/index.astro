@@ -1,0 +1,96 @@
+---
+/**
+ * Main Portfolio Page
+ * Integrates all React components to create the complete portfolio site
+ * Uses Astro for static generation with React islands for interactivity
+ */
+
+import '../styles/global.css';
+
+// Import React components
+import Navigation from '../components/Navigation';
+import Hero from '../components/Hero';
+import About from '../components/About';
+import Skills from '../components/Skills';
+import Projects from '../components/Projects';
+import Homelab from '../components/Homelab';
+import Blog from '../components/Blog';
+import Philosophy from '../components/Philosophy';
+import Contact from '../components/Contact';
+import Footer from '../components/Footer';
+
+// Import data
+import {
+  navLinks,
+  technologies,
+  expertise,
+  projects,
+  homelabServices,
+  articles,
+  principles,
+  contactLinks,
+  interests,
+} from '../data/portfolio';
+
+// Page metadata
+const pageTitle = 'Hasintha Pasindu — Neo-Brutalist DevOps/SRE Portfolio';
+const pageDescription =
+  'Portfolio of Hasintha Pasindu, an aspiring Platform Engineer specializing in DevOps, SRE, CI/CD automation, and cloud infrastructure.';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    
+    <!-- SEO Meta Tags -->
+    <title>{pageTitle}</title>
+    <meta name="description" content={pageDescription} />
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={pageDescription} />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  </head>
+  
+  <body class="bg-white text-black">
+    <!-- Fixed Navigation - Client-side for smooth scroll -->
+    <Navigation client:load links={navLinks} />
+
+    <!-- Hero Section -->
+    <Hero client:visible />
+
+    <!-- About Me Section -->
+    <About client:visible interests={interests} />
+
+    <!-- Skills & Tools Section -->
+    <Skills client:visible technologies={technologies} expertise={expertise} />
+
+    <!-- Featured Projects Section -->
+    <Projects client:visible projects={projects} />
+
+    <!-- Homelab Showcase Section -->
+    <Homelab client:visible services={homelabServices} />
+
+    <!-- Blog Section -->
+    <Blog client:visible articles={articles} />
+
+    <!-- Philosophy Section -->
+    <Philosophy client:visible principles={principles} />
+
+    <!-- Contact Section -->
+    <Contact client:visible contactLinks={contactLinks} />
+
+    <!-- Footer -->
+    <Footer />
+  </body>
+</html>

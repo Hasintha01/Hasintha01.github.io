@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Weather Dashboard CI/CD",
+      "description": "GitHub Actions CI/CD pipeline. Dockerized application deployed on Netlify with Prometheus/Grafana monitoring. Architecture diagram included for scalability insights.",
+      "icon": "📊",
+      "bgGradient": "from-yellow-200 to-yellow-400",
+      "category": "MONITORING",
+      "categoryBg": "bg-yellow-400",
+      "technologies": ["DOCKER", "GITHUB ACTIONS", "PROMETHEUS"],
+      "githubUrl": "https://github.com/Hasintha01/weather-dashboard",
+      "demoUrl": null
+    },
+    {
+      "id": "project-2",
+      "title": "MERN Inventory System w/ DevOps",
+      "description": "CI/CD: Docker + GitHub Actions. Deployed to AWS EC2 with auto-backups and monitoring. Full-stack application with MongoDB backend and React frontend. Architecture diagram included.",
+      "icon": "🗄️",
+      "bgGradient": "from-teal-200 to-teal-400",
+      "category": "BACKEND",
+      "categoryBg": "bg-teal-400",
+      "technologies": ["NODE.JS", "MONGODB", "AWS EC2"],
+      "githubUrl": "https://github.com/Hasintha01/mern-inventory",
+      "demoUrl": null
+    }
+  ]
+}

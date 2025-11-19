@@ -1,0 +1,27 @@
+{
+  "name": "hasintha-portfolio",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "Neo-brutalist portfolio site for Hasintha Pasindu - DevOps/SRE/Platform Engineer",
+  "author": "Hasintha Pasindu",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro",
+    "check": "astro check"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.9.5",
+    "@astrojs/react": "^4.4.2",
+    "@tailwindcss/vite": "^4.1.17",
+    "@types/react": "^19.2.6",
+    "@types/react-dom": "^19.2.3",
+    "astro": "^5.15.9",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.17",
+    "typescript": "^5.9.3"
+  }
+}

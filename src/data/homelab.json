@@ -1,0 +1,79 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "services": [
+    {
+      "id": "service-1",
+      "name": "☸️ Kubernetes (K3s)",
+      "icon": "☸️",
+      "description": "Container orchestration for microservices",
+      "bgColor": "bg-teal-50"
+    },
+    {
+      "id": "service-2",
+      "name": "📊 Prometheus + Grafana",
+      "icon": "📊",
+      "description": "System & application monitoring",
+      "bgColor": "bg-pink-50"
+    },
+    {
+      "id": "service-3",
+      "name": "🔄 Jenkins / GitLab Runner",
+      "icon": "🔄",
+      "description": "CI/CD pipelines for automation",
+      "bgColor": "bg-yellow-50"
+    },
+    {
+      "id": "service-4",
+      "name": "🌐 Nginx / Traefik",
+      "icon": "🌐",
+      "description": "Reverse proxy & load balancing",
+      "bgColor": "bg-purple-50"
+    },
+    {
+      "id": "service-5",
+      "name": "🗄️ PostgreSQL / MongoDB",
+      "icon": "🗄️",
+      "description": "Database servers for projects",
+      "bgColor": "bg-blue-50"
+    },
+    {
+      "id": "service-6",
+      "name": "🔒 Vault / Wireguard VPN",
+      "icon": "🔒",
+      "description": "Secrets management & secure access",
+      "bgColor": "bg-red-50"
+    }
+  ],
+  "architecture": [
+    {
+      "label": "Hardware",
+      "description": "Dell PowerEdge R720 / Raspberry Pi Cluster"
+    },
+    {
+      "label": "Virtualization",
+      "description": "Proxmox VE for VM/Container management"
+    },
+    {
+      "label": "Networking",
+      "description": "pfSense firewall, VLANs, VPN access"
+    },
+    {
+      "label": "Storage",
+      "description": "TrueNAS for centralized storage + automated backups"
+    }
+  ],
+  "stats": [
+    {
+      "value": "5+",
+      "label": "VMs Running"
+    },
+    {
+      "value": "12+",
+      "label": "Services Deployed"
+    },
+    {
+      "value": "99.9%",
+      "label": "Uptime Target"
+    }
+  ]
+}
