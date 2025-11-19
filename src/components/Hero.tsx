@@ -25,7 +25,7 @@ const Hero: React.FC = () => {
           {/* CTA Button */}
           <button
             className="border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] px-10 py-4 text-xl font-black 
-                       hover:shadow-[8px_8px_0px_0px_#000] hover:translate-x-[-2px] hover:translate-y-[-2px] 
+                       hover:shadow-[8px_8px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
                        transition-all"
           >
             EXPLORE PROJECTS →
@@ -36,7 +36,7 @@ const Hero: React.FC = () => {
         <div className="relative">
           {/* Main profile card */}
           <div className="relative inline-block">
-            <div className="border-4 border-black shadow-[12px_12px_0px_0px_#000] bg-gradient-to-br from-pink-300 via-purple-300 to-teal-300 p-8 rotate-2">
+            <div className="border-4 border-black shadow-[12px_12px_0px_0px_#000] bg-linear-to-br from-pink-300 via-purple-300 to-teal-300 p-8 rotate-2">
               <div className="w-80 h-96 bg-gray-800 border-4 border-black flex items-center justify-center text-white text-6xl font-black">
                 HP
               </div>

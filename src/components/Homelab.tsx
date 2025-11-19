@@ -21,7 +21,7 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
         {/* Architecture Card */}
         <div className="border-4 border-black bg-linear-to-br from-purple-100 to-purple-200 p-8 shadow-[8px_8px_0px_0px_#000] lg:col-span-2">
           <div className="flex items-start gap-4 mb-6">
-            <div className="w-16 h-16 bg-purple-400 border-4 border-black flex items-center justify-center text-3xl flex-shrink-0">
+            <div className="w-16 h-16 bg-purple-400 border-4 border-black flex items-center justify-center text-3xl shrink-0">
               🏗️
             </div>
             <div>
