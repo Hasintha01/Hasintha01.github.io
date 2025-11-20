@@ -5,7 +5,16 @@
  */
 
 import React from 'react';
+import { FolderGit2, Database, Terminal, Code2, FolderOpen } from 'lucide-react';
 import type { Project } from '../types';
+
+// Icon mapping for projects
+const projectIconMap: Record<string, React.ReactNode> = {
+  'project-1': <FolderGit2 size={80} strokeWidth={3} />,   // Grafana Dashboard
+  'project-2': <Database size={80} strokeWidth={3} />,     // Database project
+  'project-3': <Terminal size={80} strokeWidth={3} />,     // Automation
+  'project-4': <Code2 size={80} strokeWidth={3} />,        // Code project
+};
 
 interface ProjectsProps {
   projects: Project[];
@@ -16,7 +25,12 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
     <section id="projects" className="py-20 px-6 bg-gray-50 border-y-4 border-black">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
-        <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1">FEATURED PROJECTS</h2>
+        <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1 flex items-center gap-4">
+          <div className="border-4 border-black bg-pink-300 p-3 shadow-[4px_4px_0px_0px_#000]">
+            <FolderOpen size={36} strokeWidth={3} />
+          </div>
+          FEATURED PROJECTS
+        </h2>
 
         <div className="space-y-8">
           {projects.map((project) => (
@@ -27,9 +41,11 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
               <div className="grid md:grid-cols-2">
                 {/* Project icon/visual */}
                 <div
-                  className={`bg-linear-to-br ${project.bgGradient} border-r-4 border-black h-80 flex items-center justify-center text-6xl font-black`}
+                  className={`bg-linear-to-br ${project.bgGradient} border-r-4 border-black h-80 flex items-center justify-center`}
                 >
-                  {project.icon}
+                  <div className="border-4 border-black bg-white p-8 shadow-[6px_6px_0px_0px_#000]">
+                    {projectIconMap[project.id] || project.icon}
+                  </div>
                 </div>
 
                 {/* Project details */}

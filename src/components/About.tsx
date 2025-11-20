@@ -5,16 +5,34 @@
  */
 
 import React from 'react';
+import { User, Server, Cloud, Wrench, Activity, Container, Rocket, FileText, GraduationCap } from 'lucide-react';
 
 interface AboutProps {
   interests: string[];
 }
 
+// Icon mapping for interests
+const interestIconMap: Record<string, React.ReactNode> = {
+  'Linux Systems': <Server size={16} strokeWidth={3} />,
+  'Cloud Architecture': <Cloud size={16} strokeWidth={3} />,
+  'Automation': <Wrench size={16} strokeWidth={3} />,
+  'Observability': <Activity size={16} strokeWidth={3} />,
+  'Containerization': <Container size={16} strokeWidth={3} />,
+  'CI/CD': <Rocket size={16} strokeWidth={3} />,
+  'Technical Writing': <FileText size={16} strokeWidth={3} />,
+  'Continuous Learning': <GraduationCap size={16} strokeWidth={3} />,
+};
+
 const About: React.FC<AboutProps> = ({ interests }) => {
   return (
     <section id="about" className="py-20 px-6 max-w-7xl mx-auto">
       {/* Section title */}
-      <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1">ABOUT ME</h2>
+      <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1 flex items-center gap-4">
+        <div className="border-4 border-black bg-teal-300 p-3 shadow-[4px_4px_0px_0px_#000]">
+          <User size={36} strokeWidth={3} />
+        </div>
+        ABOUT ME
+      </h2>
 
       <div className="grid lg:grid-cols-2 gap-16 items-start">
         {/* Left: Story card with rotation */}
@@ -39,8 +57,10 @@ const About: React.FC<AboutProps> = ({ interests }) => {
             {interests.map((interest, index) => (
               <span
                 key={index}
-                className="border-3 border-black bg-white px-4 py-2 font-bold text-sm"
+                className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2 
+                           hover:shadow-[2px_2px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
               >
+                {interestIconMap[interest]}
                 {interest}
               </span>
             ))}

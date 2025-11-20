@@ -5,7 +5,18 @@
  */
 
 import React from 'react';
+import { Server, Container, Cloud, Cog, Activity, Wrench, Laptop } from 'lucide-react';
 import type { Technology } from '../types';
+
+// Icon mapping for technologies
+const iconMap: Record<string, React.ReactNode> = {
+  'tech-1': <Server size={40} strokeWidth={3} />,      // Linux
+  'tech-2': <Container size={40} strokeWidth={3} />,   // Docker
+  'tech-3': <Cloud size={40} strokeWidth={3} />,       // AWS
+  'tech-4': <Cog size={40} strokeWidth={3} />,         // K8s
+  'tech-5': <Activity size={40} strokeWidth={3} />,    // Prometheus
+  'tech-6': <Wrench size={40} strokeWidth={3} />,      // Terraform
+};
 
 interface SkillsProps {
   technologies: Technology[];
@@ -18,7 +29,10 @@ const Skills: React.FC<SkillsProps> = ({ technologies, expertise }) => {
     <section id="skills" className="py-20 px-6 bg-gray-50 border-y-4 border-black">
       <div className="max-w-7xl mx-auto">
         {/* Section title */}
-        <h2 className="text-5xl font-black font-grotesk mb-12 -rotate-1">
+        <h2 className="text-5xl font-black font-grotesk mb-12 -rotate-1 flex items-center gap-4">
+          <div className="border-4 border-black bg-purple-300 p-3 shadow-[4px_4px_0px_0px_#000]">
+            <Laptop size={36} strokeWidth={3} />
+          </div>
           TECH STACK &amp; EXPERTISE
         </h2>
 
@@ -28,10 +42,14 @@ const Skills: React.FC<SkillsProps> = ({ technologies, expertise }) => {
             {technologies.map((tech) => (
               <div
                 key={tech.id}
-                className="border-4 border-black bg-white p-6 shadow-[4px_4px_0px_0px_#000] flex items-center justify-center"
+                className="border-4 border-black bg-white p-6 shadow-[4px_4px_0px_0px_#000] 
+                           hover:shadow-[6px_6px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5
+                           transition-all cursor-pointer group"
               >
                 <div className="text-center">
-                  <div className="text-3xl mb-2">{tech.icon}</div>
+                  <div className="mb-2 flex justify-center group-hover:scale-110 transition-transform">
+                    {iconMap[tech.id] || tech.icon}
+                  </div>
                   <div className="font-black text-sm">{tech.name}</div>
                 </div>
               </div>

@@ -5,7 +5,15 @@
  */
 
 import React from 'react';
+import { Bot, Activity, FileText, Lightbulb } from 'lucide-react';
 import type { Principle } from '../types';
+
+// Icon mapping for principles
+const principleIconMap: Record<string, React.ReactNode> = {
+  'principle-1': <Bot size={28} strokeWidth={3} />,        // Automation
+  'principle-2': <Activity size={28} strokeWidth={3} />,   // Monitoring
+  'principle-3': <FileText size={28} strokeWidth={3} />,   // Documentation
+};
 
 interface PhilosophyProps {
   principles: Principle[];
@@ -22,7 +30,12 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
     <section id="philosophy" className="py-20 px-6 bg-gray-50 border-y-4 border-black">
       <div className="max-w-7xl mx-auto">
   {/* Section title */}
-  <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1">PRINCIPLES I WORK BY</h2>
+  <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1 flex items-center gap-4">
+    <div className="border-4 border-black bg-orange-300 p-3 shadow-[4px_4px_0px_0px_#000]">
+      <Lightbulb size={36} strokeWidth={3} />
+    </div>
+    PRINCIPLES I WORK BY
+  </h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Smaller Principle Cards */}
@@ -30,13 +43,16 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
             {principles.map((principle, index) => (
               <div
                 key={principle.id}
-                className={`border-4 border-black bg-white p-6 shadow-[4px_4px_0px_0px_#000] ${rotations[index % rotations.length]}`}
+                className={`border-4 border-black bg-white p-6 shadow-[4px_4px_0px_0px_#000] 
+                           hover:shadow-[6px_6px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
+                           transition-all group ${rotations[index % rotations.length]}`}
               >
                 <div className="flex items-start gap-4">
                   <div
-                    className={`w-14 h-14 ${principle.bgColor} border-2 border-black flex items-center justify-center text-2xl shrink-0`}
+                    className={`w-14 h-14 ${principle.bgColor} border-2 border-black flex items-center justify-center shrink-0 
+                               group-hover:border-4 transition-all`}
                   >
-                    {principle.icon}
+                    {principleIconMap[principle.id] || principle.icon}
                   </div>
                   <div>
                     <h3 className="font-black text-lg mb-2">{principle.title}</h3>

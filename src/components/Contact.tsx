@@ -5,7 +5,17 @@
  */
 
 import React from 'react';
+import { Mail, Github, Linkedin, Twitter, Phone, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
 import type { ContactLink } from '../types';
+
+// Icon mapping for contact links
+const contactIconMap: Record<string, React.ReactNode> = {
+  'contact-1': <Mail size={20} strokeWidth={3} />,         // Email
+  'contact-2': <Briefcase size={20} strokeWidth={3} />,    // LinkedIn
+  'contact-3': <Twitter size={20} strokeWidth={3} />,      // Twitter
+  'contact-4': <Phone size={20} strokeWidth={3} />,        // Phone
+  'contact-5': <BookOpen size={20} strokeWidth={3} />,     // Medium
+};
 
 interface ContactProps {
   contactLinks: ContactLink[];
@@ -15,6 +25,11 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
   return (
     <section id="contact" className="py-32 px-6 max-w-4xl mx-auto text-center">
       {/* Main headline */}
+      <div className="flex justify-center mb-8">
+        <div className="border-4 border-black bg-green-300 p-4 shadow-[6px_6px_0px_0px_#000]">
+          <MessageSquare size={48} strokeWidth={3} />
+        </div>
+      </div>
       <h2 className="text-6xl font-black font-grotesk mb-6">
         LET&apos;S BUILD RELIABLE SYSTEMS TOGETHER
       </h2>
@@ -38,8 +53,13 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
           <a
             key={contact.id}
             href={contact.link}
-            className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold hover:bg-opacity-80 transition-colors`}
+            className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
+                       hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
+                       transition-all flex items-center gap-2 group`}
           >
+            <span className="group-hover:scale-110 transition-transform">
+              {contactIconMap[contact.id]}
+            </span>
             {contact.label}
           </a>
         ))}

@@ -5,7 +5,15 @@
  */
 
 import React from 'react';
+import { BookOpen, FileCode, Newspaper, PenTool } from 'lucide-react';
 import type { Article } from '../types';
+
+// Icon mapping for blog articles
+const blogIconMap: Record<string, React.ReactNode> = {
+  'article-1': <BookOpen size={64} strokeWidth={3} />,    // Article
+  'article-2': <FileCode size={64} strokeWidth={3} />,    // Tutorial
+  'article-3': <Newspaper size={64} strokeWidth={3} />,   // Blog post
+};
 
 interface BlogProps {
   articles: Article[];
@@ -15,7 +23,12 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
   return (
     <section id="blog" className="py-20 px-6 max-w-7xl mx-auto">
       {/* Section title */}
-      <h2 className="text-5xl font-black font-grotesk mb-12 -rotate-1">LATEST ARTICLES</h2>
+      <h2 className="text-5xl font-black font-grotesk mb-12 -rotate-1 flex items-center gap-4">
+        <div className="border-4 border-black bg-blue-300 p-3 shadow-[4px_4px_0px_0px_#000]">
+          <PenTool size={36} strokeWidth={3} />
+        </div>
+        LATEST ARTICLES
+      </h2>
 
       {/* Articles grid */}
       <div className="grid md:grid-cols-3 gap-8">
@@ -29,9 +42,11 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
           >
             {/* Article icon/visual */}
             <div
-              className={`w-full h-48 bg-linear-to-br ${article.bgGradient} border-4 border-black mb-4 flex items-center justify-center text-4xl font-black`}
+              className={`w-full h-48 bg-linear-to-br ${article.bgGradient} border-4 border-black mb-4 flex items-center justify-center`}
             >
-              {article.icon}
+              <div className="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_#000]">
+                {blogIconMap[article.id] || article.icon}
+              </div>
             </div>
 
             {/* Category badge */}
@@ -58,7 +73,9 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
       {/* View all articles CTA */}
       <div className="text-center mt-12">
         <a
-          href="#"
+          href="https://medium.com/@hasinthapasindu"
+          target="_blank"
+          rel="noopener noreferrer"
           className="border-4 border-black bg-purple-100 shadow-[8px_8px_0px_0px_#000] px-10 py-4 text-lg font-black inline-block hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all"
         >
           VIEW ALL ARTICLES ON MEDIUM →

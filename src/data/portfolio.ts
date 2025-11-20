@@ -93,31 +93,38 @@ export const principles: Principle[] = [
 export const contactLinks: ContactLink[] = [
   {
     id: 'contact-1',
-    label: '📧 Email',
-    icon: '📧',
+    label: 'Email',
+    icon: 'mail',
     bgColor: 'bg-teal-100',
     link: 'mailto:hasintha@example.com',
   },
   {
     id: 'contact-2',
-    label: '💼 LinkedIn',
-    icon: '💼',
+    label: 'LinkedIn',
+    icon: 'linkedin',
     bgColor: 'bg-pink-100',
     link: '#',
   },
   {
     id: 'contact-3',
-    label: '🐦 Twitter',
-    icon: '🐦',
+    label: 'Twitter',
+    icon: 'twitter',
     bgColor: 'bg-yellow-100',
     link: '#',
   },
   {
     id: 'contact-4',
-    label: '📱 Phone',
-    icon: '📱',
+    label: 'Phone',
+    icon: 'phone',
     bgColor: 'bg-purple-100',
     link: '#',
+  },
+  {
+    id: 'contact-5',
+    label: 'Medium',
+    icon: 'medium',
+    bgColor: 'bg-gray-100',
+    link: 'https://medium.com/@hasinthapasindu',
   },
 ];
 
@@ -125,12 +132,12 @@ export const contactLinks: ContactLink[] = [
  * User interests tags
  */
 export const interests: string[] = [
-  '🐧 Linux Systems',
-  '☁️ Cloud Architecture',
-  '🔧 Automation',
-  '📊 Observability',
-  '🐳 Containerization',
-  '🚀 CI/CD',
-  '📝 Technical Writing',
-  '🎓 Continuous Learning',
+  'Linux Systems',
+  'Cloud Architecture',
+  'Automation',
+  'Observability',
+  'Containerization',
+  'CI/CD',
+  'Technical Writing',
+  'Continuous Learning',
 ];
