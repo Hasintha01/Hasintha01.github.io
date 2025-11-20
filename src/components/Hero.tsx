@@ -19,7 +19,7 @@ const Hero: React.FC = () => {
 
           {/* Subheadline */}
           <p className="text-xl text-gray-700 mb-8 leading-relaxed">
-            Optimizing CI/CD, monitoring, and cloud infra for developers &amp; teams.
+          Automating infrastructure, monitoring systems, and keeping services running.
           </p>
 
           {/* CTA Button */}

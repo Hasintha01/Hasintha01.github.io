@@ -2,7 +2,7 @@
   "name": "hasintha-portfolio",
   "type": "module",
   "version": "1.0.0",
-  "description": "Neo-brutalist portfolio site for Hasintha Pasindu - DevOps/SRE/Platform Engineer",
+    "description": "Neo-brutalist portfolio site for Hasintha Pasindu - Infrastructure & Automation",
   "author": "Hasintha Pasindu",
   "scripts": {
     "dev": "astro dev",

@@ -39,11 +39,11 @@
     }
   ],
   "expertise": [
-    "CI/CD Automation",
-    "Infrastructure as Code",
-    "Monitoring & Alerting",
-    "Cloud Deployments",
-    "Linux Sysadmin",
-    "Networking & Security"
+      "CI/CD Pipeline Automation",
+      "Infrastructure as Code",
+      "System Monitoring & Logging",
+      "Cloud Deployments",
+      "Production Support & Troubleshooting",
+      "Linux System Administration"
   ]
 }

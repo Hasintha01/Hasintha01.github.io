@@ -21,15 +21,14 @@ const About: React.FC<AboutProps> = ({ interests }) => {
         <div className="border-4 border-black bg-yellow-100 p-8 shadow-[8px_8px_0px_0px_#000] -rotate-1">
           <h3 className="text-2xl font-black mb-4">MY STORY</h3>
           <p className="text-gray-800 leading-relaxed mb-4">
-            I'm Hasintha Pasindu, an aspiring Platform Engineer passionate about building
-            resilient infrastructure and automating everything that can be automated. Currently
-            exploring the DevOps and SRE landscape while completing my degree.
+              I'm Hasintha Pasindu, passionate about building reliable systems and automating
+              infrastructure. I focus on keeping services running smoothly, whether that's through
+              CI/CD pipelines, monitoring, or cloud automation.
           </p>
           <p className="text-gray-800 leading-relaxed">
             My journey started with Linux system administration and evolved into cloud
-            infrastructure, CI/CD pipelines, and monitoring systems. I believe in learning by
-            doing, which is why I've built multiple projects to understand real-world DevOps
-            challenges.
+              infrastructure, deployment automation, and system monitoring. I believe in learning by
+              doing—building projects to solve real problems and keeping production systems healthy.
           </p>
         </div>
 

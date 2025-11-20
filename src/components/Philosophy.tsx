@@ -21,8 +21,8 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
   return (
     <section id="philosophy" className="py-20 px-6 bg-gray-50 border-y-4 border-black">
       <div className="max-w-7xl mx-auto">
-        {/* Section title */}
-        <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1">MY DEVOPS PHILOSOPHY</h2>
+  {/* Section title */}
+  <h2 className="text-5xl font-black font-grotesk mb-12 rotate-1">PRINCIPLES I WORK BY</h2>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left: Smaller Principle Cards */}
@@ -51,9 +51,9 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
           <div className="border-4 border-black bg-yellow-400 p-12 shadow-[12px_12px_0px_0px_#000] rotate-2">
             <div className="text-6xl font-black mb-4">&quot;</div>
             <p className="text-3xl font-bold font-grotesk leading-tight mb-8">
-              Great DevOps isn&apos;t about tools—it&apos;s about culture, collaboration, and
-              continuous improvement. Build systems that are reliable, scalable, and make
-              developers&apos; lives easier.
+              Reliable systems come from clear ownership, ruthless automation, fast feedback
+              loops and empathetic collaboration. I focus on reducing toil, surfacing signal
+              early and making shipping safer &amp; faster.
             </p>
             <div className="flex items-center gap-4">
               <div className="w-16 h-16 bg-black border-2 border-black rounded-full flex items-center justify-center text-white font-bold text-xl">
@@ -61,7 +61,7 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
               </div>
               <div>
                 <div className="font-black text-lg">Hasintha Pasindu</div>
-                <div className="text-sm font-semibold">Aspiring Platform Engineer</div>
+                <div className="text-sm font-semibold">Infrastructure &amp; Automation</div>
               </div>
             </div>
           </div>

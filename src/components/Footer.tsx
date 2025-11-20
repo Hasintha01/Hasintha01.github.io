@@ -16,7 +16,7 @@ const Footer: React.FC = () => {
         <div className="text-4xl font-black font-grotesk mb-4">HASINTHA PASINDU</div>
 
         {/* Subtitle */}
-        <p className="text-gray-600 mb-4">Aspiring Platform Engineer • DevOps • SRE</p>
+    <p className="text-gray-600 mb-4">Infrastructure • Automation • Reliability</p>
 
         {/* Copyright and credits */}
         <div className="text-sm text-gray-500">
