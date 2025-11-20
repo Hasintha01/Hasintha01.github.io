@@ -37,8 +37,16 @@ const Hero: React.FC = () => {
           {/* Main profile card */}
           <div className="relative inline-block">
             <div className="border-4 border-black shadow-[12px_12px_0px_0px_#000] bg-linear-to-br from-pink-300 via-purple-300 to-teal-300 p-8 rotate-2">
-              <div className="w-80 h-96 bg-gray-800 border-4 border-black flex items-center justify-center text-white text-6xl font-black">
-                HP
+              <div className="w-80 h-96 border-4 border-black overflow-hidden bg-gray-100">
+                <img
+                  src="/images/profile.jpg"
+                  alt="Profile portrait"
+                  width={320}
+                  height={384}
+                  className="w-full h-full object-cover"
+                  loading="eager"
+                  decoding="async"
+                />
               </div>
             </div>
 
