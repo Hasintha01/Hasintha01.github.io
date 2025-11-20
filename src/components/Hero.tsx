@@ -39,7 +39,7 @@ const Hero: React.FC = () => {
             <div className="border-4 border-black shadow-[12px_12px_0px_0px_#000] bg-linear-to-br from-pink-300 via-purple-300 to-teal-300 p-8 rotate-2">
               <div className="w-80 h-96 border-4 border-black overflow-hidden bg-gray-100">
                 <img
-                  src="/images/profile.jpg"
+                  src="/images/hp-profile.webp"
                   alt="Profile portrait"
                   width={320}
                   height={384}
