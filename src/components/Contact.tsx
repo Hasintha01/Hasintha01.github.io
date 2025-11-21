@@ -54,7 +54,7 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
             key={contact.id}
             href={contact.link}
             className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
-                       hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
+                       shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 
                        transition-all flex items-center gap-2 group`}
           >
             <span className="group-hover:scale-110 transition-transform">

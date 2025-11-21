@@ -17,12 +17,6 @@ const Footer: React.FC = () => {
 
         {/* Subtitle */}
     <p className="text-gray-600 mb-4">Infrastructure • Automation • Reliability</p>
-
-        {/* Copyright and credits */}
-        <div className="text-sm text-gray-500">
-          <p>© {currentYear} Hasintha Pasindu</p>
-          <p className="mt-2">🎨 Neo-Brutalist Style – Bold &amp; Boxy Aesthetic</p>
-        </div>
       </div>
     </footer>
   );

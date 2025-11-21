@@ -119,13 +119,6 @@ export const contactLinks: ContactLink[] = [
     bgColor: 'bg-purple-100',
     link: '#',
   },
-  {
-    id: 'contact-5',
-    label: 'Medium',
-    icon: 'medium',
-    bgColor: 'bg-gray-100',
-    link: 'https://medium.com/@hasinthapasindu',
-  },
 ];
 
 /**
