@@ -36,13 +36,13 @@ const Hero: React.FC = () => {
         </div>
 
         {/* RIGHT: VISUAL FOCUSED */}
-        <div className="relative">
+        <div className="relative flex justify-end">
           {/* Main profile card */}
           <div className="relative inline-block">
             <div className="border-4 border-black shadow-[12px_12px_0px_0px_#000] bg-linear-to-br from-pink-300 via-purple-300 to-teal-300 p-8 rotate-2">
               <div className="w-80 h-96 border-4 border-black overflow-hidden bg-gray-100">
                 <img
-                  src="/images/hp-profile.JPG"
+                  src="/images/hp-profile.jpg"
                   alt="Profile portrait"
                   width={320}
                   height={384}
@@ -52,28 +52,23 @@ const Hero: React.FC = () => {
                 />
               </div>
             </div>
-
-            {/* Status badge */}
-            <div className="absolute -top-4 -right-12 border-4 border-black bg-teal-300 px-6 py-3 font-black text-sm shadow-[4px_4px_0px_0px_#000] status-badge">
-              ✓ OPEN FOR INTERNSHIPS
-            </div>
           </div>
 
           {/* Decorative graphic elements */}
-          <div className="absolute top-10 -left-10 w-20 h-20 bg-yellow-400 border-4 border-black shadow-[4px_4px_0px_0px_#000] rotate-12"></div>
+          <div className="absolute top-10 -left-10 w-20 h-20 bg-purple-400 border-4 border-black shadow-[4px_4px_0px_0px_#000] rotate-12"></div>
           <div className="absolute bottom-20 -right-6 w-16 h-16 bg-pink-400 border-4 border-black rounded-full"></div>
 
-          {/* Chart illustration */}
+          {/* Infrastructure stats card */}
           <div className="absolute -bottom-8 left-10 border-4 border-black bg-white p-4 shadow-[6px_6px_0px_0px_#000] -rotate-3">
             <div className="flex items-end gap-2 h-20">
               <div className="w-8 bg-teal-400 border-2 border-black" style={{ height: '40%' }}></div>
-              <div className="w-8 bg-teal-400 border-2 border-black" style={{ height: '65%' }}></div>
+              <div className="w-8 bg-purple-400 border-2 border-black" style={{ height: '65%' }}></div>
               <div
-                className="w-8 bg-yellow-400 border-2 border-black"
+                className="w-8 bg-teal-400 border-2 border-black"
                 style={{ height: '100%' }}
               ></div>
             </div>
-            <div className="mt-2 text-xs font-bold">↑ 200% AUTOMATION EFFICIENCY</div>
+            <div className="mt-2 text-xs font-bold">↑ 99.9% UPTIME TARGET</div>
           </div>
         </div>
       </div>
