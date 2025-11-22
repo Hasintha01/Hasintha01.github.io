@@ -10,6 +10,7 @@ import type { Project } from '../types';
 
 // Icon mapping for projects
 const projectIconMap: Record<string, React.ReactNode> = {
+  'project-weather-dashboard': <FolderGit2 size={80} strokeWidth={3} />,   // Weather Dashboard
   'project-1': <FolderGit2 size={80} strokeWidth={3} />,   // Grafana Dashboard
   'project-2': <Database size={80} strokeWidth={3} />,     // Database project
   'project-3': <Terminal size={80} strokeWidth={3} />,     // Automation
