@@ -32,22 +32,39 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
 
       {/* Articles grid */}
       <div className="grid md:grid-cols-3 gap-8">
-        {articles.map((article) => (
-          <a
-            key={article.id}
-            href={article.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="border-4 border-black bg-white shadow-[8px_8px_0px_0px_#000] p-6 hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all block"
-          >
-            {/* Article icon/visual */}
-            <div
-              className={`w-full h-48 bg-linear-to-br ${article.bgGradient} border-4 border-black mb-4 flex items-center justify-center`}
+        {articles.map((article) => {
+          // Decide how to render the icon: mapped React icon, SVG/image path, or fallback text
+          const mapped = blogIconMap[article.id];
+          const isImagePath = /\.(svg|png|jpg|jpeg|gif)$/i.test(article.icon);
+          const iconContent = mapped
+            ? mapped
+            : isImagePath
+              ? (
+                <img
+                  src={article.icon}
+                  alt={article.title}
+                  className="w-16 h-16 object-contain"
+                  loading="lazy"
+                />
+              )
+              : <span className="text-5xl font-black" aria-hidden="true">{article.icon}</span>;
+
+          return (
+            <a
+              key={article.id}
+              href={article.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="border-4 border-black bg-white shadow-[8px_8px_0px_0px_#000] p-6 hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all block"
             >
-              <div className="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_#000]">
-                {blogIconMap[article.id] || article.icon}
+              {/* Article icon/visual */}
+              <div
+                className={`w-full h-48 bg-linear-to-br ${article.bgGradient} border-4 border-black mb-4 flex items-center justify-center`}
+              >
+                <div className="border-4 border-black bg-white p-6 shadow-[6px_6px_0px_0px_#000]">
+                  {iconContent}
+                </div>
               </div>
-            </div>
 
             {/* Category badge */}
             <div
@@ -66,8 +83,9 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
             <div className="text-xs text-gray-600 font-semibold">
               {article.readTime} • {article.date}
             </div>
-          </a>
-        ))}
+            </a>
+          );
+        })}
       </div>
 
       {/* View all articles CTA */}
