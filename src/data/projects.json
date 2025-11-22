@@ -3,12 +3,12 @@
   "projects": [
     {
       "id": "project-weather-dashboard",
-      "title": "Weather Dashboard",
-      "description": "Responsive weather dashboard with React & TypeScript. Features real-time weather data, 5-day forecasts, geolocation support, and city search. Dockerized deployment with CI/CD pipeline via GitHub Actions.",
-      "bgGradient": "from-sky-200 to-sky-400",
-      "category": "FRONTEND",
-      "categoryBg": "bg-sky-400",
-      "technologies": ["REACT", "TYPESCRIPT", "DOCKER", "GITHUB ACTIONS"],
+      "title": "Weather Dashboard w/ Full DevOps Pipeline",
+      "description": "CI/CD: Multi-stage Docker builds, GitHub Actions pipelines (test/lint/deploy), GHCR registry, API uptime monitoring. Multi-platform container images (amd64/arm64) with nginx reverse proxy, security headers, and automated GitHub Pages deployment. React + TypeScript frontend with OpenWeatherMap API integration.",
+      "bgGradient": "from-purple-200 to-purple-400",
+      "category": "INFRASTRUCTURE",
+      "categoryBg": "bg-purple-400",
+      "technologies": ["DOCKER", "GITHUB ACTIONS", "NGINX", "REACT"],
       "githubUrl": "https://github.com/Hasintha01/typescript-app",
       "demoUrl": null
     },
