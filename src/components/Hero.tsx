@@ -22,14 +22,17 @@ const Hero: React.FC = () => {
           Automating infrastructure, monitoring systems, and keeping services running.
           </p>
 
-          {/* CTA Button */}
-          <button
-            className="border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] px-10 py-4 text-xl font-black 
+          {/* CTA Button (links to GitHub profile) */}
+          <a
+            href="https://github.com/Hasintha01"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] px-10 py-4 text-xl font-black 
                        hover:shadow-[8px_8px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
                        transition-all"
           >
             EXPLORE PROJECTS →
-          </button>
+          </a>
         </div>
 
         {/* RIGHT: VISUAL FOCUSED */}

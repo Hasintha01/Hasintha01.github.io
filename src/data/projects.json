@@ -10,7 +10,7 @@
       "category": "MONITORING",
       "categoryBg": "bg-yellow-400",
       "technologies": ["DOCKER", "GITHUB ACTIONS", "PROMETHEUS"],
-      "githubUrl": "https://github.com/Hasintha01/weather-dashboard",
+  "githubUrl": "https://github.com/Hasintha01/typescript-app",
       "demoUrl": null
     },
     {
