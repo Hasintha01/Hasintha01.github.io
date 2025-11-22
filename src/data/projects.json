@@ -3,8 +3,8 @@
   "projects": [
     {
       "id": "project-weather-dashboard",
-      "title": "Weather Dashboard w/ Full DevOps Pipeline",
-      "description": "CI/CD: Multi-stage Docker builds, GitHub Actions pipelines (test/lint/deploy), GHCR registry, API uptime monitoring. Multi-platform container images (amd64/arm64) with nginx reverse proxy, security headers, and automated GitHub Pages deployment. React + TypeScript frontend with OpenWeatherMap API integration.",
+      "title": "Weather Dashboard w/ DevOps",
+      "description": "Multi-stage Docker builds with GitHub Actions CI/CD. Multi-platform container images with nginx reverse proxy. Includes API uptime monitoring and automated deployment.",
       "bgGradient": "from-purple-200 to-purple-400",
       "category": "INFRASTRUCTURE",
       "categoryBg": "bg-purple-400",
@@ -15,11 +15,11 @@
     {
       "id": "project-2",
       "title": "MERN Inventory System w/ DevOps",
-      "description": "CI/CD: Docker + GitHub Actions. Deployed to AWS EC2 with auto-backups and monitoring. Full-stack application with MongoDB backend and React frontend. Architecture diagram included.",
+      "description": "Full-stack inventory management with Docker and GitHub Actions CI/CD. Deployed to AWS EC2 with automated backups and monitoring. MongoDB backend with React frontend.",
       "bgGradient": "from-teal-200 to-teal-400",
       "category": "BACKEND",
       "categoryBg": "bg-teal-400",
-      "technologies": ["NODE.JS", "MONGODB", "AWS EC2"],
+      "technologies": ["NODE.JS", "MONGODB", "AWS EC2", "DOCKER"],
       "githubUrl": "https://github.com/Hasintha01/mern-inventory",
       "demoUrl": null
     }
