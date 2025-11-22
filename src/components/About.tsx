@@ -57,8 +57,7 @@ const About: React.FC<AboutProps> = ({ interests }) => {
             {interests.map((interest, index) => (
               <span
                 key={index}
-                className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2 
-                           hover:shadow-[2px_2px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-all"
+                className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2"
               >
                 {interestIconMap[interest]}
                 {interest}
