@@ -80,7 +80,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border-3 border-black bg-black text-white px-6 py-2 font-bold hover:bg-gray-800 transition-colors inline-block"
+                      className="border-3 border-black bg-black text-white px-6 py-2 font-bold hover:bg-white hover:text-black transition-colors inline-block"
                     >
                       VIEW ON GITHUB →
                     </a>
