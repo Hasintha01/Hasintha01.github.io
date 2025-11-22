@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { BookOpen, FileCode, Newspaper, PenTool } from 'lucide-react';
+import { BookOpen, FileCode, Newspaper, PenTool, Settings, BarChart3, Rocket, Package } from 'lucide-react';
 import type { Article } from '../types';
 
 // Icon mapping for blog articles
@@ -29,6 +29,35 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
         </div>
         LATEST ARTICLES
       </h2>
+
+      {/* What I Write About card */}
+      <div className="mb-16">
+        <div className="border-4 border-black bg-yellow-100 p-8 shadow-[8px_8px_0px_0px_#000] rotate-2 w-full">
+          <h3 className="text-3xl font-black mb-4 text-center">WHAT I WRITE ABOUT</h3>
+          <p className="text-gray-700 mb-6 text-center leading-relaxed">
+            Sharing real-world DevOps experiences, infrastructure automation tips, and practical tutorials. 
+            I write about the tools and techniques that actually work in production environments.
+          </p>
+          <div className="flex flex-wrap gap-3 justify-center">
+            <span className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+              <Settings size={16} strokeWidth={3} />
+              DevOps Tools
+            </span>
+            <span className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+              <BarChart3 size={16} strokeWidth={3} />
+              Infrastructure
+            </span>
+            <span className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+              <Rocket size={16} strokeWidth={3} />
+              CI/CD Pipelines
+            </span>
+            <span className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+              <Package size={16} strokeWidth={3} />
+              Containerization
+            </span>
+          </div>
+        </div>
+      </div>
 
       {/* Articles grid */}
       <div className="grid md:grid-cols-3 gap-8">
