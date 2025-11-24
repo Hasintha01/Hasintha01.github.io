@@ -96,14 +96,14 @@ export const contactLinks: ContactLink[] = [
     label: 'Email',
     icon: 'mail',
     bgColor: 'bg-teal-100',
-    link: 'mailto:hasintha@example.com',
+    link: 'mailto:Hasinthapasindu20@gmail.com',
   },
   {
     id: 'contact-2',
     label: 'LinkedIn',
     icon: 'linkedin',
     bgColor: 'bg-pink-100',
-    link: '#',
+    link: 'https://www.linkedin.com/in/hasintha-pasindu/',
   },
   {
     id: 'contact-3',

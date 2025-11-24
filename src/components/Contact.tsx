@@ -53,6 +53,8 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
           <a
             key={contact.id}
             href={contact.link}
+            target="_blank"
+            rel="noopener noreferrer"
             className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
                        shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 
                        transition-all flex items-center gap-2 group`}
