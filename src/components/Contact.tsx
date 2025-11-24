@@ -11,9 +11,9 @@ import type { ContactLink } from '../types';
 // Icon mapping for contact links
 const contactIconMap: Record<string, React.ReactNode> = {
   'contact-1': <Mail size={20} strokeWidth={3} />,         // Email
-  'contact-2': <Briefcase size={20} strokeWidth={3} />,    // LinkedIn
+  'contact-2': <Linkedin size={20} strokeWidth={3} />,     // LinkedIn
   'contact-3': <Twitter size={20} strokeWidth={3} />,      // Twitter
-  'contact-4': <Phone size={20} strokeWidth={3} />,        // Phone
+  'contact-4': <Github size={20} strokeWidth={3} />,       // GitHub
   'contact-5': <BookOpen size={20} strokeWidth={3} />,     // Medium
 };
 
@@ -49,22 +49,41 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
 
       {/* Contact Info Links */}
       <div className="mt-16 flex flex-wrap justify-center gap-6">
-        {contactLinks.map((contact) => (
-          <a
-            key={contact.id}
-            href={contact.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
-                       shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 
-                       transition-all flex items-center gap-2 group`}
-          >
-            <span className="group-hover:scale-110 transition-transform">
-              {contactIconMap[contact.id]}
-            </span>
-            {contact.label}
-          </a>
-        ))}
+        {contactLinks.map((contact) => {
+          if (contact.id === 'contact-1') {
+            return (
+              <a
+                key={contact.id}
+                href={contact.link}
+                className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
+                           shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 
+                           transition-all flex items-center gap-2 group`}
+              >
+                <span className="group-hover:scale-110 transition-transform">
+                  {contactIconMap[contact.id]}
+                </span>
+                {contact.label}
+              </a>
+            );
+          } else {
+            return (
+              <a
+                key={contact.id}
+                href={contact.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`border-4 border-black ${contact.bgColor} px-6 py-3 font-bold 
+                           shadow-[4px_4px_0px_0px_#000] hover:shadow-none hover:translate-x-1 hover:translate-y-1 
+                           transition-all flex items-center gap-2 group`}
+              >
+                <span className="group-hover:scale-110 transition-transform">
+                  {contactIconMap[contact.id]}
+                </span>
+                {contact.label}
+              </a>
+            );
+          }
+        })}
       </div>
     </section>
   );

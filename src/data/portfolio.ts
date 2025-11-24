@@ -110,14 +110,14 @@ export const contactLinks: ContactLink[] = [
     label: 'Twitter',
     icon: 'twitter',
     bgColor: 'bg-yellow-100',
-    link: '#',
+    link: 'https://x.com/HasinthaPasind2',
   },
   {
     id: 'contact-4',
-    label: 'Phone',
-    icon: 'phone',
+    label: 'GitHub',
+    icon: 'github',
     bgColor: 'bg-purple-100',
-    link: '#',
+    link: 'https://github.com/Hasintha01',
   },
 ];
 
