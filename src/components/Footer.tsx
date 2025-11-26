@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import { lastUpdated } from '../data/portfolio';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
@@ -16,7 +17,12 @@ const Footer: React.FC = () => {
         <div className="text-4xl font-black font-grotesk mb-4">HASINTHA PASINDU</div>
 
         {/* Subtitle */}
-    <p className="text-gray-600 mb-4">Infrastructure • Automation • Reliability</p>
+        <p className="text-gray-600 mb-4">Infrastructure • Automation • Reliability</p>
+
+        {/* Last updated date */}
+        <div className="inline-block rounded px-4 py-2 bg-black text-white font-semibold text-sm shadow-lg mt-4">
+          Last sync: {lastUpdated}
+        </div>
       </div>
     </footer>
   );

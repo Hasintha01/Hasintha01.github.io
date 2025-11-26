@@ -1,4 +1,8 @@
 /**
+ * Last portfolio updated date
+ */
+export const lastUpdated = 'November 26, 2025';
+/**
  * Portfolio data configuration
  * Centralized data source loading from JSON files
  * Provides type-safe access to all portfolio content
