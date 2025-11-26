@@ -23,7 +23,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
   return (
     <section id="blog" className="py-20 px-6 max-w-7xl mx-auto">
       {/* Section title */}
-      <h2 className="text-5xl font-black font-grotesk mb-12 -rotate-1 flex items-center gap-4">
+      <h2 className="text-3xl sm:text-5xl font-black font-grotesk mb-8 sm:mb-12 -rotate-1 flex items-center gap-4">
         <div className="border-4 border-black bg-blue-300 p-3 shadow-[4px_4px_0px_0px_#000]">
           <PenTool size={36} strokeWidth={3} />
         </div>
@@ -31,15 +31,15 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
       </h2>
 
       {/* What I Write About card */}
-      <div className="mb-16">
-        <div className="border-4 border-black bg-yellow-100 p-8 shadow-[8px_8px_0px_0px_#000] rotate-2 w-full">
-          <h3 className="text-3xl font-black mb-4 text-center">WHAT I WRITE ABOUT</h3>
-          <p className="text-gray-700 mb-6 text-center leading-relaxed">
+      <div className="mb-10 sm:mb-16">
+        <div className="border-4 border-black bg-yellow-100 p-4 sm:p-8 shadow-[8px_8px_0px_0px_#000] rotate-2 w-full">
+          <h3 className="text-xl sm:text-3xl font-black mb-2 sm:mb-4 text-center">WHAT I WRITE ABOUT</h3>
+          <p className="text-gray-700 mb-4 sm:mb-6 text-center leading-relaxed text-sm sm:text-base">
             Sharing real-world DevOps experiences, infrastructure automation tips, and practical tutorials. 
             I write about the tools and techniques that actually work in production environments.
           </p>
           <div className="flex flex-wrap gap-3 justify-center">
-            <span className="border-3 border-black bg-white px-4 py-2 font-bold text-sm flex items-center gap-2">
+            <span className="border-3 border-black bg-white px-3 sm:px-4 py-1 sm:py-2 font-bold text-xs sm:text-sm flex items-center gap-1 sm:gap-2">
               <Settings size={16} strokeWidth={3} />
               DevOps Tools
             </span>
@@ -60,7 +60,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
       </div>
 
       {/* Articles grid */}
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
         {articles.map((article) => {
           // Decide how to render the icon: mapped React icon, SVG/image path, or fallback text
           const mapped = blogIconMap[article.id];
@@ -97,16 +97,16 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
 
             {/* Category badge */}
             <div
-              className={`inline-block border-2 border-black ${article.categoryBg} px-3 py-1 text-xs font-black mb-3`}
+              className={`inline-block border-2 border-black ${article.categoryBg} px-2 sm:px-3 py-1 text-xs font-black mb-2 sm:mb-3`}
             >
               {article.category}
             </div>
 
             {/* Article title */}
-            <h3 className="text-xl font-black mb-3">{article.title}</h3>
+            <h3 className="text-base sm:text-xl font-black mb-2 sm:mb-3">{article.title}</h3>
 
             {/* Article description */}
-            <p className="text-sm text-gray-700 mb-4">{article.description}</p>
+            <p className="text-xs sm:text-sm text-gray-700 mb-3 sm:mb-4">{article.description}</p>
 
             {/* Article metadata */}
             <div className="text-xs text-gray-600 font-semibold">
@@ -118,7 +118,7 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
       </div>
 
       {/* View all articles CTA */}
-      <div className="text-center mt-12">
+      <div className="text-center mt-8 sm:mt-12">
         <a
           href="https://medium.com/@hasinthapasindu"
           target="_blank"
