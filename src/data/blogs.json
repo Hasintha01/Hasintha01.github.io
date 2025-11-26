@@ -16,16 +16,16 @@
     },
     {
       "id": "article-2",
-      "title": "Kubernetes Basics for Beginners",
-      "description": "Understanding pods, services, and deployments in Kubernetes orchestration.",
+      "title": "How to Build Faster, Smaller, and Cleaner Docker Images",
+      "description": "How to reduce Docker image size and improve performance with lightweight base images, combined steps, caching, and multi-stage builds.",
       "icon": "file-code",
       "bgGradient": "from-teal-200 to-teal-400",
       "category": "MEDIUM",
       "categoryBg": "bg-teal-400",
-      "readTime": "8 min read",
-      "date": "Nov 2024",
-      "url": "https://medium.com/@hasintha",
-      "tags": ["Kubernetes", "Container Orchestration", "DevOps"]
+      "readTime": "3 min read",
+      "date": "Nov 2025",
+      "url": "https://hasinthapasindu.medium.com/how-to-build-faster-smaller-and-cleaner-docker-images-2d717243d537",
+      "tags": ["Docker", "CI/CD", "DevOps", "Best Practices"]
     },
     {
       "id": "article-3",
