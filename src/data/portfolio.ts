@@ -1,7 +1,7 @@
 /**
  * Last portfolio updated date
  */
-export const lastUpdated = 'November 26, 2025';
+export const lastUpdated = 'November 30, 2025';
 /**
  * Portfolio data configuration
  * Centralized data source loading from JSON files
