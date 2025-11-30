@@ -5,7 +5,7 @@
  */
 
 import React from 'react';
-import { Mail, Github, Linkedin, Twitter, Phone, Briefcase, BookOpen, MessageSquare } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, BookOpen, MessageSquare } from 'lucide-react';
 import type { ContactLink } from '../types';
 
 // Icon mapping for contact links
