@@ -37,14 +37,14 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           {projects.map((project) => (
             <div
               key={project.id}
-              className="border-4 border-black bg-white shadow-[4px_4px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] overflow-hidden hover:shadow-[6px_6px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 sm:hover:-translate-x-1 sm:hover:-translate-y-1 transition-all rounded-xl"
+              className="border-4 border-black bg-white shadow-[4px_4px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] overflow-hidden hover:shadow-[6px_6px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 sm:hover:-translate-x-1 sm:hover:-translate-y-1 transition-all"
             >
               <div className="flex flex-col sm:grid sm:grid-cols-2">
                 {/* Project icon/visual */}
                 <div
                   className={`bg-linear-to-br ${project.bgGradient} border-b-4 sm:border-b-0 sm:border-r-4 border-black h-48 sm:h-80 flex items-center justify-center`}
                 >
-                  <div className="border-4 border-black bg-white p-4 sm:p-8 shadow-[4px_4px_0px_0px_#000] sm:shadow-[6px_6px_0px_0px_#000] rounded-lg">
+                  <div className="border-4 border-black bg-white p-4 sm:p-8 shadow-[4px_4px_0px_0px_#000] sm:shadow-[6px_6px_0px_0px_#000]">
                     {projectIconMap[project.id] || project.icon}
                   </div>
                 </div>
@@ -53,7 +53,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                 <div className="p-4 sm:p-8">
                   {/* Category badge */}
                   <div
-                    className={`inline-block border-2 border-black ${project.categoryBg} px-3 sm:px-4 py-1 text-xs font-black mb-3 sm:mb-4 rounded-full`}
+                    className={`inline-block border-2 border-black ${project.categoryBg} px-3 sm:px-4 py-1 text-xs font-black mb-3 sm:mb-4`}
                   >
                     {project.category}
                   </div>
@@ -67,7 +67,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                   {/* Technology tags */}
                   <div className="flex flex-wrap gap-2 sm:gap-4 mb-4 sm:mb-6">
                     {project.technologies.map((tech, index) => (
-                      <span key={index} className="border-2 border-black px-2 sm:px-3 py-1 text-xs font-bold rounded-lg">
+                      <span key={index} className="border-2 border-black px-2 sm:px-3 py-1 text-xs font-bold">
                         {tech}
                       </span>
                     ))}
@@ -80,7 +80,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border-3 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold hover:bg-white hover:text-black transition-colors inline-block rounded-lg"
+                      className="border-3 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold hover:bg-white hover:text-black transition-colors inline-block"
                     >
                       VIEW ON GITHUB →
                     </a>
@@ -91,7 +91,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                         href={project.demoUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="border-3 border-black bg-white text-black px-4 sm:px-6 py-2 font-bold hover:bg-gray-100 transition-colors inline-block rounded-lg"
+                        className="border-3 border-black bg-white text-black px-4 sm:px-6 py-2 font-bold hover:bg-gray-100 transition-colors inline-block"
                       >
                         LIVE DEMO →
                       </a>
