@@ -23,18 +23,15 @@ import projectsData from './projects.json';
 import skillsData from './skills.json';
 import blogsData from './blogs.json';
 import homelabData from './homelab.json';
+import navigationData from './navigation.json';
+import principlesData from './principles.json';
+import contactData from './contact.json';
+import interestsData from './interests.json';
 
 /**
- * Navigation menu items
+ * Navigation menu items (loaded from JSON)
  */
-export const navLinks: NavLink[] = [
-  { id: 'nav-1', label: 'ABOUT', href: '#about', decorationColor: 'decoration-yellow-400' },
-  { id: 'nav-2', label: 'SKILLS', href: '#skills', decorationColor: 'decoration-teal-400' },
-  { id: 'nav-3', label: 'PROJECTS', href: '#projects', decorationColor: 'decoration-pink-400' },
-  { id: 'nav-4', label: 'HOMELAB', href: '#homelab', decorationColor: 'decoration-purple-400' },
-  { id: 'nav-5', label: 'BLOG', href: '#blog', decorationColor: 'decoration-yellow-400' },
-  { id: 'nav-6', label: 'CONTACT', href: '#contact', decorationColor: 'decoration-teal-400' },
-];
+export const navLinks: NavLink[] = navigationData.navLinks;
 
 /**
  * Technologies/Tools in the tech stack (loaded from JSON)
@@ -62,79 +59,16 @@ export const homelabServices: HomelabService[] = homelabData.services;
 export const articles: Article[] = blogsData.articles;
 
 /**
- * DevOps philosophy principles
+ * DevOps philosophy principles (loaded from JSON)
  */
-export const principles: Principle[] = [
-  {
-    id: 'principle-1',
-    title: 'AUTOMATE EVERYTHING',
-    description:
-      'If you do it twice, automate it. Eliminate manual toil and let humans focus on creative problem-solving.',
-    icon: '🤖',
-    bgColor: 'bg-teal-400',
-  },
-  {
-    id: 'principle-2',
-    title: 'MONITOR & OBSERVE',
-    description:
-      "You can't fix what you can't see. Build observability into everything from day one.",
-    icon: '📊',
-    bgColor: 'bg-pink-400',
-  },
-  {
-    id: 'principle-3',
-    title: 'INFRASTRUCTURE AS CODE',
-    description:
-      'Treat infrastructure like software. Version control, code review, and test everything.',
-    icon: '📝',
-    bgColor: 'bg-yellow-400',
-  },
-];
+export const principles: Principle[] = principlesData.principles;
 
 /**
- * Contact links
+ * Contact links (loaded from JSON)
  */
-export const contactLinks: ContactLink[] = [
-  {
-    id: 'contact-1',
-    label: 'Email',
-    icon: 'mail',
-    bgColor: 'bg-teal-100',
-    link: 'mailto:Hasinthapasindu20@gmail.com',
-  },
-  {
-    id: 'contact-2',
-    label: 'LinkedIn',
-    icon: 'linkedin',
-    bgColor: 'bg-pink-100',
-    link: 'https://www.linkedin.com/in/hasintha-pasindu/',
-  },
-  {
-    id: 'contact-3',
-    label: 'Twitter',
-    icon: 'twitter',
-    bgColor: 'bg-yellow-100',
-    link: 'https://x.com/HasinthaPasind2',
-  },
-  {
-    id: 'contact-4',
-    label: 'GitHub',
-    icon: 'github',
-    bgColor: 'bg-purple-100',
-    link: 'https://github.com/Hasintha01',
-  },
-];
+export const contactLinks: ContactLink[] = contactData.contactLinks;
 
 /**
- * User interests tags
+ * User interests tags (loaded from JSON)
  */
-export const interests: string[] = [
-  'Linux Systems',
-  'Cloud Architecture',
-  'Automation',
-  'Observability',
-  'Containerization',
-  'CI/CD',
-  'Technical Writing',
-  'Continuous Learning',
-];
+export const interests: string[] = interestsData.interests;

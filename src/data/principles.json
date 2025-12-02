@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "principles": [
+    {
+      "id": "principle-1",
+      "title": "AUTOMATE EVERYTHING",
+      "description": "If you do it twice, automate it. Eliminate manual toil and let humans focus on creative problem-solving.",
+      "icon": "🤖",
+      "bgColor": "bg-teal-400"
+    },
+    {
+      "id": "principle-2",
+      "title": "MONITOR & OBSERVE",
+      "description": "You can't fix what you can't see. Build observability into everything from day one.",
+      "icon": "📊",
+      "bgColor": "bg-pink-400"
+    },
+    {
+      "id": "principle-3",
+      "title": "INFRASTRUCTURE AS CODE",
+      "description": "Treat infrastructure like software. Version control, code review, and test everything.",
+      "icon": "📝",
+      "bgColor": "bg-yellow-400"
+    }
+  ]
+}

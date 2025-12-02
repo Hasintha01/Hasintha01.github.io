@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "navLinks": [
+    {
+      "id": "nav-1",
+      "label": "ABOUT",
+      "href": "#about",
+      "decorationColor": "decoration-yellow-400"
+    },
+    {
+      "id": "nav-2",
+      "label": "SKILLS",
+      "href": "#skills",
+      "decorationColor": "decoration-teal-400"
+    },
+    {
+      "id": "nav-3",
+      "label": "PROJECTS",
+      "href": "#projects",
+      "decorationColor": "decoration-pink-400"
+    },
+    {
+      "id": "nav-4",
+      "label": "HOMELAB",
+      "href": "#homelab",
+      "decorationColor": "decoration-purple-400"
+    },
+    {
+      "id": "nav-5",
+      "label": "BLOG",
+      "href": "#blog",
+      "decorationColor": "decoration-yellow-400"
+    },
+    {
+      "id": "nav-6",
+      "label": "CONTACT",
+      "href": "#contact",
+      "decorationColor": "decoration-teal-400"
+    }
+  ]
+}

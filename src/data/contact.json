@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "contactLinks": [
+    {
+      "id": "contact-1",
+      "label": "Email",
+      "icon": "mail",
+      "bgColor": "bg-teal-100",
+      "link": "mailto:Hasinthapasindu20@gmail.com"
+    },
+    {
+      "id": "contact-2",
+      "label": "LinkedIn",
+      "icon": "linkedin",
+      "bgColor": "bg-pink-100",
+      "link": "https://www.linkedin.com/in/hasintha-pasindu/"
+    },
+    {
+      "id": "contact-3",
+      "label": "Twitter",
+      "icon": "twitter",
+      "bgColor": "bg-yellow-100",
+      "link": "https://x.com/HasinthaPasind2"
+    },
+    {
+      "id": "contact-4",
+      "label": "GitHub",
+      "icon": "github",
+      "bgColor": "bg-purple-100",
+      "link": "https://github.com/Hasintha01"
+    }
+  ]
+}
