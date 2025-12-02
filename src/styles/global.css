@@ -64,3 +64,87 @@ body {
 html {
   scroll-behavior: smooth;
 }
+
+/**
+ * Mobile-specific optimizations
+ * Improved touch targets, text readability, and viewport handling
+ */
+
+/* Prevent text size adjustment on orientation change */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+/* Improved touch targets for mobile */
+@media (max-width: 640px) {
+  /* Minimum touch target size of 44x44px for better accessibility */
+  button,
+  a,
+  input,
+  select,
+  textarea {
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  /* Prevent horizontal scrolling on mobile */
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Better line height for mobile readability */
+  p,
+  li {
+    line-height: 1.6;
+  }
+
+  /* Optimize font rendering for mobile */
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Remove tap highlight color on mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Custom scrollbar for better mobile experience */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Prevent zoom on input focus for iOS */
+@media screen and (max-width: 640px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+  body {
+    padding-left: max(0px, env(safe-area-inset-left));
+    padding-right: max(0px, env(safe-area-inset-right));
+  }
+}
