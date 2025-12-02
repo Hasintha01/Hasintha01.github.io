@@ -5,6 +5,7 @@
  */
 
 import React from 'react';
+import profileImage from '../images/hp-profile.jpg';
 
 const Hero: React.FC = () => {
   return (
@@ -42,10 +43,10 @@ const Hero: React.FC = () => {
             <div className="border-3 sm:border-4 border-black shadow-[8px_8px_0px_0px_#000] sm:shadow-[12px_12px_0px_0px_#000] bg-linear-to-br from-pink-300 via-purple-300 to-teal-300 p-3 sm:p-4 md:p-6 lg:p-8 rotate-2">
               <div className="w-40 h-52 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-80 lg:h-96 border-3 sm:border-4 border-black overflow-hidden bg-gray-100">
                 <img
-                  src="/images/hp-profile.jpg"
+                  src={profileImage.src}
                   alt="Profile portrait"
-                  width={192}
-                  height={240}
+                  width={320}
+                  height={384}
                   className="w-full h-full object-cover"
                   loading="eager"
                   decoding="async"
