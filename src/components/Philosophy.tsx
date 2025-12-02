@@ -5,7 +5,10 @@
  */
 
 import React from 'react';
-import { Bot, Activity, FileText, Lightbulb } from 'lucide-react';
+import Bot from 'lucide-react/dist/esm/icons/bot';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
+import Lightbulb from 'lucide-react/dist/esm/icons/lightbulb';
 import type { Principle } from '../types';
 
 // Icon mapping for principles

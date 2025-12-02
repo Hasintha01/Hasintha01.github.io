@@ -5,7 +5,11 @@
  */
 
 import React from 'react';
-import { FolderGit2, Database, Terminal, Code2, FolderOpen } from 'lucide-react';
+import FolderGit2 from 'lucide-react/dist/esm/icons/folder-git-2';
+import Database from 'lucide-react/dist/esm/icons/database';
+import Terminal from 'lucide-react/dist/esm/icons/terminal';
+import Code2 from 'lucide-react/dist/esm/icons/code-2';
+import FolderOpen from 'lucide-react/dist/esm/icons/folder-open';
 import type { Project } from '../types';
 
 // Icon mapping for projects

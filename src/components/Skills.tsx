@@ -5,7 +5,13 @@
  */
 
 import React from 'react';
-import { Server, Container, Cloud, Cog, Activity, Wrench, Laptop } from 'lucide-react';
+import Server from 'lucide-react/dist/esm/icons/server';
+import Container from 'lucide-react/dist/esm/icons/container';
+import Cloud from 'lucide-react/dist/esm/icons/cloud';
+import Cog from 'lucide-react/dist/esm/icons/cog';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import Wrench from 'lucide-react/dist/esm/icons/wrench';
+import Laptop from 'lucide-react/dist/esm/icons/laptop';
 import type { Technology } from '../types';
 
 // Icon mapping for technologies

@@ -5,7 +5,15 @@
  */
 
 import React from 'react';
-import { User, Server, Cloud, Wrench, Activity, Container, Rocket, FileText, GraduationCap } from 'lucide-react';
+import User from 'lucide-react/dist/esm/icons/user';
+import Server from 'lucide-react/dist/esm/icons/server';
+import Cloud from 'lucide-react/dist/esm/icons/cloud';
+import Wrench from 'lucide-react/dist/esm/icons/wrench';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import Container from 'lucide-react/dist/esm/icons/container';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
+import GraduationCap from 'lucide-react/dist/esm/icons/graduation-cap';
 
 interface AboutProps {
   interests: string[];

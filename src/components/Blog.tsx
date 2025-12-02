@@ -5,7 +5,14 @@
  */
 
 import React from 'react';
-import { BookOpen, FileCode, Newspaper, PenTool, Settings, BarChart3, Rocket, Package } from 'lucide-react';
+import BookOpen from 'lucide-react/dist/esm/icons/book-open';
+import FileCode from 'lucide-react/dist/esm/icons/file-code';
+import Newspaper from 'lucide-react/dist/esm/icons/newspaper';
+import PenTool from 'lucide-react/dist/esm/icons/pen-tool';
+import Settings from 'lucide-react/dist/esm/icons/settings';
+import BarChart3 from 'lucide-react/dist/esm/icons/bar-chart-3';
+import Rocket from 'lucide-react/dist/esm/icons/rocket';
+import Package from 'lucide-react/dist/esm/icons/package';
 import type { Article } from '../types';
 
 // Icon mapping for blog articles

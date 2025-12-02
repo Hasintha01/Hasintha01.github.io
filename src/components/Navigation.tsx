@@ -6,7 +6,8 @@
  */
 
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import Menu from 'lucide-react/dist/esm/icons/menu';
+import X from 'lucide-react/dist/esm/icons/x';
 import type { NavLink } from '../types';
 
 interface NavigationProps {

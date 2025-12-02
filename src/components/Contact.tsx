@@ -5,7 +5,12 @@
  */
 
 import React from 'react';
-import { Mail, Github, Linkedin, Twitter, BookOpen, MessageSquare } from 'lucide-react';
+import Mail from 'lucide-react/dist/esm/icons/mail';
+import Github from 'lucide-react/dist/esm/icons/github';
+import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
+import Twitter from 'lucide-react/dist/esm/icons/twitter';
+import BookOpen from 'lucide-react/dist/esm/icons/book-open';
+import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
 import type { ContactLink } from '../types';
 
 // Icon mapping for contact links

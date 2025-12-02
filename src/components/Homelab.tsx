@@ -5,7 +5,14 @@
  */
 
 import React from 'react';
-import { Server, Cog, GitBranch, Globe, Database, Lock, HardDrive, Settings } from 'lucide-react';
+import Server from 'lucide-react/dist/esm/icons/server';
+import Cog from 'lucide-react/dist/esm/icons/cog';
+import GitBranch from 'lucide-react/dist/esm/icons/git-branch';
+import Globe from 'lucide-react/dist/esm/icons/globe';
+import Database from 'lucide-react/dist/esm/icons/database';
+import Lock from 'lucide-react/dist/esm/icons/lock';
+import HardDrive from 'lucide-react/dist/esm/icons/hard-drive';
+import Settings from 'lucide-react/dist/esm/icons/settings';
 import type { HomelabService } from '../types';
 
 // Icon mapping for homelab services
