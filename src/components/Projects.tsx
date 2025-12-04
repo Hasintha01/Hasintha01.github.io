@@ -19,6 +19,7 @@ const projectIconMap: Record<string, React.ReactNode> = {
   'project-2': <Database size={80} strokeWidth={3} />,     // Database project
   'project-3': <Terminal size={80} strokeWidth={3} />,     // Automation
   'project-4': <Code2 size={80} strokeWidth={3} />,        // Code project
+  'project-monitoring': <Terminal size={80} strokeWidth={3} />, // Monitoring Infrastructure
 };
 
 interface ProjectsProps {
