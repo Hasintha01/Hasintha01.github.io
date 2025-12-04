@@ -36,6 +36,18 @@
       "technologies": ["GITHUB ACTIONS", "LIGHTHOUSE", "WEB VITALS", "CI/CD"],
       "githubUrl": "https://github.com/Hasintha01/Hasintha01.github.io",
       "demoUrl": null
+    },
+    {
+      "id": "project-logwatcher",
+      "title": "LogWatcher - Automated Log Monitoring",
+      "description": "Real-time log monitoring system with automated alerting. Detects critical keywords, handles log rotation, and sends multi-channel notifications. Includes Flask dashboard for alert visualization and filtering.",
+      "icon": "activity",
+      "bgGradient": "from-green-200 to-green-400",
+      "category": "AUTOMATION",
+      "categoryBg": "bg-green-400",
+      "technologies": ["PYTHON", "FLASK", "MONITORING", "ALERTS"],
+      "githubUrl": "https://github.com/Hasintha01/logwatcher",
+      "demoUrl": null
     }
   ]
 }
