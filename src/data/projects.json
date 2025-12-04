@@ -48,6 +48,18 @@
       "technologies": ["PYTHON", "FLASK", "MONITORING", "ALERTS"],
       "githubUrl": "https://github.com/Hasintha01/logwatcher",
       "demoUrl": null
+    },
+    {
+      "id": "project-cloudbackup",
+      "title": "CloudBackupAutomator - AWS S3 Backup Solution",
+      "description": "Production-ready automated backup system with AES-256 encryption and incremental backups. Features interactive restore, progress tracking, and secure credential management. Designed for cron/Task Scheduler automation.",
+      "icon": "cloud",
+      "bgGradient": "from-blue-200 to-blue-400",
+      "category": "CLOUD ENGINEERING",
+      "categoryBg": "bg-blue-400",
+      "technologies": ["PYTHON", "AWS S3", "BOTO3", "ENCRYPTION"],
+      "githubUrl": "https://github.com/Hasintha01/CloudBackupAutomator",
+      "demoUrl": null
     }
   ]
 }

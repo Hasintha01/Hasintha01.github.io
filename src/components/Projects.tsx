@@ -11,6 +11,7 @@ import Terminal from 'lucide-react/dist/esm/icons/terminal';
 import Code2 from 'lucide-react/dist/esm/icons/code-2';
 import FolderOpen from 'lucide-react/dist/esm/icons/folder-open';
 import Activity from 'lucide-react/dist/esm/icons/activity';
+import Cloud from 'lucide-react/dist/esm/icons/cloud';
 import type { Project } from '../types';
 
 // Icon mapping for projects
@@ -22,6 +23,7 @@ const projectIconMap: Record<string, React.ReactNode> = {
   'project-4': <Code2 size={80} strokeWidth={3} />,        // Code project
   'project-monitoring': <Terminal size={80} strokeWidth={3} />, // Monitoring Infrastructure
   'project-logwatcher': <Activity size={80} strokeWidth={3} />, // LogWatcher
+  'project-cloudbackup': <Cloud size={80} strokeWidth={3} />, // CloudBackupAutomator
 };
 
 interface ProjectsProps {
