@@ -44,7 +44,7 @@ const Hero: React.FC = () => {
               <div className="w-40 h-52 sm:w-56 sm:h-72 md:w-64 md:h-80 lg:w-80 lg:h-96 border-3 sm:border-4 border-black overflow-hidden bg-gray-100">
                 <img
                   src={profileImage.src}
-                  alt="Profile portrait"
+                  alt="Hasintha Pasindu - Infrastructure and Automation Engineer"
                   width={320}
                   height={384}
                   className="w-full h-full object-cover"
