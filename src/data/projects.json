@@ -22,7 +22,7 @@
       "category": "BACKEND",
       "categoryBg": "bg-teal-400",
       "technologies": ["NODE.JS", "MONGODB", "AWS EC2", "DOCKER"],
-      "githubUrl": "https://github.com/Hasintha01/mern-inventory",
+      "githubUrl": "https://github.com/Hasintha01",
       "demoUrl": null
     }
   ]
