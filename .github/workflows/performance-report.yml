@@ -62,7 +62,7 @@ jobs:
       - name: Generate performance report
         run: |
           cat << 'EOF' > .monitoring/weekly-report.md
-          # 📊 Weekly Performance Report
+          # Weekly Performance Report
           
           **Report Date:** $(date -u +"%Y-%m-%d %H:%M UTC")
           
@@ -70,10 +70,10 @@ jobs:
           
           | Metric | Score | Status |
           |--------|-------|--------|
-          | ⚡ Performance | ${{ steps.scores.outputs.performance }}% | ${{ steps.scores.outputs.performance >= 80 && '✅' || '⚠️' }} |
-          | ♿ Accessibility | ${{ steps.scores.outputs.accessibility }}% | ${{ steps.scores.outputs.accessibility >= 90 && '✅' || '⚠️' }} |
-          | ✨ Best Practices | ${{ steps.scores.outputs.best_practices }}% | ${{ steps.scores.outputs.best_practices >= 85 && '✅' || '⚠️' }} |
-          | 🔍 SEO | ${{ steps.scores.outputs.seo }}% | ${{ steps.scores.outputs.seo >= 90 && '✅' || '⚠️' }} |
+          | Performance | ${{ steps.scores.outputs.performance }}% | ${{ steps.scores.outputs.performance >= 80 && 'PASS' || 'WARN' }} |
+          | Accessibility | ${{ steps.scores.outputs.accessibility }}% | ${{ steps.scores.outputs.accessibility >= 90 && 'PASS' || 'WARN' }} |
+          | Best Practices | ${{ steps.scores.outputs.best_practices }}% | ${{ steps.scores.outputs.best_practices >= 85 && 'PASS' || 'WARN' }} |
+          | SEO | ${{ steps.scores.outputs.seo }}% | ${{ steps.scores.outputs.seo >= 90 && 'PASS' || 'WARN' }} |
           
           ## Recommendations
           
@@ -95,13 +95,13 @@ jobs:
       
       - name: Create performance summary
         run: |
-          echo "## 📊 Weekly Performance Audit" >> $GITHUB_STEP_SUMMARY
+          echo "## Weekly Performance Audit" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
           echo "### Lighthouse Scores" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- ⚡ **Performance:** ${{ steps.scores.outputs.performance }}%" >> $GITHUB_STEP_SUMMARY
-          echo "- ♿ **Accessibility:** ${{ steps.scores.outputs.accessibility }}%" >> $GITHUB_STEP_SUMMARY
-          echo "- ✨ **Best Practices:** ${{ steps.scores.outputs.best_practices }}%" >> $GITHUB_STEP_SUMMARY
-          echo "- 🔍 **SEO:** ${{ steps.scores.outputs.seo }}%" >> $GITHUB_STEP_SUMMARY
+          echo "- **Performance:** ${{ steps.scores.outputs.performance }}%" >> $GITHUB_STEP_SUMMARY
+          echo "- **Accessibility:** ${{ steps.scores.outputs.accessibility }}%" >> $GITHUB_STEP_SUMMARY
+          echo "- **Best Practices:** ${{ steps.scores.outputs.best_practices }}%" >> $GITHUB_STEP_SUMMARY
+          echo "- **SEO:** ${{ steps.scores.outputs.seo }}%" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "📈 Performance data saved to \`.monitoring/performance.log\`" >> $GITHUB_STEP_SUMMARY
+          echo "Performance data saved to \`.monitoring/performance.log\`" >> $GITHUB_STEP_SUMMARY
