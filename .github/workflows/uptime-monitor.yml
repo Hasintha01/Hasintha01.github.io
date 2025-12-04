@@ -1,0 +1,104 @@
+# GitHub Actions workflow for uptime monitoring
+name: Uptime Monitor
+
+on:
+  # Run every 6 hours
+  schedule:
+    - cron: '0 */6 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  uptime-check:
+    name: Check Site Uptime
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Check site availability
+        id: site_check
+        run: |
+          URL="https://hasintha01.github.io"
+          START=$(date +%s%3N)
+          RESPONSE=$(curl -o /dev/null -s -w "%{http_code}|%{time_total}" -L $URL)
+          END=$(date +%s%3N)
+          
+          HTTP_CODE=$(echo $RESPONSE | cut -d'|' -f1)
+          RESPONSE_TIME=$(echo $RESPONSE | cut -d'|' -f2)
+          RESPONSE_TIME_MS=$(echo "$RESPONSE_TIME * 1000" | bc)
+          
+          echo "http_code=$HTTP_CODE" >> $GITHUB_OUTPUT
+          echo "response_time=$RESPONSE_TIME_MS" >> $GITHUB_OUTPUT
+          echo "timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_OUTPUT
+          echo "status=$( [ $HTTP_CODE -eq 200 ] && echo 'up' || echo 'down' )" >> $GITHUB_OUTPUT
+          
+          echo "📊 Site Status: $HTTP_CODE"
+          echo "⏱️ Response Time: ${RESPONSE_TIME_MS}ms"
+      
+      - name: Update uptime log
+        run: |
+          mkdir -p .monitoring
+          echo "$(date -u +"%Y-%m-%d %H:%M:%S UTC"),${{ steps.site_check.outputs.status }},${{ steps.site_check.outputs.http_code }},${{ steps.site_check.outputs.response_time }}" >> .monitoring/uptime.log
+          
+          # Keep only last 500 entries
+          tail -n 500 .monitoring/uptime.log > .monitoring/uptime.log.tmp
+          mv .monitoring/uptime.log.tmp .monitoring/uptime.log
+      
+      - name: Calculate uptime percentage
+        id: uptime_calc
+        run: |
+          if [ -f .monitoring/uptime.log ]; then
+            TOTAL=$(wc -l < .monitoring/uptime.log)
+            UP=$(grep -c ",up," .monitoring/uptime.log || echo 0)
+            UPTIME=$(echo "scale=2; $UP * 100 / $TOTAL" | bc)
+            echo "uptime_percentage=$UPTIME" >> $GITHUB_OUTPUT
+            echo "📈 Uptime: ${UPTIME}%"
+          else
+            echo "uptime_percentage=100.00" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit uptime log
+        if: steps.site_check.outputs.status == 'up'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add .monitoring/uptime.log
+          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Update uptime log - ${{ steps.site_check.outputs.timestamp }}"
+          git push
+      
+      - name: Create issue if site is down
+        if: steps.site_check.outputs.status == 'down'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const httpCode = '${{ steps.site_check.outputs.http_code }}';
+            const timestamp = '${{ steps.site_check.outputs.timestamp }}';
+            
+            github.rest.issues.create({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              title: `🚨 Site Down: HTTP ${httpCode}`,
+              body: `## Site Availability Alert\n\n` +
+                    `🔴 **Status:** DOWN\n` +
+                    `📍 **URL:** https://hasintha01.github.io\n` +
+                    `📊 **HTTP Code:** ${httpCode}\n` +
+                    `⏰ **Time:** ${timestamp}\n\n` +
+                    `The site is currently unreachable. Please investigate immediately.\n\n` +
+                    `---\n*This issue was automatically created by the uptime monitor.*`,
+              labels: ['bug', 'monitoring', 'urgent']
+            });
+      
+      - name: Update status summary
+        if: always()
+        run: |
+          echo "## 🌐 Site Uptime Report" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "🔗 **URL:** https://hasintha01.github.io" >> $GITHUB_STEP_SUMMARY
+          echo "📊 **Status:** ${{ steps.site_check.outputs.status == 'up' && '✅ UP' || '❌ DOWN' }}" >> $GITHUB_STEP_SUMMARY
+          echo "📈 **HTTP Code:** ${{ steps.site_check.outputs.http_code }}" >> $GITHUB_STEP_SUMMARY
+          echo "⏱️ **Response Time:** ${{ steps.site_check.outputs.response_time }}ms" >> $GITHUB_STEP_SUMMARY
+          echo "📅 **Checked:** ${{ steps.site_check.outputs.timestamp }}" >> $GITHUB_STEP_SUMMARY
+          echo "🎯 **Uptime:** ${{ steps.uptime_calc.outputs.uptime_percentage }}%" >> $GITHUB_STEP_SUMMARY
