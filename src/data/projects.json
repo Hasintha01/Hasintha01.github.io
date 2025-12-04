@@ -24,6 +24,18 @@
       "technologies": ["NODE.JS", "MONGODB", "AWS EC2", "DOCKER"],
       "githubUrl": "https://github.com/Hasintha01",
       "demoUrl": null
+    },
+    {
+      "id": "project-monitoring",
+      "title": "Portfolio Monitoring Infrastructure",
+      "description": "Enterprise-grade monitoring for a static site using GitHub Actions. Automated uptime checks, performance auditing, Web Vitals tracking, and CI/CD quality gates. 100% free and open-source.",
+      "icon": "terminal",
+      "bgGradient": "from-orange-200 to-orange-400",
+      "category": "DEVOPS",
+      "categoryBg": "bg-orange-400",
+      "technologies": ["GITHUB ACTIONS", "LIGHTHOUSE", "WEB VITALS", "CI/CD"],
+      "githubUrl": "https://github.com/Hasintha01/Hasintha01.github.io",
+      "demoUrl": "https://hasintha01.github.io"
     }
   ]
 }

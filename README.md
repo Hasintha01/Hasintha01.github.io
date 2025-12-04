@@ -9,6 +9,8 @@
 
 **Live Site:** [hasintha01.github.io](https://hasintha01.github.io)
 
+**Notable Feature:** This portfolio practices what it preaches—it includes [enterprise-grade monitoring infrastructure](MONITORING.md) as a working demonstration of DevOps principles.
+
 ---
 
 ## Features
@@ -38,21 +40,27 @@
 
 ---
 
-## Monitoring & Quality
+## Monitoring Infrastructure (Featured Project)
 
-This portfolio includes comprehensive free monitoring:
+This portfolio includes a **complete monitoring stack** as a DevOps showcase:
 
-### Automated Checks
-- **Uptime Monitoring** - Checks every 6 hours, stores history
-- **Performance Reports** - Weekly Lighthouse audits
-- **Link Validation** - Automated broken link detection
-- **Test Suite** - Runs on every PR
-- **Web Vitals** - Real user performance tracking
+### What's Monitored
+- **Uptime Tracking** - Automated health checks every 6 hours with GitHub Issues alerts
+- **Performance Auditing** - Weekly Lighthouse CI reports with trend analysis  
+- **Real User Monitoring** - Web Vitals (LCP, FID, CLS) from actual visitors
+- **Quality Gates** - CI/CD pipelines block bad deploys (tests, links, performance)
+- **Cost** - $0/month using GitHub Actions and open-source tools
 
-### View Status
-- [Monitoring Data](.monitoring/) - Uptime and performance logs
-- [Workflows](https://github.com/Hasintha01/Hasintha01.github.io/actions) - All CI/CD pipelines
-- [Setup Guide](MONITORING.md) - Complete monitoring documentation
+### Technical Highlights
+- Custom GitHub Actions workflows for observability
+- Automated alerting and incident response
+- Time-series data storage in git
+- Ready for Google Analytics / Plausible integration
+
+### Learn More
+- [Architecture & Setup](MONITORING.md) - Complete technical documentation
+- [Monitoring Data](.monitoring/) - Historical uptime and performance logs
+- [Live Workflows](https://github.com/Hasintha01/Hasintha01.github.io/actions) - See it running in real-time
 
 ---
 
