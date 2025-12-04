@@ -55,6 +55,7 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
       {/* Contact Info Links */}
       <div className="mt-10 sm:mt-12 md:mt-16 flex flex-wrap justify-center gap-3 sm:gap-4 md:gap-6">
         {contactLinks.map((contact) => {
+          const iconElement = contactIconMap[contact.id];
           if (contact.id === 'contact-1') {
             return (
               <a
@@ -65,10 +66,9 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
                            transition-all flex items-center gap-1.5 sm:gap-2 group active:shadow-none active:translate-x-1 active:translate-y-1`}
               >
                 <span className="group-hover:scale-110 transition-transform">
-                  {React.cloneElement(contactIconMap[contact.id] as React.ReactElement, {
-                    size: 16,
-                    className: 'sm:w-5 sm:h-5'
-                  })}
+                  {React.isValidElement(iconElement) && React.cloneElement(iconElement, {
+                    className: 'w-4 h-4 sm:w-5 sm:h-5'
+                  } as any)}
                 </span>
                 {contact.label}
               </a>
@@ -85,10 +85,9 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
                            transition-all flex items-center gap-1.5 sm:gap-2 group active:shadow-none active:translate-x-1 active:translate-y-1`}
               >
                 <span className="group-hover:scale-110 transition-transform">
-                  {React.cloneElement(contactIconMap[contact.id] as React.ReactElement, {
-                    size: 16,
-                    className: 'sm:w-5 sm:h-5'
-                  })}
+                  {React.isValidElement(iconElement) && React.cloneElement(iconElement, {
+                    className: 'w-4 h-4 sm:w-5 sm:h-5'
+                  } as any)}
                 </span>
                 {contact.label}
               </a>

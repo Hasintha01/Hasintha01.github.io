@@ -54,10 +54,11 @@ const Skills: React.FC<SkillsProps> = ({ technologies, expertise }) => {
               >
                 <div className="text-center">
                   <div className="mb-2 flex justify-center group-hover:scale-110 transition-transform">
-                    {React.cloneElement(iconMap[tech.id] || tech.icon as React.ReactElement, {
-                      size: 28,
-                      className: 'sm:w-8 sm:h-8 md:w-10 md:h-10'
-                    })}
+                    {React.isValidElement(iconMap[tech.id])
+                      ? React.cloneElement(iconMap[tech.id] as React.ReactElement, {
+                          className: 'w-7 h-7 sm:w-8 sm:h-8 md:w-10 md:h-10'
+                        } as any)
+                      : <span className="text-3xl">{tech.icon}</span>}
                   </div>
                   <div className="font-black text-xs sm:text-sm">{tech.name}</div>
                 </div>

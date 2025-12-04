@@ -55,10 +55,11 @@ const Philosophy: React.FC<PhilosophyProps> = ({ principles }) => {
                     className={`w-12 h-12 sm:w-14 sm:h-14 ${principle.bgColor} border-2 border-black flex items-center justify-center shrink-0 
                                group-hover:border-3 sm:group-hover:border-4 transition-all`}
                   >
-                    {React.cloneElement(principleIconMap[principle.id] || principle.icon as React.ReactElement, {
-                      size: 24,
-                      className: 'sm:w-7 sm:h-7'
-                    })}
+                    {React.isValidElement(principleIconMap[principle.id])
+                      ? React.cloneElement(principleIconMap[principle.id] as React.ReactElement, {
+                          className: 'w-6 h-6 sm:w-7 sm:h-7'
+                        } as any)
+                      : <span className="text-2xl">{principle.icon}</span>}
                   </div>
                   <div>
                     <h3 className="font-black text-base sm:text-lg mb-1.5 sm:mb-2">{principle.title}</h3>
