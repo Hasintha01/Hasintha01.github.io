@@ -60,9 +60,13 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
     <nav className="fixed top-0 left-0 right-0 bg-white border-b-4 border-black z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-3 sm:py-4 flex justify-between items-center">
         {/* Brand name - responsive sizing */}
-        <div className="text-lg sm:text-xl md:text-2xl font-black font-grotesk">
+        <a
+          href="#hero"
+          onClick={(e) => handleClick(e, '#hero')}
+          className="text-lg sm:text-xl md:text-2xl font-black font-grotesk hover:opacity-80 transition-opacity"
+        >
           HASINTHA PASINDU
-        </div>
+        </a>
 
         {/* Desktop Navigation links */}
         <ul className="hidden md:flex gap-4 lg:gap-8 text-sm font-semibold">
