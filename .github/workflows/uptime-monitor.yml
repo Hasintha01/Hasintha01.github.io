@@ -9,6 +9,10 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
+permissions:
+  contents: write
+  issues: write
+
 jobs:
   uptime-check:
     name: Check Site Uptime
