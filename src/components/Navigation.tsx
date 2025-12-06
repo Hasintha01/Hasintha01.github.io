@@ -5,7 +5,7 @@
  * Mobile-responsive with hamburger menu
  */
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Menu from 'lucide-react/dist/esm/icons/menu';
 import X from 'lucide-react/dist/esm/icons/x';
 import type { NavLink } from '../types';
@@ -16,6 +16,8 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ links }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
+  const menuButtonRef = useRef<HTMLButtonElement>(null);
 
   /**
    * Handle smooth scrolling for anchor links
@@ -30,6 +32,29 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
     // Close mobile menu after clicking
     setIsMenuOpen(false);
   };
+
+  /**
+   * Handle escape key to close menu
+   */
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+        menuButtonRef.current?.focus();
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener('keydown', handleEscape);
+      // Focus first link when menu opens
+      const firstLink = menuRef.current?.querySelector('a');
+      firstLink?.focus();
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscape);
+    };
+  }, [isMenuOpen]);
 
   return (
     <nav className="fixed top-0 left-0 right-0 bg-white border-b-4 border-black z-50">
@@ -56,9 +81,12 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
 
         {/* Mobile Menu Button */}
         <button
+          ref={menuButtonRef}
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden border-2 border-black p-2 bg-yellow-300 hover:bg-yellow-400 transition-colors"
-          aria-label="Toggle menu"
+          aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={isMenuOpen}
+          aria-controls="mobile-menu"
         >
           {isMenuOpen ? <X size={24} strokeWidth={3} /> : <Menu size={24} strokeWidth={3} />}
         </button>
@@ -66,7 +94,13 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
 
       {/* Mobile Navigation Menu */}
       {isMenuOpen && (
-        <div className="md:hidden border-t-4 border-black bg-white">
+        <div 
+          ref={menuRef}
+          id="mobile-menu"
+          className="md:hidden border-t-4 border-black bg-white"
+          role="navigation"
+          aria-label="Mobile navigation"
+        >
           <ul className="flex flex-col">
             {links.map((link) => (
               <li key={link.id} className="border-b-2 border-black last:border-b-0">

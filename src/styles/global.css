@@ -66,6 +66,103 @@ html {
 }
 
 /**
+ * Accessibility: Focus Visible Styles
+ * Clear focus indicators for keyboard navigation (WCAG 2.4.7 Level AA)
+ * Uses :focus-visible to only show on keyboard, not mouse clicks
+ */
+
+/* Default focus style for all interactive elements */
+*:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+  transition: outline-offset 0.2s ease;
+}
+
+/* Enhanced focus for links */
+a:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 4px;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 4px;
+}
+
+/* Enhanced focus for buttons */
+button:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Focus for inputs and form elements */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid #3b82f6;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.1);
+}
+
+/* Neo-brutalist style focus for primary CTA buttons (yellow background) */
+.bg-yellow-400:focus-visible,
+.bg-yellow-300:focus-visible {
+  outline: 4px solid #1e40af;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 8px rgba(30, 64, 175, 0.15);
+}
+
+/* Focus for navigation links with colored underlines */
+nav a:focus-visible {
+  outline: 3px solid currentColor;
+  outline-offset: 6px;
+  text-decoration: underline;
+  text-decoration-thickness: 3px;
+}
+
+/* Focus for cards and interactive containers */
+[role="button"]:focus-visible,
+.group:focus-within {
+  outline: 3px solid #3b82f6;
+  outline-offset: 3px;
+}
+
+/* Focus for black buttons (inverted style) */
+.bg-black:focus-visible {
+  outline: 3px solid #fbbf24;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(251, 191, 36, 0.2);
+}
+
+/* Focus for white/light buttons */
+.bg-white:focus-visible:not(input):not(textarea) {
+  outline: 3px solid #1e40af;
+  outline-offset: 4px;
+  box-shadow: 0 0 0 6px rgba(30, 64, 175, 0.15);
+}
+
+/* Skip to content link (hidden until focused) */
+.skip-to-content {
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  padding: 12px 24px;
+  background: #fbbf24;
+  border: 4px solid #000;
+  font-weight: 900;
+  text-decoration: none;
+  box-shadow: 4px 4px 0 0 #000;
+  transition: top 0.3s ease;
+}
+
+.skip-to-content:focus {
+  top: 20px;
+  outline: 4px solid #1e40af;
+  outline-offset: 4px;
+}
+
+/**
  * Mobile-specific optimizations
  * Improved touch targets, text readability, and viewport handling
  */

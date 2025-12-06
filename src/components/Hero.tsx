@@ -28,9 +28,11 @@ const Hero: React.FC = () => {
             href="https://github.com/Hasintha01"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Explore my projects on GitHub"
             className="inline-block border-3 sm:border-4 border-black bg-yellow-400 shadow-[4px_4px_0px_0px_#000] sm:shadow-[6px_6px_0px_0px_#000] px-5 sm:px-8 md:px-10 py-3 sm:py-3 md:py-4 text-sm sm:text-base md:text-xl font-black 
                        hover:shadow-[6px_6px_0px_0px_#000] sm:hover:shadow-[8px_8px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
-                       transition-all active:shadow-none active:translate-x-0 active:translate-y-0"
+                       transition-all active:shadow-none active:translate-x-0 active:translate-y-0
+                       focus-visible:outline-4 focus-visible:outline-blue-900 focus-visible:outline-offset-4"
           >
             EXPLORE PROJECTS →
           </a>

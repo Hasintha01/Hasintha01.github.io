@@ -79,10 +79,15 @@ const pageDescription =
   </head>
   
   <body class="bg-white text-black">
+    <!-- Skip to Content Link - Accessibility (WCAG 2.4.1) -->
+    <a href="#main-content" class="skip-to-content">
+      SKIP TO CONTENT →
+    </a>
+
     <!-- Fixed Navigation - Client-side for smooth scroll -->
     <Navigation client:load links={navLinks} />
 
-    <main>
+    <main id="main-content">
     <!-- Hero Section -->
     <Hero client:visible />
 

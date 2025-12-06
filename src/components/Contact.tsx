@@ -46,7 +46,8 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6 justify-center items-stretch sm:items-center">
         <a
           href="mailto:Hasinthapasindu20@gmail.com"
-          className="border-3 sm:border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center"
+          aria-label="Send me an email"
+          className="border-3 sm:border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center focus-visible:outline-4 focus-visible:outline-blue-900 focus-visible:outline-offset-4"
         >
           GET IN TOUCH →
         </a>
@@ -54,7 +55,8 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
           href="https://github.com/Hasintha01"
           target="_blank"
           rel="noopener noreferrer"
-          className="border-3 sm:border-4 border-black bg-white shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center"
+          aria-label="View my GitHub profile"
+          className="border-3 sm:border-4 border-black bg-white shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center focus-visible:outline-4 focus-visible:outline-blue-900 focus-visible:outline-offset-4"
         >
           VIEW GITHUB →
         </a>

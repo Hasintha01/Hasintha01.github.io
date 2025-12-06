@@ -20,7 +20,7 @@ describe('Hero Component', () => {
 
   it('renders the CTA button with correct link', () => {
     render(<Hero />);
-    const ctaButton = screen.getByRole('link', { name: /EXPLORE PROJECTS/i });
+    const ctaButton = screen.getByRole('link', { name: /Explore my projects on GitHub/i });
     expect(ctaButton).toBeInTheDocument();
     expect(ctaButton).toHaveAttribute('href', 'https://github.com/Hasintha01');
     expect(ctaButton).toHaveAttribute('target', '_blank');
@@ -66,7 +66,7 @@ describe('Hero Component', () => {
 
   it('CTA button has hover effects', () => {
     render(<Hero />);
-    const ctaButton = screen.getByRole('link', { name: /EXPLORE PROJECTS/i });
+    const ctaButton = screen.getByRole('link', { name: /Explore my projects on GitHub/i });
     expect(ctaButton.className).toContain('hover:shadow');
     expect(ctaButton.className).toContain('transition-all');
   });

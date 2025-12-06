@@ -28,7 +28,7 @@ describe('Contact Component', () => {
 
   it('renders the primary email CTA button', () => {
     render(<Contact contactLinks={mockContactLinks} />);
-    const emailButton = screen.getByRole('link', { name: /GET IN TOUCH/i });
+    const emailButton = screen.getByRole('link', { name: /Send me an email/i });
     expect(emailButton).toBeInTheDocument();
     expect(emailButton).toHaveAttribute('href', 'mailto:Hasinthapasindu20@gmail.com');
   });
@@ -68,7 +68,7 @@ describe('Contact Component', () => {
 
   it('CTA buttons have hover effects', () => {
     render(<Contact contactLinks={mockContactLinks} />);
-    const emailButton = screen.getByRole('link', { name: /GET IN TOUCH/i });
+    const emailButton = screen.getByRole('link', { name: /Send me an email/i });
     expect(emailButton.className).toContain('hover:shadow');
     expect(emailButton.className).toContain('transition-all');
   });
