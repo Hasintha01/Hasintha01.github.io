@@ -37,6 +37,7 @@
 | **Deployment** | GitHub Pages |
 | **CI/CD** | GitHub Actions |
 | **Monitoring** | Lighthouse CI, Web Vitals, Custom Uptime Monitor |
+| **Analytics** | Plausible Analytics (Privacy-friendly) |
 
 ---
 
@@ -55,7 +56,7 @@ This portfolio includes a **complete monitoring stack** as a DevOps showcase:
 - Custom GitHub Actions workflows for observability
 - Automated alerting and incident response
 - Time-series data storage in git
-- Ready for Google Analytics / Plausible integration
+- **Plausible Analytics integration** - Privacy-friendly Web Vitals tracking
 
 ### Learn More
 - [Architecture & Setup](MONITORING.md) - Complete technical documentation

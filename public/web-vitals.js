@@ -27,6 +27,17 @@
       });
     }
     
+    // Send to Plausible Analytics if available
+    if (window.plausible) {
+      window.plausible('Web Vitals', {
+        props: {
+          metric: metric.name,
+          value: Math.round(metric.value),
+          rating: metric.rating
+        }
+      });
+    }
+    
     // Log to console in development
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
       console.log(`[Web Vitals] ${metric.name}:`, Math.round(metric.value), metric.rating);
