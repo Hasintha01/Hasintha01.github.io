@@ -59,18 +59,5 @@ include = []
 # Remap URLs (for testing local builds)
 remap = []
 
-# Cache results to speed up repeated checks
-cache = true
-
-# Verbose output
-verbose = true
-
-# Don't show progress bar in CI
-no_progress = true
-
-# Output format (detailed, compact, or json)
-format = "detailed"
-
-# Use GitHub flavored markdown output
-# This will be cleaner without emojis
-output = "lychee-report.md"
+# Output format (detailed, compact, json, or markdown)
+format = "markdown"
