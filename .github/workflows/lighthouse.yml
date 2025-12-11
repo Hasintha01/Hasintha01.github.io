@@ -66,5 +66,5 @@ jobs:
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '🔦 Lighthouse audit completed! Check the artifacts for detailed performance metrics.'
+              body: 'Lighthouse audit completed! Check the artifacts for detailed performance metrics.'
             })

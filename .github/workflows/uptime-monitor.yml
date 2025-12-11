@@ -39,8 +39,8 @@ jobs:
           echo "timestamp=$(date -u +"%Y-%m-%dT%H:%M:%SZ")" >> $GITHUB_OUTPUT
           echo "status=$( [ $HTTP_CODE -eq 200 ] && echo 'up' || echo 'down' )" >> $GITHUB_OUTPUT
           
-          echo "📊 Site Status: $HTTP_CODE"
-          echo "⏱️ Response Time: ${RESPONSE_TIME_MS}ms"
+          echo "Site Status: $HTTP_CODE"
+          echo "Response Time: ${RESPONSE_TIME_MS}ms"
       
       - name: Update uptime log
         run: |
@@ -59,7 +59,7 @@ jobs:
             UP=$(grep -c ",up," .monitoring/uptime.log || echo 0)
             UPTIME=$(echo "scale=2; $UP * 100 / $TOTAL" | bc)
             echo "uptime_percentage=$UPTIME" >> $GITHUB_OUTPUT
-            echo "📈 Uptime: ${UPTIME}%"
+            echo "Uptime: ${UPTIME}%"
           else
             echo "uptime_percentage=100.00" >> $GITHUB_OUTPUT
           fi
@@ -70,7 +70,7 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .monitoring/uptime.log
-          git diff --quiet && git diff --staged --quiet || git commit -m "📊 Update uptime log - ${{ steps.site_check.outputs.timestamp }}"
+          git diff --quiet && git diff --staged --quiet || git commit -m "Update uptime log - ${{ steps.site_check.outputs.timestamp }}"
           git push
       
       - name: Create issue if site is down
@@ -84,12 +84,12 @@ jobs:
             github.rest.issues.create({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              title: `🚨 Site Down: HTTP ${httpCode}`,
+              title: `[ALERT] Site Down: HTTP ${httpCode}`,
               body: `## Site Availability Alert\n\n` +
-                    `🔴 **Status:** DOWN\n` +
-                    `📍 **URL:** https://hasintha01.github.io\n` +
-                    `📊 **HTTP Code:** ${httpCode}\n` +
-                    `⏰ **Time:** ${timestamp}\n\n` +
+                    `**Status:** DOWN\n` +
+                    `**URL:** https://hasintha01.github.io\n` +
+                    `**HTTP Code:** ${httpCode}\n` +
+                    `**Time:** ${timestamp}\n\n` +
                     `The site is currently unreachable. Please investigate immediately.\n\n` +
                     `---\n*This issue was automatically created by the uptime monitor.*`,
               labels: ['bug', 'monitoring', 'urgent']
@@ -98,11 +98,11 @@ jobs:
       - name: Update status summary
         if: always()
         run: |
-          echo "## 🌐 Site Uptime Report" >> $GITHUB_STEP_SUMMARY
+          echo "## Site Uptime Report" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "🔗 **URL:** https://hasintha01.github.io" >> $GITHUB_STEP_SUMMARY
-          echo "📊 **Status:** ${{ steps.site_check.outputs.status == 'up' && '✅ UP' || '❌ DOWN' }}" >> $GITHUB_STEP_SUMMARY
-          echo "📈 **HTTP Code:** ${{ steps.site_check.outputs.http_code }}" >> $GITHUB_STEP_SUMMARY
-          echo "⏱️ **Response Time:** ${{ steps.site_check.outputs.response_time }}ms" >> $GITHUB_STEP_SUMMARY
-          echo "📅 **Checked:** ${{ steps.site_check.outputs.timestamp }}" >> $GITHUB_STEP_SUMMARY
-          echo "🎯 **Uptime:** ${{ steps.uptime_calc.outputs.uptime_percentage }}%" >> $GITHUB_STEP_SUMMARY
+          echo "**URL:** https://hasintha01.github.io" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ${{ steps.site_check.outputs.status == 'up' && 'UP' || 'DOWN' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**HTTP Code:** ${{ steps.site_check.outputs.http_code }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Response Time:** ${{ steps.site_check.outputs.response_time }}ms" >> $GITHUB_STEP_SUMMARY
+          echo "**Checked:** ${{ steps.site_check.outputs.timestamp }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Uptime:** ${{ steps.uptime_calc.outputs.uptime_percentage }}%" >> $GITHUB_STEP_SUMMARY

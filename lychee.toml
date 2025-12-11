@@ -1,0 +1,76 @@
+# Lychee Link Checker Configuration
+# https://lychee.cli.rs/#/usage/config
+
+# Maximum number of concurrent network requests
+max_concurrency = 8
+
+# Accept these HTTP status codes as valid
+accept = [200, 201, 202, 203, 204, 300, 301, 302, 303, 304, 307, 308, 429]
+
+# Timeout for network requests (in seconds)
+timeout = 30
+
+# Maximum number of redirects to follow
+max_redirects = 10
+
+# Number of retries per request
+max_retries = 3
+
+# Retry wait time between attempts (in seconds)
+retry_wait_time = 5
+
+# Custom headers for requests (helps avoid rate limiting)
+headers = [
+    "accept=text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+]
+
+# Exclude these patterns (regex supported)
+exclude = [
+    # Email addresses
+    '.*@.*',
+    # Social media (often blocks automated checks)
+    'linkedin\.com',
+    'twitter\.com',
+    'x\.com',
+    # Medium (blocks bots)
+    'medium\.com',
+    # Font CDNs (not critical to check)
+    'fonts\.googleapis\.com',
+    'fonts\.gstatic\.com',
+    # SVG namespaces
+    'www\.w3\.org/2000/svg',
+]
+
+# Exclude specific paths
+exclude_path = [
+    "dist/_astro",
+    "node_modules",
+    ".git"
+]
+
+# Include these patterns (check these even if they match exclude)
+# GitHub user profiles can timeout - add retry logic
+include = []
+
+# Check links in these files
+# Note: Set via command line args in workflow
+
+# Remap URLs (for testing local builds)
+remap = []
+
+# Cache results to speed up repeated checks
+cache = true
+
+# Verbose output
+verbose = true
+
+# Don't show progress bar in CI
+no_progress = true
+
+# Output format (detailed, compact, or json)
+format = "detailed"
+
+# Use GitHub flavored markdown output
+# This will be cleaner without emojis
+output = "lychee-report.md"

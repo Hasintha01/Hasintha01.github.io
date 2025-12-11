@@ -38,46 +38,29 @@ jobs:
       - name: Build site
         run: npm run build
       
-      - name: Check internal links
+      - name: Check links
         uses: lycheeverse/lychee-action@v1
         with:
           args: |
-            --verbose
-            --no-progress
-            --accept 200,201,202,203,204,300,301,302,303,304,307,308,429
-            --timeout 20
-            --max-redirects 10
-            --exclude-path dist/_astro
-            --exclude 'linkedin.com'
-            --exclude 'twitter.com'
-            --exclude 'x.com'
-            --exclude 'medium.com'
-            --exclude 'fonts.googleapis.com'
-            --exclude 'fonts.gstatic.com'
+            --config lychee.toml
+            --exclude-mail
+            --accept 200,201,202,203,204,300,301,302,303,304,307,308,429,999
+            --max-retries 3
+            --retry-wait-time 10
             './dist/**/*.html'
           fail: true
+          format: markdown
+          output: ./lychee-report.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
-      - name: Check external links (non-blocking)
-        uses: lycheeverse/lychee-action@v1
+      - name: Upload link check report
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          args: |
-            --verbose
-            --no-progress
-            --accept 200,201,202,203,204,300,301,302,303,304,307,308,429,999
-            --timeout 30
-            --max-redirects 10
-            --exclude-path dist/_astro
-            --exclude-mail
-            --exclude 'linkedin.com'
-            --exclude 'twitter.com'
-            --exclude 'x.com'
-            --exclude 'medium.com'
-            --exclude 'fonts.googleapis.com'
-            --exclude 'fonts.gstatic.com'
-            './dist/**/*.html'
-          fail: false
+          name: link-check-report
+          path: lychee-report.md
+          retention-days: 30
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       
@@ -86,17 +69,25 @@ jobs:
         run: |
           echo "## Link Check Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "✅ Internal links verified" >> $GITHUB_STEP_SUMMARY
-          echo "⚠️ External links checked (non-blocking)" >> $GITHUB_STEP_SUMMARY
+          if [ -f lychee-report.md ]; then
+            cat lychee-report.md >> $GITHUB_STEP_SUMMARY
+          else
+            echo "Link check completed successfully" >> $GITHUB_STEP_SUMMARY
+          fi
       
       - name: Comment PR with link check results
         if: github.event_name == 'pull_request' && always()
         uses: actions/github-script@v7
         with:
           script: |
+            const fs = require('fs');
+            let body = 'Link check completed!';
+            if (fs.existsSync('lychee-report.md')) {
+              body = fs.readFileSync('lychee-report.md', 'utf8');
+            }
             github.rest.issues.createComment({
               issue_number: context.issue.number,
               owner: context.repo.owner,
               repo: context.repo.repo,
-              body: '🔗 Link check completed! All internal links are working. Check the workflow logs for external link status.'
+              body: body
             })
