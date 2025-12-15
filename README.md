@@ -197,7 +197,7 @@ This project is open source and available under the MIT License.
 ## Contact
 
 **Hasintha Pasindu**
-- Website: [hasintha01.github.io](https://hasintha01.github.io)
+- Website: [hasinthapasindu.me](https://hasinthapasindu.me/)
 - Email: Hasinthapasindu20@gmail.com
 - LinkedIn: [linkedin.com/in/hasintha-pasindu](https://www.linkedin.com/in/hasintha-pasindu/)
 - GitHub: [@Hasintha01](https://github.com/Hasintha01)
