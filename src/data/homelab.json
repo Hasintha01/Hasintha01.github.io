@@ -3,71 +3,71 @@
   "services": [
     {
       "id": "service-1",
-      "name": "Zabbix",
-      "description": "Infrastructure and application monitoring",
-      "bgColor": "bg-teal-50"
+      "name": "Prometheus",
+      "description": "Metrics collection & time-series storage",
+      "bgColor": "bg-orange-50"
     },
     {
       "id": "service-2",
-      "name": "Prometheus + Grafana",
-      "description": "System & application monitoring",
+      "name": "Grafana",
+      "description": "Visualization & alerting dashboards",
       "bgColor": "bg-pink-50"
     },
     {
       "id": "service-3",
-      "name": "Jenkins / GitLab Runner",
-      "description": "CI/CD pipelines for automation",
-      "bgColor": "bg-yellow-50"
-    },
-    {
-      "id": "service-4",
-      "name": "Nginx / Traefik",
-      "description": "Reverse proxy & load balancing",
-      "bgColor": "bg-purple-50"
-    },
-    {
-      "id": "service-5",
-      "name": "PostgreSQL / MongoDB",
-      "description": "Database servers for projects",
+      "name": "Node Exporter",
+      "description": "System metrics from endpoint servers",
       "bgColor": "bg-blue-50"
     },
     {
-      "id": "service-6",
-      "name": "Vault / Wireguard VPN",
-      "description": "Secrets management & secure access",
+      "id": "service-4",
+      "name": "PostgreSQL",
+      "description": "External database for Grafana",
+      "bgColor": "bg-indigo-50"
+    },
+    {
+      "id": "service-5",
+      "name": "Alertmanager",
+      "description": "Alert routing & notification (planned)",
       "bgColor": "bg-red-50"
+    },
+    {
+      "id": "service-6",
+      "name": "Grafana Loki",
+      "description": "Centralized logging (planned)",
+      "bgColor": "bg-purple-50"
     }
   ],
   "architecture": [
     {
-      "label": "Hardware",
-      "description": "Dell PowerEdge R720 / Raspberry Pi Cluster"
+      "label": "Endpoint Servers",
+      "description": "Ubuntu VMs running Node Exporter for metrics collection"
     },
     {
-      "label": "Virtualization",
-      "description": "Proxmox VE for VM/Container management"
+      "label": "Monitoring Server",
+      "description": "Prometheus & Grafana for metrics storage and visualization"
     },
     {
-      "label": "Networking",
-      "description": "pfSense firewall, VLANs, VPN access"
+      "label": "Database Server",
+      "description": "PostgreSQL for Grafana metadata & dashboards"
     },
     {
-      "label": "Storage",
-      "description": "TrueNAS for centralized storage + automated backups"
+      "label": "Security & Network",
+      "description": "systemd services, firewall rules, network isolation"
     }
   ],
   "stats": [
     {
-      "value": "5+",
-      "label": "VMs Running"
+      "value": "3",
+      "label": "Server Roles"
     },
     {
-      "value": "12+",
-      "label": "Services Deployed"
+      "value": "VM-Based",
+      "label": "Architecture"
     },
     {
-      "value": "99.9%",
-      "label": "Uptime Target"
+      "value": "Production",
+      "label": "Grade Stack"
     }
   ]
 }

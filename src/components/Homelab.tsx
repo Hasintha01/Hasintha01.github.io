@@ -6,25 +6,24 @@
 
 import React from 'react';
 import Server from 'lucide-react/dist/esm/icons/server';
-import Cog from 'lucide-react/dist/esm/icons/cog';
-import GitBranch from 'lucide-react/dist/esm/icons/git-branch';
-import Globe from 'lucide-react/dist/esm/icons/globe';
+import Activity from 'lucide-react/dist/esm/icons/activity';
+import BarChart from 'lucide-react/dist/esm/icons/bar-chart-2';
 import Database from 'lucide-react/dist/esm/icons/database';
-import Lock from 'lucide-react/dist/esm/icons/lock';
-import HardDrive from 'lucide-react/dist/esm/icons/hard-drive';
+import Bell from 'lucide-react/dist/esm/icons/bell';
+import FileText from 'lucide-react/dist/esm/icons/file-text';
 import Settings from 'lucide-react/dist/esm/icons/settings';
 import type { HomelabService } from '../types';
 
 // Icon mapping for homelab services
 const homelabIconMap: Record<string, React.ReactNode> = {
-  'service-1': <Cog size={32} strokeWidth={3} />,           // Kubernetes
-  'service-2': <Server size={32} strokeWidth={3} />,        // Prometheus/Grafana
-  'service-3': <GitBranch size={32} strokeWidth={3} />,     // Jenkins/GitLab
-  'service-4': <Globe size={32} strokeWidth={3} />,         // Nginx/Traefik
-  'service-5': <Database size={32} strokeWidth={3} />,      // Database
-  'service-6': <Lock size={32} strokeWidth={3} />,          // Security
-  'service-7': <HardDrive size={32} strokeWidth={3} />,     // Storage
-  'service-8': <Settings size={32} strokeWidth={3} />,      // Settings
+  'service-1': <Activity size={32} strokeWidth={3} />,      // Prometheus - metrics/activity
+  'service-2': <BarChart size={32} strokeWidth={3} />,      // Grafana - visualization
+  'service-3': <Server size={32} strokeWidth={3} />,        // Node Exporter - server metrics
+  'service-4': <Database size={32} strokeWidth={3} />,      // PostgreSQL
+  'service-5': <Bell size={32} strokeWidth={3} />,          // Alertmanager - notifications
+  'service-6': <FileText size={32} strokeWidth={3} />,      // Grafana Loki - logs
+  'service-7': <Settings size={32} strokeWidth={3} />,      // Future services
+  'service-8': <Settings size={32} strokeWidth={3} />,      // Future services
 };
 
 interface HomelabProps {
@@ -52,7 +51,7 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
             <div>
               <h3 className="text-xl sm:text-2xl md:text-3xl font-black mb-1 sm:mb-2">ARCHITECTURE</h3>
               <p className="text-xs sm:text-sm text-gray-700">
-                Self-hosted infrastructure for learning and experimentation
+                Production-style monitoring & observability stack on Ubuntu VMs
               </p>
             </div>
           </div>
@@ -60,25 +59,25 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
             <li className="flex items-start gap-2 sm:gap-3">
               <span className="text-lg sm:text-xl shrink-0">•</span>
               <span>
-                <strong>Hardware:</strong> Dell PowerEdge R720 / Raspberry Pi Cluster
+                <strong>Endpoint Servers:</strong> Ubuntu VMs running Node Exporter for metrics collection
               </span>
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
               <span className="text-lg sm:text-xl shrink-0">•</span>
               <span>
-                <strong>Virtualization:</strong> Proxmox VE for VM/Container management
+                <strong>Monitoring Server:</strong> Prometheus & Grafana for metrics storage and visualization
               </span>
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
               <span className="text-lg sm:text-xl shrink-0">•</span>
               <span>
-                <strong>Networking:</strong> pfSense firewall, VLANs, VPN access
+                <strong>Database Server:</strong> PostgreSQL for Grafana metadata & dashboards
               </span>
             </li>
             <li className="flex items-start gap-2 sm:gap-3">
               <span className="text-lg sm:text-xl shrink-0">•</span>
               <span>
-                <strong>Storage:</strong> TrueNAS for centralized storage + automated backups
+                <strong>Security & Network:</strong> systemd services, firewall rules, network isolation
               </span>
             </li>
           </ul>
@@ -89,16 +88,16 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
           <h3 className="text-xl sm:text-2xl font-black mb-4 sm:mb-5 md:mb-6">STATS</h3>
           <div className="space-y-3 sm:space-y-4">
             <div>
-              <div className="text-3xl sm:text-4xl font-black">5+</div>
-              <div className="text-xs sm:text-sm font-semibold">VMs Running</div>
+              <div className="text-3xl sm:text-4xl font-black">3</div>
+              <div className="text-xs sm:text-sm font-semibold">Server Roles</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-black">12+</div>
-              <div className="text-xs sm:text-sm font-semibold">Services Deployed</div>
+              <div className="text-2xl sm:text-3xl font-black">VM-Based</div>
+              <div className="text-xs sm:text-sm font-semibold">Architecture</div>
             </div>
             <div>
-              <div className="text-3xl sm:text-4xl font-black">99.9%</div>
-              <div className="text-xs sm:text-sm font-semibold">Uptime Target</div>
+              <div className="text-2xl sm:text-3xl font-black">Production</div>
+              <div className="text-xs sm:text-sm font-semibold">Grade Stack</div>
             </div>
           </div>
         </div>

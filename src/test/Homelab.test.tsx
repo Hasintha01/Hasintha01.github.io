@@ -13,16 +13,20 @@ describe('Homelab Component', () => {
     {
       id: 'service-1',
       name: 'Prometheus',
-      icon: 'activity',
-      description: 'Metrics collection and alerting system',
-      bgColor: 'bg-orange-400',
+      description: 'Metrics collection & time-series storage',
+      bgColor: 'bg-orange-50',
     },
     {
       id: 'service-2',
       name: 'Grafana',
-      icon: 'bar-chart',
-      description: 'Visualization and analytics platform',
-      bgColor: 'bg-purple-400',
+      description: 'Visualization & alerting dashboards',
+      bgColor: 'bg-pink-50',
+    },
+    {
+      id: 'service-3',
+      name: 'Node Exporter',
+      description: 'System metrics from endpoint servers',
+      bgColor: 'bg-blue-50',
     },
   ];
 
@@ -35,12 +39,13 @@ describe('Homelab Component', () => {
     render(<Homelab services={mockServices} />);
     expect(screen.getByText('Prometheus')).toBeInTheDocument();
     expect(screen.getByText('Grafana')).toBeInTheDocument();
+    expect(screen.getByText('Node Exporter')).toBeInTheDocument();
   });
 
   it('renders service descriptions', () => {
     render(<Homelab services={mockServices} />);
-    expect(screen.getByText(/Metrics collection and alerting system/i)).toBeInTheDocument();
-    expect(screen.getByText(/Visualization and analytics platform/i)).toBeInTheDocument();
+    expect(screen.getByText(/Metrics collection & time-series storage/i)).toBeInTheDocument();
+    expect(screen.getByText(/Visualization & alerting dashboards/i)).toBeInTheDocument();
   });
 
   it('renders homelab architecture section', () => {
@@ -56,10 +61,12 @@ describe('Homelab Component', () => {
 
   it('service cards have correct background colors', () => {
     const { container } = render(<Homelab services={mockServices} />);
-    const orangeCard = container.querySelector('.bg-orange-400');
-    const purpleCard = container.querySelector('.bg-purple-400');
+    const orangeCard = container.querySelector('.bg-orange-50');
+    const pinkCard = container.querySelector('.bg-pink-50');
+    const blueCard = container.querySelector('.bg-blue-50');
     expect(orangeCard).toBeInTheDocument();
-    expect(purpleCard).toBeInTheDocument();
+    expect(pinkCard).toBeInTheDocument();
+    expect(blueCard).toBeInTheDocument();
   });
 
   it('has proper section styling', () => {
@@ -72,6 +79,7 @@ describe('Homelab Component', () => {
     render(<Homelab services={mockServices} />);
     expect(screen.getByText('Prometheus')).toBeInTheDocument();
     expect(screen.getByText('Grafana')).toBeInTheDocument();
+    expect(screen.getByText('Node Exporter')).toBeInTheDocument();
   });
 
   it('has grid layout for services', () => {
