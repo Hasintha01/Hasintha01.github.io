@@ -9,6 +9,9 @@ on:
   # Allow manual trigger
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   performance-audit:
     name: Generate Performance Report
@@ -29,6 +32,12 @@ jobs:
       
       - name: Build site
         run: npm run build
+      
+      - name: Serve site
+        run: npx http-server ./dist -p 8080 &
+      
+      - name: Wait for server
+        run: npx wait-on http://localhost:8080
       
       - name: Run Lighthouse audit
         uses: treosh/lighthouse-ci-action@v11
