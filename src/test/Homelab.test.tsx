@@ -50,7 +50,7 @@ describe('Homelab Component', () => {
 
   it('renders homelab architecture section', () => {
     render(<Homelab services={mockServices} />);
-    expect(screen.getByText(/ARCHITECTURE/i)).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: /ARCHITECTURE/i })).toBeInTheDocument();
   });
 
   it('has proper section ID for navigation', () => {
