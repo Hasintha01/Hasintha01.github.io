@@ -138,8 +138,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add .monitoring/performance.log .monitoring/performance-report.md
-          git diff --quiet && git diff --staged --quiet || git commit -m "Weekly performance report - $(date -u +"%Y-%m-%d")"
-          git push
+          git diff --quiet && git diff --staged --quiet || {
+            git commit -m "Weekly performance report - $(date -u +"%Y-%m-%d")"
+            git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git HEAD:main
+          }
       
       - name: Create performance summary
         run: |
