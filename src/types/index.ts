@@ -45,7 +45,7 @@ export interface Article {
 export interface HomelabService {
   id: string;
   name: string;
-  icon: string;
+  icon?: string;
   description: string;
   bgColor: string;
 }
@@ -57,7 +57,7 @@ export interface HomelabService {
 export interface Technology {
   id: string;
   name: string;
-  icon: string;
+  icon?: string;
   category: string;
 }
 
