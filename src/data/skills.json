@@ -4,37 +4,31 @@
     {
       "id": "tech-1",
       "name": "Linux",
-      "icon": "🐧",
       "category": "Operating System"
     },
     {
       "id": "tech-2",
       "name": "Docker",
-      "icon": "🐳",
       "category": "Containerization"
     },
     {
       "id": "tech-3",
       "name": "AWS",
-      "icon": "☁️",
       "category": "Cloud Platform"
     },
     {
       "id": "tech-4",
       "name": "Zabbix",
-      "icon": "📈",
       "category": "Monitoring"
     },
     {
       "id": "tech-5",
       "name": "Prometheus",
-      "icon": "📊",
       "category": "Monitoring"
     },
     {
       "id": "tech-6",
       "name": "Terraform",
-      "icon": "🔧",
       "category": "IaC"
     }
   ],

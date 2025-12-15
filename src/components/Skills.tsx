@@ -8,7 +8,7 @@ import React from 'react';
 import Server from 'lucide-react/dist/esm/icons/server';
 import Container from 'lucide-react/dist/esm/icons/container';
 import Cloud from 'lucide-react/dist/esm/icons/cloud';
-import Cog from 'lucide-react/dist/esm/icons/cog';
+import BarChart from 'lucide-react/dist/esm/icons/bar-chart';
 import Activity from 'lucide-react/dist/esm/icons/activity';
 import Wrench from 'lucide-react/dist/esm/icons/wrench';
 import Laptop from 'lucide-react/dist/esm/icons/laptop';
@@ -19,7 +19,7 @@ const iconMap: Record<string, React.ReactNode> = {
   'tech-1': <Server size={40} strokeWidth={3} />,      // Linux
   'tech-2': <Container size={40} strokeWidth={3} />,   // Docker
   'tech-3': <Cloud size={40} strokeWidth={3} />,       // AWS
-  'tech-4': <Cog size={40} strokeWidth={3} />,         // K8s
+  'tech-4': <BarChart size={40} strokeWidth={3} />,    // Zabbix
   'tech-5': <Activity size={40} strokeWidth={3} />,    // Prometheus
   'tech-6': <Wrench size={40} strokeWidth={3} />,      // Terraform
 };

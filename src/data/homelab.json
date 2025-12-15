@@ -4,42 +4,36 @@
     {
       "id": "service-1",
       "name": "Zabbix",
-      "icon": "monitoring",
       "description": "Infrastructure and application monitoring",
       "bgColor": "bg-teal-50"
     },
     {
       "id": "service-2",
       "name": "Prometheus + Grafana",
-      "icon": "monitoring",
       "description": "System & application monitoring",
       "bgColor": "bg-pink-50"
     },
     {
       "id": "service-3",
       "name": "Jenkins / GitLab Runner",
-      "icon": "cicd",
       "description": "CI/CD pipelines for automation",
       "bgColor": "bg-yellow-50"
     },
     {
       "id": "service-4",
       "name": "Nginx / Traefik",
-      "icon": "proxy",
       "description": "Reverse proxy & load balancing",
       "bgColor": "bg-purple-50"
     },
     {
       "id": "service-5",
       "name": "PostgreSQL / MongoDB",
-      "icon": "database",
       "description": "Database servers for projects",
       "bgColor": "bg-blue-50"
     },
     {
       "id": "service-6",
       "name": "Vault / Wireguard VPN",
-      "icon": "security",
       "description": "Secrets management & secure access",
       "bgColor": "bg-red-50"
     }
