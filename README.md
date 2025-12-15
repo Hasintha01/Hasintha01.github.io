@@ -60,7 +60,7 @@ This portfolio includes a **complete monitoring stack** as a DevOps showcase:
 
 ### Learn More
 - [Architecture & Setup](MONITORING.md) - Complete technical documentation
-- [Monitoring Data](.monitoring/) - Historical uptime and performance logs
+- [Monitoring Reports](.monitoring/) - Live uptime and performance reports
 - [Live Workflows](https://github.com/Hasintha01/Hasintha01.github.io/actions) - See it running in real-time
 
 ---
@@ -172,7 +172,7 @@ The site automatically deploys to GitHub Pages on every push to `main`:
 | Best Practices | 88% | ≥75% |
 | SEO | 92% | ≥85% |
 
-*Scores are tracked weekly and stored in [.monitoring/performance.log](.monitoring/performance.log)*
+View detailed reports: [Performance Report](.monitoring/performance-report.md) | [Uptime Report](.monitoring/uptime-report.md)
 
 ---
 
@@ -206,4 +206,4 @@ This project is open source and available under the MIT License.
 
 **Built by Hasintha Pasindu**
 
-*Last Updated: December 4, 2025*
+*Last Updated: December 15, 2025*
