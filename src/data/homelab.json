@@ -3,9 +3,9 @@
   "services": [
     {
       "id": "service-1",
-      "name": "Kubernetes (K3s)",
-      "icon": "kubernetes",
-      "description": "Container orchestration for microservices",
+      "name": "Zabbix",
+      "icon": "monitoring",
+      "description": "Infrastructure and application monitoring",
       "bgColor": "bg-teal-50"
     },
     {

@@ -21,9 +21,9 @@
     },
     {
       "id": "tech-4",
-      "name": "K8s",
-      "icon": "☸️",
-      "category": "Orchestration"
+      "name": "Zabbix",
+      "icon": "📈",
+      "category": "Monitoring"
     },
     {
       "id": "tech-5",
