@@ -115,7 +115,7 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {services.map((service) => {
-            const iconElement = homelabIconMap[service.id] || service.icon;
+            const iconElement = homelabIconMap[service.id];
             return (
               <div 
                 key={service.id} 

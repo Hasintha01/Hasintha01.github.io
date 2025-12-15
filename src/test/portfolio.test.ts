@@ -59,7 +59,6 @@ describe('Portfolio Data Module', () => {
       technologies.forEach((tech) => {
         expect(tech).toHaveProperty('id');
         expect(tech).toHaveProperty('name');
-        expect(tech).toHaveProperty('icon');
         expect(tech).toHaveProperty('category');
       });
     });
@@ -117,7 +116,6 @@ describe('Portfolio Data Module', () => {
         expect(service).toHaveProperty('id');
         expect(service).toHaveProperty('name');
         expect(service).toHaveProperty('description');
-        expect(service).toHaveProperty('icon');
         expect(service).toHaveProperty('bgColor');
       });
     });
