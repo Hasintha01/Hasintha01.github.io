@@ -41,27 +41,9 @@
 
 ---
 
-## Monitoring Infrastructure (Featured Project)
+## Monitoring
 
-This portfolio includes a **complete monitoring stack** as a DevOps showcase:
-
-### What's Monitored
-- **Uptime Tracking** - Automated health checks every 6 hours with GitHub Issues alerts
-- **Performance Auditing** - Weekly Lighthouse CI reports with trend analysis  
-- **Real User Monitoring** - Web Vitals (LCP, FID, CLS) from actual visitors
-- **Quality Gates** - CI/CD pipelines block bad deploys (tests, links, performance)
-- **Cost** - $0/month using GitHub Actions and open-source tools
-
-### Technical Highlights
-- Custom GitHub Actions workflows for observability
-- Automated alerting and incident response
-- Time-series data storage in git
-- **Plausible Analytics integration** - Privacy-friendly Web Vitals tracking
-
-### Learn More
-- [Architecture & Setup](MONITORING.md) - Complete technical documentation
-- [Monitoring Reports](.monitoring/) - Live uptime and performance reports
-- [Live Workflows](https://github.com/Hasintha01/Hasintha01.github.io/actions) - See it running in real-time
+This portfolio includes automated monitoring with uptime tracking, performance audits, and real user metrics. See [MONITORING.md](MONITORING.md) for details.
 
 ---
 
@@ -176,18 +158,6 @@ View detailed reports: [Performance Report](.monitoring/performance-report.md) |
 
 ---
 
-## Contributing
-
-This is a personal portfolio, but suggestions are welcome!
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
----
-
 ## License
 
 This project is open source and available under the MIT License.
@@ -206,4 +176,4 @@ This project is open source and available under the MIT License.
 
 **Built by Hasintha Pasindu**
 
-*Last Updated: December 15, 2025*
+*Last Updated: December 19, 2025*
