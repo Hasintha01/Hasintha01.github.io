@@ -89,22 +89,10 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="border-4 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold sm:hover:bg-white sm:hover:text-black active:bg-black active:text-white transition-colors inline-block text-center"
+                      className="border-4 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold sm:hover:bg-white sm:hover:text-black active:bg-gray-900 active:text-white transition-colors inline-block text-center"
                     >
                       VIEW ON GITHUB →
                     </a>
-
-                    {/* Demo button (if available) */}
-                    {project.demoUrl && (
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="border-4 border-black bg-white text-black px-4 sm:px-6 py-2 font-bold sm:hover:bg-gray-100 transition-colors inline-block text-center"
-                      >
-                        LIVE DEMO →
-                      </a>
-                    )}
                   </div>
                 </div>
               </div>
