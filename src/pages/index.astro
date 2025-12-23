@@ -44,7 +44,8 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- Primary Meta Tags -->
@@ -57,7 +58,6 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <link rel="canonical" href={canonicalURL} />
     
     <!-- Language & Geographic Targeting -->
-    <html lang="en" />
     <meta name="language" content="English" />
     
     <!-- Open Graph / Facebook -->
@@ -191,28 +191,28 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
 
     <main id="main-content">
     <!-- Hero Section -->
-    <Hero client:visible />
+    <Hero />
 
     <!-- About Me Section -->
-    <About client:visible interests={interests} />
+    <About interests={interests} />
 
     <!-- Skills & Tools Section -->
-    <Skills client:visible technologies={technologies} expertise={expertise} />
+    <Skills technologies={technologies} expertise={expertise} />
 
     <!-- Featured Projects Section -->
-    <Projects client:visible projects={projects} />
+    <Projects projects={projects} />
 
     <!-- Homelab Showcase Section -->
-    <Homelab client:visible services={homelabServices} />
+    <Homelab services={homelabServices} />
 
     <!-- Blog Section -->
-    <Blog client:visible articles={articles} />
+    <Blog articles={articles} />
 
     <!-- Philosophy Section -->
-    <Philosophy client:visible principles={principles} />
+    <Philosophy principles={principles} />
 
     <!-- Contact Section -->
-    <Contact client:visible contactLinks={contactLinks} />
+    <Contact contactLinks={contactLinks} />
     </main>
 
     <!-- Footer -->

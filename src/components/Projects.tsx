@@ -93,6 +93,18 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                     >
                       VIEW ON GITHUB →
                     </a>
+                    
+                    {/* Live Demo button (only if demoUrl exists) */}
+                    {project.demoUrl && (
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border-4 border-black bg-yellow-400 text-black px-4 sm:px-6 py-2 font-bold sm:hover:bg-white active:bg-yellow-300 transition-colors inline-block text-center"
+                      >
+                        LIVE DEMO →
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>
