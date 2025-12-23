@@ -33,9 +33,11 @@ import {
 } from '../data/portfolio';
 
 // Page metadata
-const pageTitle = 'Hasintha Pasindu — Infrastructure & Automation Portfolio';
+const pageTitle = 'Hasintha Pasindu Madhuwantha — Infrastructure & Automation Engineer Portfolio';
 const pageDescription =
-  'Portfolio of Hasintha Pasindu - Building reliable infrastructure through automation, monitoring, and cloud technologies.';
+  'Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer specializing in CI/CD pipelines, Kubernetes, Docker, AWS cloud infrastructure, system monitoring, and DevOps practices. Building reliable, scalable infrastructure through automation.';
+const canonicalURL = 'https://hasinthapasindu.me';
+const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
 ---
 
 <!doctype html>
@@ -45,28 +47,52 @@ const pageDescription =
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     
-    <!-- SEO Meta Tags -->
+    <!-- Primary Meta Tags -->
     <title>{pageTitle}</title>
+    <meta name="title" content={pageTitle} />
     <meta name="description" content={pageDescription} />
-    <meta name="keywords" content="Infrastructure Automation, CI/CD Pipelines, System Monitoring, Kubernetes, Docker, AWS, Cloud Infrastructure, DevOps, Production Support" />
-    <meta name="author" content="Hasintha Pasindu" />
+    <meta name="keywords" content="Hasintha Pasindu Madhuwantha, Infrastructure Automation, CI/CD Pipelines, System Monitoring, Kubernetes, Docker, AWS, Cloud Infrastructure, DevOps, Production Support, Site Reliability Engineering, GitOps, Terraform, Ansible, Prometheus, Grafana" />
+    <meta name="author" content="Hasintha Pasindu Madhuwantha" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={canonicalURL} />
     
-    <!-- Open Graph / Social Media -->
+    <!-- Language & Geographic Targeting -->
+    <html lang="en" />
+    <meta name="language" content="English" />
+    
+    <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL} />
     <meta property="og:title" content={pageTitle} />
     <meta property="og:description" content={pageDescription} />
-    <meta property="og:url" content="https://hasintha01.github.io" />
+    <meta property="og:image" content={siteImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer" />
+    <meta property="og:site_name" content="Hasintha Pasindu Madhuwantha Portfolio" />
+    <meta property="og:locale" content="en_US" />
     
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content={canonicalURL} />
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
+    <meta name="twitter:image" content={siteImage} />
+    <meta name="twitter:image:alt" content="Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer" />
+    <meta name="twitter:creator" content="@hasinthapasindu" />
     
-    <!-- Theme Color for Mobile Browsers -->
+    <!-- Additional SEO Meta Tags -->
+    <meta name="application-name" content="Hasintha Pasindu Madhuwantha Portfolio" />
+    <meta name="apple-mobile-web-app-title" content="Hasintha Portfolio" />
     <meta name="theme-color" content="#FDE047" />
+    <meta name="format-detection" content="telephone=no" />
     
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="/images/H Letter.png" />
+    <link rel="apple-touch-icon" href="/images/H Letter.png" />
+    
+    <!-- Humans.txt -->
+    <link rel="author" href="/humans.txt" />
     
     <!-- DNS Prefetch & Preconnect for Performance -->
     <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
@@ -74,8 +100,81 @@ const pageDescription =
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
+    <!-- Structured Data - JSON-LD for Person & ProfessionalService -->
+    <script type="application/ld+json" set:html={JSON.stringify({
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Person",
+          "@id": `${canonicalURL}/#person`,
+          "name": "Hasintha Pasindu Madhuwantha",
+          "givenName": "Hasintha Pasindu",
+          "familyName": "Madhuwantha",
+          "alternateName": ["Hasintha Pasindu", "Hasintha Madhuwantha"],
+          "url": canonicalURL,
+          "image": siteImage,
+          "jobTitle": "Infrastructure & Automation Engineer",
+          "worksFor": {
+            "@type": "Organization",
+            "name": "Freelance"
+          },
+          "knowsAbout": [
+            "Infrastructure Automation",
+            "CI/CD Pipelines",
+            "DevOps",
+            "Kubernetes",
+            "Docker",
+            "AWS",
+            "Cloud Infrastructure",
+            "System Monitoring",
+            "Site Reliability Engineering",
+            "GitOps",
+            "Terraform",
+            "Ansible"
+          ],
+          "sameAs": [
+            "https://github.com/Hasintha01",
+            "https://linkedin.com/in/hasintha-pasindu"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": `${canonicalURL}/#website`,
+          "url": canonicalURL,
+          "name": "Hasintha Pasindu Madhuwantha Portfolio",
+          "description": pageDescription,
+          "publisher": {
+            "@id": `${canonicalURL}/#person`
+          },
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "WebPage",
+          "@id": `${canonicalURL}/#webpage`,
+          "url": canonicalURL,
+          "name": pageTitle,
+          "isPartOf": {
+            "@id": `${canonicalURL}/#website`
+          },
+          "about": {
+            "@id": `${canonicalURL}/#person`
+          },
+          "description": pageDescription,
+          "inLanguage": "en-US"
+        },
+        {
+          "@type": "ProfilePage",
+          "dateCreated": "2024-01-01T00:00:00+00:00",
+          "dateModified": new Date().toISOString(),
+          "mainEntity": {
+            "@id": `${canonicalURL}/#person`
+          }
+        }
+      ]
+    })} />
+    
     <!-- Plausible Analytics - Privacy-friendly, GDPR compliant -->
-    <script defer data-domain="hasintha01.github.io" src="https://plausible.io/js/script.js"></script>
+    <script defer data-domain="hasinthapasindu.me" src="https://plausible.io/js/script.js"></script>
     
     <!-- Web Vitals Monitoring -->
     <script is:inline src="/web-vitals.js" defer></script>

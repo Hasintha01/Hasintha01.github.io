@@ -2,8 +2,8 @@
   "name": "hasintha-portfolio",
   "type": "module",
   "version": "1.0.0",
-  "description": "Neo-brutalist portfolio site for Hasintha Pasindu - Infrastructure & Automation",
-  "author": "Hasintha Pasindu",
+  "description": "Neo-brutalist portfolio site for Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer",
+  "author": "Hasintha Pasindu Madhuwantha",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",

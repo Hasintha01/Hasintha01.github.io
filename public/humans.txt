@@ -1,0 +1,15 @@
+/* TEAM */
+Developer: Hasintha Pasindu Madhuwantha
+Site: https://hasinthapasindu.me
+Location: Sri Lanka
+
+/* THANKS */
+Built with: Astro, React, TypeScript, TailwindCSS
+
+/* SITE */
+Last update: 2025-12-23
+Standards: HTML5, CSS3, ES2022
+Components: React 19, Lucide Icons
+Hosting: GitHub Pages
+Domain: hasinthapasindu.me
+Analytics: Plausible Analytics
