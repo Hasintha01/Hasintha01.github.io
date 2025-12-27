@@ -7,7 +7,7 @@
 
 > **Infrastructure & Automation Portfolio** — Building reliable systems through automation, monitoring, and cloud technologies.
 
-**Live Site:** [hasintha01.github.io](https://hasintha01.github.io)
+**Live Site:** [hasinthapasindu.me](https://hasinthapasindu.me)
 
 **Notable Feature:** This portfolio practices what it preaches—it includes [enterprise-grade monitoring infrastructure](MONITORING.md) as a working demonstration of DevOps principles.
 
@@ -141,7 +141,7 @@ The site automatically deploys to GitHub Pages on every push to `main`:
 3. **Audit** - Lighthouse performance check
 4. **Deploy** - Publishes to GitHub Pages
 
-**Deployment URL:** [hasintha01.github.io](https://hasintha01.github.io)
+**Deployment URL:** [hasinthapasindu.me](https://hasinthapasindu.me)
 
 ---
 
@@ -176,4 +176,4 @@ This project is open source and available under the MIT License.
 
 **Built by Hasintha Pasindu**
 
-*Last Updated: December 19, 2025*
+*Last Updated: December 27, 2025*
