@@ -1,0 +1,345 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - link "SKIP TO CONTENT →" [ref=e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - navigation [ref=e4]:
+    - generic [ref=e5]:
+      - link "HASINTHA PASINDU" [ref=e6] [cursor=pointer]:
+        - /url: "#hero"
+      - button "Open menu" [ref=e7]:
+        - img [ref=e8]
+  - main [ref=e9]:
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - heading "BUILD RESILIENT INFRASTRUCTURE & AUTOMATED SYSTEMS" [level=1] [ref=e13]
+        - paragraph [ref=e14]: Automating infrastructure, monitoring systems, and keeping services running.
+        - link "Explore my projects on GitHub" [ref=e15] [cursor=pointer]:
+          - /url: https://github.com/Hasintha01
+          - text: EXPLORE PROJECTS →
+      - generic [ref=e16]:
+        - img "Hasintha Pasindu - Infrastructure and Automation Engineer" [ref=e20]
+        - generic [ref=e28]: ↑ 99.9% UPTIME
+    - generic [ref=e29]:
+      - heading "ABOUT ME" [level=2] [ref=e30]:
+        - img [ref=e32]
+        - text: ABOUT ME
+      - generic [ref=e35]:
+        - generic [ref=e36]:
+          - heading "MY STORY" [level=3] [ref=e37]
+          - paragraph [ref=e38]: I'm Hasintha Pasindu, passionate about building reliable systems and automating infrastructure. I focus on keeping services running smoothly, whether that's through CI/CD pipelines, monitoring, or cloud automation.
+          - paragraph [ref=e39]: My journey started with Linux system administration and evolved into cloud infrastructure, deployment automation, and system monitoring. I believe in learning by doing—building projects to solve real problems and keeping production systems healthy.
+        - generic [ref=e40]:
+          - heading "INTERESTS" [level=3] [ref=e41]
+          - generic [ref=e42]:
+            - generic [ref=e43]: Linux Systems
+            - generic [ref=e44]: Cloud Architecture
+            - generic [ref=e45]: Automation
+            - generic [ref=e46]: Observability
+            - generic [ref=e47]: Containerization
+            - generic [ref=e48]: CI/CD
+            - generic [ref=e49]: Technical Writing
+            - generic [ref=e50]: Continuous Learning
+    - generic [ref=e52]:
+      - heading "TECH STACK & EXPERTISE" [level=2] [ref=e53]:
+        - img [ref=e55]
+        - generic [ref=e58]: TECH STACK & EXPERTISE
+      - generic [ref=e59]:
+        - generic [ref=e60]:
+          - generic [ref=e62] [cursor=pointer]:
+            - img [ref=e64]
+            - generic [ref=e67]: Linux
+          - generic [ref=e69] [cursor=pointer]:
+            - img [ref=e71]
+            - generic [ref=e75]: Docker
+          - generic [ref=e77] [cursor=pointer]:
+            - img [ref=e79]
+            - generic [ref=e81]: AWS
+          - generic [ref=e83] [cursor=pointer]:
+            - img [ref=e85]
+            - generic [ref=e86]: Zabbix
+          - generic [ref=e88] [cursor=pointer]:
+            - img [ref=e90]
+            - generic [ref=e92]: Prometheus
+          - generic [ref=e94] [cursor=pointer]:
+            - img [ref=e96]
+            - generic [ref=e98]: Terraform
+        - list [ref=e100]:
+          - listitem [ref=e101]:
+            - generic [ref=e103]: CI/CD Pipeline Automation
+          - listitem [ref=e104]:
+            - generic [ref=e106]: Infrastructure as Code
+          - listitem [ref=e107]:
+            - generic [ref=e109]: System Monitoring & Logging
+          - listitem [ref=e110]:
+            - generic [ref=e112]: Cloud Deployments
+          - listitem [ref=e113]:
+            - generic [ref=e115]: Production Support & Troubleshooting
+          - listitem [ref=e116]:
+            - generic [ref=e118]: Linux System Administration
+    - generic [ref=e120]:
+      - heading "FEATURED PROJECTS" [level=2] [ref=e121]:
+        - img [ref=e123]
+        - text: FEATURED PROJECTS
+      - generic [ref=e125]:
+        - generic [ref=e127]:
+          - img [ref=e130]
+          - generic [ref=e135]:
+            - generic [ref=e136]: INFRASTRUCTURE
+            - heading "Weather Dashboard w/ DevOps" [level=3] [ref=e137]
+            - paragraph [ref=e138]: Multi-stage Docker builds with GitHub Actions CI/CD. Multi-platform container images with nginx reverse proxy. Includes API uptime monitoring and automated deployment.
+            - generic [ref=e139]:
+              - generic [ref=e140]: DOCKER
+              - generic [ref=e141]: GITHUB ACTIONS
+              - generic [ref=e142]: NGINX
+              - generic [ref=e143]: REACT
+            - link "VIEW ON GITHUB →" [ref=e145] [cursor=pointer]:
+              - /url: https://github.com/Hasintha01/typescript-app
+        - generic [ref=e147]:
+          - img [ref=e150]
+          - generic [ref=e154]:
+            - generic [ref=e155]: BACKEND
+            - heading "MERN Inventory System w/ DevOps" [level=3] [ref=e156]
+            - paragraph [ref=e157]: Full-stack inventory management with Docker and GitHub Actions CI/CD. Deployed to AWS EC2 with automated backups and monitoring. MongoDB backend with React frontend.
+            - generic [ref=e158]:
+              - generic [ref=e159]: NODE.JS
+              - generic [ref=e160]: MONGODB
+              - generic [ref=e161]: AWS EC2
+              - generic [ref=e162]: DOCKER
+            - link "VIEW ON GITHUB →" [ref=e164] [cursor=pointer]:
+              - /url: https://github.com/Hasintha01
+        - generic [ref=e166]:
+          - img [ref=e169]
+          - generic [ref=e171]:
+            - generic [ref=e172]: OBSERVABILITY
+            - heading "Portfolio Monitoring Infrastructure" [level=3] [ref=e173]
+            - paragraph [ref=e174]: Enterprise-grade monitoring for a static site using GitHub Actions. Automated uptime checks, performance auditing, Web Vitals tracking, and CI/CD quality gates. 100% free and open-source.
+            - generic [ref=e175]:
+              - generic [ref=e176]: GITHUB ACTIONS
+              - generic [ref=e177]: LIGHTHOUSE
+              - generic [ref=e178]: WEB VITALS
+              - generic [ref=e179]: CI/CD
+            - link "VIEW ON GITHUB →" [ref=e181] [cursor=pointer]:
+              - /url: https://github.com/Hasintha01/Hasintha01.github.io
+        - generic [ref=e183]:
+          - img [ref=e186]
+          - generic [ref=e188]:
+            - generic [ref=e189]: AUTOMATION
+            - heading "LogWatcher - Automated Log Monitoring" [level=3] [ref=e190]
+            - paragraph [ref=e191]: Real-time log monitoring system with automated alerting. Detects critical keywords, handles log rotation, and sends multi-channel notifications. Includes Flask dashboard for alert visualization and filtering.
+            - generic [ref=e192]:
+              - generic [ref=e193]: PYTHON
+              - generic [ref=e194]: FLASK
+              - generic [ref=e195]: MONITORING
+              - generic [ref=e196]: ALERTS
+            - link "VIEW ON GITHUB →" [ref=e198] [cursor=pointer]:
+              - /url: https://github.com/Hasintha01/logwatcher
+        - generic [ref=e200]:
+          - img [ref=e203]
+          - generic [ref=e205]:
+            - generic [ref=e206]: CLOUD ENGINEERING
+            - heading "CloudBackupAutomator - AWS S3 Backup Solution" [level=3] [ref=e207]
+            - paragraph [ref=e208]: Production-ready automated backup system with AES-256 encryption and incremental backups. Features interactive restore, progress tracking, and secure credential management. Designed for cron/Task Scheduler automation.
+            - generic [ref=e209]:
+              - generic [ref=e210]: PYTHON
+              - generic [ref=e211]: AWS S3
+              - generic [ref=e212]: BOTO3
+              - generic [ref=e213]: ENCRYPTION
+            - link "VIEW ON GITHUB →" [ref=e215] [cursor=pointer]:
+              - /url: https://github.com/Hasintha01/CloudBackupAutomator
+    - generic [ref=e216]:
+      - heading "HOMELAB SHOWCASE" [level=2] [ref=e217]:
+        - img [ref=e219]
+        - generic [ref=e222]: HOMELAB SHOWCASE
+      - generic [ref=e223]:
+        - generic [ref=e224]:
+          - generic [ref=e225]:
+            - img [ref=e227]
+            - generic [ref=e230]:
+              - heading "ARCHITECTURE" [level=3] [ref=e231]
+              - paragraph [ref=e232]: Production-style monitoring & observability stack on Ubuntu VMs
+          - list [ref=e233]:
+            - listitem [ref=e234]:
+              - generic [ref=e235]: •
+              - generic [ref=e236]:
+                - strong [ref=e237]: "Endpoint Servers:"
+                - text: Ubuntu VMs running Node Exporter for metrics collection
+            - listitem [ref=e238]:
+              - generic [ref=e239]: •
+              - generic [ref=e240]:
+                - strong [ref=e241]: "Monitoring Server:"
+                - text: Prometheus & Grafana for metrics storage and visualization
+            - listitem [ref=e242]:
+              - generic [ref=e243]: •
+              - generic [ref=e244]:
+                - strong [ref=e245]: "Database Server:"
+                - text: PostgreSQL for Grafana metadata & dashboards
+            - listitem [ref=e246]:
+              - generic [ref=e247]: •
+              - generic [ref=e248]:
+                - strong [ref=e249]: "Security & Network:"
+                - text: systemd services, firewall rules, network isolation
+        - generic [ref=e250]:
+          - heading "STATS" [level=3] [ref=e251]
+          - generic [ref=e252]:
+            - generic [ref=e253]:
+              - generic [ref=e254]: "3"
+              - generic [ref=e255]: Server Roles
+            - generic [ref=e256]:
+              - generic [ref=e257]: VM-Based
+              - generic [ref=e258]: Architecture
+            - generic [ref=e259]:
+              - generic [ref=e260]: Production
+              - generic [ref=e261]: Grade Stack
+      - generic [ref=e262]:
+        - heading "SERVICES RUNNING" [level=3] [ref=e263]:
+          - img [ref=e265]
+          - generic [ref=e268]: SERVICES RUNNING
+        - generic [ref=e269]:
+          - generic [ref=e270] [cursor=pointer]:
+            - generic [ref=e271]:
+              - img [ref=e273]
+              - generic [ref=e275]: Prometheus
+            - paragraph [ref=e276]: Metrics collection & time-series storage
+          - generic [ref=e277] [cursor=pointer]:
+            - generic [ref=e278]:
+              - img [ref=e280]
+              - generic [ref=e281]: Grafana
+            - paragraph [ref=e282]: Visualization & alerting dashboards
+          - generic [ref=e283] [cursor=pointer]:
+            - generic [ref=e284]:
+              - img [ref=e286]
+              - generic [ref=e289]: Node Exporter
+            - paragraph [ref=e290]: System metrics from endpoint servers
+          - generic [ref=e291] [cursor=pointer]:
+            - generic [ref=e292]:
+              - img [ref=e294]
+              - generic [ref=e298]: PostgreSQL
+            - paragraph [ref=e299]: External database for Grafana
+          - generic [ref=e300] [cursor=pointer]:
+            - generic [ref=e301]:
+              - img [ref=e303]
+              - generic [ref=e306]: Alertmanager
+            - paragraph [ref=e307]: Alert routing & notification (planned)
+          - generic [ref=e308] [cursor=pointer]:
+            - generic [ref=e309]:
+              - img [ref=e311]
+              - generic [ref=e314]: Grafana Loki
+            - paragraph [ref=e315]: Centralized logging (planned)
+        - button "VIEW DOCUMENTATION →" [ref=e317]
+    - generic [ref=e318]:
+      - heading "LATEST ARTICLES" [level=2] [ref=e319]:
+        - img [ref=e321]
+        - generic [ref=e326]: LATEST ARTICLES
+      - generic [ref=e328]:
+        - heading "WHAT I WRITE ABOUT" [level=3] [ref=e329]
+        - paragraph [ref=e330]: Sharing real-world DevOps experiences, infrastructure automation tips, and practical tutorials. I write about the tools and techniques that actually work in production environments.
+        - generic [ref=e331]:
+          - generic [ref=e332]:
+            - img [ref=e333]
+            - generic [ref=e336]: DevOps
+          - generic [ref=e337]:
+            - img [ref=e338]
+            - text: Infrastructure
+          - generic [ref=e343]:
+            - img [ref=e344]
+            - text: CI/CD
+          - generic [ref=e349]:
+            - img [ref=e350]
+            - text: Containers
+      - generic [ref=e355]:
+        - link "MEDIUM How Docker and CI/CD Saved Me From Deployment Nightmares Real-world lessons on killing the 'works on my machine' problem using containers and automated pipelines. 4 min read • Nov 2025" [ref=e356] [cursor=pointer]:
+          - /url: https://medium.com/@hasinthapasindu/how-docker-and-ci-cd-saved-me-from-deployment-nightmares-8231d7b850f5
+          - img [ref=e359]
+          - generic [ref=e361]: MEDIUM
+          - heading "How Docker and CI/CD Saved Me From Deployment Nightmares" [level=3] [ref=e362]
+          - paragraph [ref=e363]: Real-world lessons on killing the 'works on my machine' problem using containers and automated pipelines.
+          - generic [ref=e364]: 4 min read • Nov 2025
+        - link "MEDIUM How to Build Faster, Smaller, and Cleaner Docker Images How to reduce Docker image size and improve performance with lightweight base images, combined steps, caching, and multi-stage builds. 3 min read • Nov 2025" [ref=e365] [cursor=pointer]:
+          - /url: https://medium.com/@hasinthapasindu/how-to-build-faster-smaller-and-cleaner-docker-images-2d717243d537
+          - img [ref=e368]
+          - generic [ref=e373]: MEDIUM
+          - heading "How to Build Faster, Smaller, and Cleaner Docker Images" [level=3] [ref=e374]
+          - paragraph [ref=e375]: How to reduce Docker image size and improve performance with lightweight base images, combined steps, caching, and multi-stage builds.
+          - generic [ref=e376]: 3 min read • Nov 2025
+      - link "VIEW ALL ARTICLES →" [ref=e378] [cursor=pointer]:
+        - /url: https://medium.com/@hasinthapasindu
+    - generic [ref=e380]:
+      - heading "PRINCIPLES I WORK BY" [level=2] [ref=e381]:
+        - img [ref=e383]
+        - generic [ref=e387]: PRINCIPLES I WORK BY
+      - generic [ref=e388]:
+        - generic [ref=e389]:
+          - generic [ref=e391]:
+            - img [ref=e393]
+            - generic [ref=e396]:
+              - heading "AUTOMATE EVERYTHING" [level=3] [ref=e397]
+              - paragraph [ref=e398]: If you do it twice, automate it. Eliminate manual toil and let humans focus on creative problem-solving.
+          - generic [ref=e400]:
+            - img [ref=e402]
+            - generic [ref=e404]:
+              - heading "MONITOR & OBSERVE" [level=3] [ref=e405]
+              - paragraph [ref=e406]: You can't fix what you can't see. Build observability into everything from day one.
+          - generic [ref=e408]:
+            - img [ref=e410]
+            - generic [ref=e416]:
+              - heading "INFRASTRUCTURE AS CODE" [level=3] [ref=e417]
+              - paragraph [ref=e418]: Treat infrastructure like software. Version control, code review, and test everything.
+        - generic [ref=e419]:
+          - generic [ref=e420]: "\""
+          - paragraph [ref=e421]: Reliable systems come from clear ownership, ruthless automation, fast feedback loops and empathetic collaboration. I focus on reducing toil, surfacing signal early and making shipping safer & faster.
+          - generic [ref=e422]:
+            - generic [ref=e423]: HP
+            - generic [ref=e424]:
+              - generic [ref=e425]: Hasintha Pasindu
+              - generic [ref=e426]: Infrastructure & Automation
+    - generic [ref=e427]:
+      - img [ref=e430]
+      - heading "LET'S BUILD RELIABLE SYSTEMS TOGETHER" [level=2] [ref=e432]
+      - paragraph [ref=e433]: Ready to automate, monitor, and scale?
+      - generic [ref=e434]:
+        - link "Send me an email" [ref=e435] [cursor=pointer]:
+          - /url: mailto:Hasinthapasindu20@gmail.com
+          - text: GET IN TOUCH →
+        - link "View my GitHub profile" [ref=e436] [cursor=pointer]:
+          - /url: https://github.com/Hasintha01
+          - text: VIEW GITHUB →
+      - generic [ref=e437]:
+        - link "Email" [ref=e438] [cursor=pointer]:
+          - /url: mailto:Hasinthapasindu20@gmail.com
+          - img [ref=e440]
+          - text: Email
+        - link "LinkedIn" [ref=e443] [cursor=pointer]:
+          - /url: https://www.linkedin.com/in/hasintha-pasindu/
+          - img [ref=e445]
+          - text: LinkedIn
+        - link "Twitter" [ref=e449] [cursor=pointer]:
+          - /url: https://x.com/HasinthaPasind2
+          - img [ref=e451]
+          - text: Twitter
+        - link "GitHub" [ref=e453] [cursor=pointer]:
+          - /url: https://github.com/Hasintha01
+          - img [ref=e455]
+          - text: GitHub
+  - contentinfo [ref=e458]:
+    - generic [ref=e459]:
+      - generic [ref=e460]: HASINTHA PASINDU
+      - paragraph [ref=e461]: Infrastructure • Automation • Reliability
+      - generic [ref=e462]: "Last sync: December 11, 2025"
+  - generic [ref=e465]:
+    - button "Menu" [ref=e466]:
+      - img [ref=e468]
+      - generic: Menu
+    - button "Inspect" [ref=e472]:
+      - img [ref=e474]
+      - generic: Inspect
+    - button "Audit" [ref=e476]:
+      - generic [ref=e477]:
+        - img [ref=e478]
+        - img [ref=e481]
+      - generic: Audit
+    - button "Settings" [ref=e484]:
+      - img [ref=e486]
+      - generic: Settings
+```
