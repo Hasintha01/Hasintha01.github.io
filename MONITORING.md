@@ -6,8 +6,8 @@
 
 | Metric | Frequency | Storage |
 |--------|-----------|---------|
-| Site Availability | Every 6 hours | `.monitoring/uptime.log` |
-| Response Time | Every 6 hours | `.monitoring/uptime.log` |
+| Site Availability | Daily | `.monitoring/uptime.log` |
+| Response Time | Daily | `.monitoring/uptime.log` |
 | Lighthouse Scores | Weekly | `.monitoring/performance.log` |
 | Web Vitals (LCP/FID/CLS) | Real-time | Browser only |
 | Broken Links | Weekly | Workflow logs |

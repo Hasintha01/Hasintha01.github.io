@@ -2,9 +2,9 @@
 name: Uptime Monitor
 
 on:
-  # Run every 6 hours
+  # Run daily at midnight UTC
   schedule:
-    - cron: '0 */6 * * *'
+    - cron: '0 0 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
