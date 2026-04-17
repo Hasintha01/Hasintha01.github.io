@@ -89,13 +89,12 @@ test.describe('Footer Contact Info', () => {
     await expect(footer).toBeVisible();
   });
 
-  test('should have working footer links', async ({ page }) => {
+  test('should show footer branding and last sync metadata', async ({ page }) => {
     await page.goto('/');
-    
-    // Check footer has links
-    const footerLinks = page.locator('footer a');
-    const count = await footerLinks.count();
-    
-    expect(count).toBeGreaterThan(0);
+
+    const footer = page.locator('footer');
+    await expect(footer).toContainText('HASINTHA PASINDU');
+    await expect(footer).toContainText('Infrastructure • Automation • Reliability');
+    await expect(footer).toContainText(/Last sync:/i);
   });
 });
