@@ -101,7 +101,7 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     
     <!-- Structured Data - JSON-LD for Person & ProfessionalService -->
-    <script type="application/ld+json" set:html={JSON.stringify({
+    <script is:inline type="application/ld+json" set:html={JSON.stringify({
       "@context": "https://schema.org",
       "@graph": [
         {
@@ -174,7 +174,7 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     })} />
     
     <!-- Plausible Analytics - Privacy-friendly, GDPR compliant -->
-    <script defer data-domain="hasinthapasindu.me" src="https://plausible.io/js/script.js"></script>
+    <script is:inline defer data-domain="hasinthapasindu.me" src="https://plausible.io/js/script.js"></script>
     
     <!-- Web Vitals Monitoring -->
     <script is:inline src="/web-vitals.js" defer></script>

@@ -19,7 +19,7 @@ export default defineConfig({
   ],
 
   vite: {
-    plugins: [tailwindcss()],
+    plugins: [/** @type {any} */ (tailwindcss())],
     build: {
       // Enable minification and compression
       minify: 'terser',

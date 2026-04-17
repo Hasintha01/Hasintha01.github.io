@@ -20,7 +20,7 @@ test.describe('Contact Section', () => {
     await expect(contactSection.getByRole('heading')).toBeVisible();
   });
 
-  test('should have valid external contact links', async ({ page, context }) => {
+  test('should have valid external contact links', async ({ page }) => {
     // Get all links in contact section
     const contactLinks = page.locator('#contact a[href^="http"]');
     const count = await contactLinks.count();
