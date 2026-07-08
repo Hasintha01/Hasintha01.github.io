@@ -9,7 +9,7 @@
 
 **Live Site:** [hasinthapasindu.me](https://hasinthapasindu.me)
 
-**Notable Feature:** This portfolio practices what it preaches—it includes [enterprise-grade monitoring infrastructure](MONITORING.md) as a working demonstration of DevOps principles.
+**Notable Feature:** This portfolio includes a [reliability and observability pipeline](MONITORING.md) as a practical demonstration of DevOps principles.
 
 ---
 

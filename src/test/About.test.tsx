@@ -20,14 +20,14 @@ describe('About Component', () => {
     expect(screen.getByText(/ABOUT ME/i)).toBeInTheDocument();
   });
 
-  it('renders the MY STORY section', () => {
+  it('renders the MY DIRECTION section', () => {
     render(<About interests={mockInterests} />);
-    expect(screen.getByText(/MY STORY/i)).toBeInTheDocument();
+    expect(screen.getByText(/MY DIRECTION/i)).toBeInTheDocument();
   });
 
   it('renders the main description', () => {
     render(<About interests={mockInterests} />);
-    expect(screen.getByText(/building reliable systems/i)).toBeInTheDocument();
+    expect(screen.getByText(/DevOps Intern within Managed Infrastructure Services/i)).toBeInTheDocument();
   });
 
   it('renders all interests', () => {

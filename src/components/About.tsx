@@ -45,16 +45,21 @@ const About: React.FC<AboutProps> = ({ interests }) => {
       <div className="grid lg:grid-cols-2 gap-6 sm:gap-10 md:gap-16 items-start">
         {/* Left: Story card with rotation */}
         <div className="border-3 sm:border-4 border-black bg-yellow-100 p-5 sm:p-6 md:p-8 shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] -rotate-1">
-          <h3 className="text-xl sm:text-2xl font-black mb-3 sm:mb-4">MY STORY</h3>
+          <h3 className="text-xl sm:text-2xl font-black mb-3 sm:mb-4">MY DIRECTION</h3>
           <p className="text-sm sm:text-base text-gray-800 leading-relaxed mb-3 sm:mb-4">
-              I'm Hasintha Pasindu, passionate about building reliable systems and automating
-              infrastructure. I focus on keeping services running smoothly, whether that's through
-              CI/CD pipelines, monitoring, or cloud automation.
+            I&apos;m a DevOps Intern within Managed Infrastructure Services at MillenniumIT ESP and an
+            IT undergraduate at SLIIT. My current work involves cloud monitoring, alert
+            investigation, Linux troubleshooting, deployment support, operational documentation,
+            and internal engineering initiatives.
+          </p>
+          <p className="text-sm sm:text-base text-gray-800 leading-relaxed mb-3 sm:mb-4">
+            I enjoy understanding how systems behave in real environments, investigating failures,
+            reducing repetitive work through automation, and contributing to tools that improve
+            day-to-day engineering operations.
           </p>
           <p className="text-sm sm:text-base text-gray-800 leading-relaxed">
-            My journey started with Linux system administration and evolved into cloud
-              infrastructure, deployment automation, and system monitoring. I believe in learning by
-              doing—building projects to solve real problems and keeping production systems healthy.
+            I&apos;m working toward a career in DevOps, Cloud Engineering, and Platform Engineering,
+            with a long-term focus on automation, observability, and reliable infrastructure.
           </p>
         </div>
 

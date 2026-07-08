@@ -10,32 +10,31 @@ import Hero from '../components/Hero';
 describe('Hero Component', () => {
   it('renders the main headline', () => {
     render(<Hero />);
-    expect(screen.getByText(/BUILD RESILIENT INFRASTRUCTURE/i)).toBeInTheDocument();
+    expect(screen.getByText(/BUILDING RELIABLE CLOUD INFRASTRUCTURE/i)).toBeInTheDocument();
   });
 
   it('renders the subheadline', () => {
     render(<Hero />);
-    expect(screen.getByText(/Automating infrastructure, monitoring systems/i)).toBeInTheDocument();
+    expect(screen.getByText(/DevOps Intern at MillenniumIT ESP/i)).toBeInTheDocument();
   });
 
   it('renders the CTA button with correct link', () => {
     render(<Hero />);
-    const ctaButton = screen.getByRole('link', { name: /Explore my projects on GitHub/i });
+    const ctaButton = screen.getByRole('link', { name: /View my work/i });
     expect(ctaButton).toBeInTheDocument();
-    expect(ctaButton).toHaveAttribute('href', 'https://github.com/Hasintha01');
-    expect(ctaButton).toHaveAttribute('target', '_blank');
-    expect(ctaButton).toHaveAttribute('rel', 'noopener noreferrer');
+    expect(ctaButton).toHaveAttribute('href', '#projects');
   });
 
   it('renders the profile image with correct alt text', () => {
     render(<Hero />);
-    const profileImage = screen.getByAltText(/Hasintha Pasindu - Infrastructure and Automation Engineer/i);
+    const profileImage = screen.getByAltText(/Professional portrait of Hasintha Pasindu/i);
     expect(profileImage).toBeInTheDocument();
   });
 
-  it('renders the uptime stats card', () => {
+  it('renders the infrastructure focus card without an unsupported uptime claim', () => {
     render(<Hero />);
-    expect(screen.getByText(/99.9% UPTIME/i)).toBeInTheDocument();
+    expect(screen.getByText(/AWS · LINUX · OBSERVABILITY/i)).toBeInTheDocument();
+    expect(screen.queryByText(/99.9% UPTIME/i)).not.toBeInTheDocument();
   });
 
   it('profile image has proper loading attributes', () => {
@@ -66,7 +65,7 @@ describe('Hero Component', () => {
 
   it('CTA button has hover effects', () => {
     render(<Hero />);
-    const ctaButton = screen.getByRole('link', { name: /Explore my projects on GitHub/i });
+    const ctaButton = screen.getByRole('link', { name: /View my work/i });
     expect(ctaButton.className).toContain('hover:shadow');
     expect(ctaButton.className).toContain('transition-all');
   });

@@ -16,13 +16,6 @@
       "link": "https://www.linkedin.com/in/hasintha-pasindu/"
     },
     {
-      "id": "contact-3",
-      "label": "Twitter",
-      "icon": "twitter",
-      "bgColor": "bg-yellow-100",
-      "link": "https://x.com/HasinthaPasind2"
-    },
-    {
       "id": "contact-4",
       "label": "GitHub",
       "icon": "github",

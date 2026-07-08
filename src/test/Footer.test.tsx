@@ -22,7 +22,7 @@ describe('Footer Component', () => {
 
   it('renders Hasintha Pasindu name', () => {
     render(<Footer />);
-    expect(screen.getByText(/Hasintha Pasindu/i)).toBeInTheDocument();
+    expect(screen.getAllByText(/Hasintha Pasindu/i).length).toBeGreaterThan(0);
   });
 
   it('has border styling', () => {
@@ -49,9 +49,9 @@ describe('Footer Component', () => {
     expect(centerDiv).toBeInTheDocument();
   });
 
-  it('renders last sync date', () => {
+  it('does not render a stale sync date', () => {
     render(<Footer />);
-    expect(screen.getByText(/Last sync:/i)).toBeInTheDocument();
+    expect(screen.queryByText(/Last sync:/i)).not.toBeInTheDocument();
   });
 
   it('mentions infrastructure keywords', () => {

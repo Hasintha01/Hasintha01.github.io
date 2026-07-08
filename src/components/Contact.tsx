@@ -8,7 +8,6 @@ import React from 'react';
 import Mail from 'lucide-react/dist/esm/icons/mail';
 import Github from 'lucide-react/dist/esm/icons/github';
 import Linkedin from 'lucide-react/dist/esm/icons/linkedin';
-import Twitter from 'lucide-react/dist/esm/icons/twitter';
 import BookOpen from 'lucide-react/dist/esm/icons/book-open';
 import MessageSquare from 'lucide-react/dist/esm/icons/message-square';
 import type { ContactLink } from '../types';
@@ -17,7 +16,6 @@ import type { ContactLink } from '../types';
 const contactIconMap: Record<string, React.ReactNode> = {
   'contact-1': <Mail size={20} strokeWidth={3} />,         // Email
   'contact-2': <Linkedin size={20} strokeWidth={3} />,     // LinkedIn
-  'contact-3': <Twitter size={20} strokeWidth={3} />,      // Twitter
   'contact-4': <Github size={20} strokeWidth={3} />,       // GitHub
   'contact-5': <BookOpen size={20} strokeWidth={3} />,     // Medium
 };
@@ -36,11 +34,15 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
         </div>
       </div>
       <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black font-grotesk mb-4 sm:mb-5 md:mb-6 leading-tight px-2">
-        LET&apos;S BUILD RELIABLE SYSTEMS TOGETHER
+        LET&apos;S CONNECT
       </h2>
 
       {/* Subheadline */}
-      <p className="text-sm sm:text-base md:text-lg lg:text-xl text-gray-700 mb-8 sm:mb-10 md:mb-12">Ready to automate, monitor, and scale?</p>
+      <p className="text-sm sm:text-base md:text-lg text-gray-700 mb-8 sm:mb-10 md:mb-12 max-w-3xl mx-auto leading-relaxed">
+        I&apos;m interested in DevOps, Cloud Engineering, Platform Engineering, SRE, and Managed
+        Infrastructure opportunities where I can continue developing my skills in AWS, Linux,
+        automation, monitoring, and reliable cloud operations.
+      </p>
 
       {/* Primary CTA buttons */}
       <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 md:gap-6 justify-center items-stretch sm:items-center">
@@ -49,16 +51,14 @@ const Contact: React.FC<ContactProps> = ({ contactLinks }) => {
           aria-label="Send me an email"
           className="border-3 sm:border-4 border-black bg-yellow-400 shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center focus-visible:outline-4 focus-visible:outline-blue-900 focus-visible:outline-offset-4"
         >
-          GET IN TOUCH →
+          EMAIL ME →
         </a>
         <a
-          href="https://github.com/Hasintha01"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="View my GitHub profile"
+          href="#resume"
+          aria-label="Go to resume section"
           className="border-3 sm:border-4 border-black bg-white shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] px-8 sm:px-10 md:px-12 py-3.5 sm:py-4 md:py-5 text-base sm:text-lg md:text-xl font-black hover:shadow-[10px_10px_0px_0px_#000] sm:hover:shadow-[12px_12px_0px_0px_#000] hover:-translate-x-1 hover:-translate-y-1 transition-all active:shadow-none active:translate-x-0 active:translate-y-0 text-center focus-visible:outline-4 focus-visible:outline-blue-900 focus-visible:outline-offset-4"
         >
-          VIEW GITHUB →
+          VIEW RESUME →
         </a>
       </div>
 

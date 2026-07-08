@@ -47,7 +47,7 @@ describe('Blog Component', () => {
     render(<Blog articles={mockArticles} />);
     expect(screen.getByText('WHAT I WRITE ABOUT')).toBeInTheDocument();
     expect(
-      screen.getByText(/Sharing real-world DevOps experiences/i)
+      screen.getByText(/practical lessons from cloud operations/i)
     ).toBeInTheDocument();
   });
 

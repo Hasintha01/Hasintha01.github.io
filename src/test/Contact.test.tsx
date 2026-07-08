@@ -18,12 +18,12 @@ describe('Contact Component', () => {
 
   it('renders the main headline', () => {
     render(<Contact contactLinks={mockContactLinks} />);
-    expect(screen.getByText(/LET'S BUILD RELIABLE SYSTEMS TOGETHER/i)).toBeInTheDocument();
+    expect(screen.getByText(/LET'S CONNECT/i)).toBeInTheDocument();
   });
 
   it('renders the subheadline', () => {
     render(<Contact contactLinks={mockContactLinks} />);
-    expect(screen.getByText(/Ready to automate, monitor, and scale/i)).toBeInTheDocument();
+    expect(screen.getByText(/interested in DevOps, Cloud Engineering/i)).toBeInTheDocument();
   });
 
   it('renders the primary email CTA button', () => {

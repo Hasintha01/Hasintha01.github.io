@@ -42,8 +42,8 @@ const Blog: React.FC<BlogProps> = ({ articles }) => {
         <div className="border-3 sm:border-4 border-black bg-yellow-100 p-4 sm:p-6 md:p-8 shadow-[6px_6px_0px_0px_#000] sm:shadow-[8px_8px_0px_0px_#000] rotate-2 w-full">
           <h3 className="text-lg sm:text-2xl md:text-3xl font-black mb-2 sm:mb-3 md:mb-4 text-center">WHAT I WRITE ABOUT</h3>
           <p className="text-gray-700 mb-4 sm:mb-5 md:mb-6 text-center leading-relaxed text-xs sm:text-sm md:text-base">
-            Sharing real-world DevOps experiences, infrastructure automation tips, and practical tutorials. 
-            I write about the tools and techniques that actually work in production environments.
+            I share practical lessons from cloud operations, DevOps projects, infrastructure
+            automation, containers, and continuous learning.
           </p>
           <div className="flex flex-wrap gap-2 sm:gap-3 justify-center">
             <span className="border-2 sm:border-3 border-black bg-white px-2.5 sm:px-3 md:px-4 py-1 sm:py-1.5 md:py-2 font-bold text-xs sm:text-sm flex items-center gap-1 sm:gap-2">
