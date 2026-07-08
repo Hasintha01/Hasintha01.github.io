@@ -11,11 +11,12 @@ import '../styles/global.css';
 import Navigation from '../components/Navigation';
 import Hero from '../components/Hero';
 import About from '../components/About';
+import Experience from '../components/Experience';
 import Skills from '../components/Skills';
 import Projects from '../components/Projects';
 import Homelab from '../components/Homelab';
 import Blog from '../components/Blog';
-import Philosophy from '../components/Philosophy';
+import Resume from '../components/Resume';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
@@ -27,15 +28,14 @@ import {
   projects,
   homelabServices,
   articles,
-  principles,
   contactLinks,
   interests,
 } from '../data/portfolio';
 
 // Page metadata
-const pageTitle = 'Hasintha Pasindu Madhuwantha — Infrastructure & Automation Engineer Portfolio';
+const pageTitle = 'Hasintha Pasindu | DevOps, AWS & Cloud Engineering Portfolio';
 const pageDescription =
-  'Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer specializing in CI/CD pipelines, Kubernetes, Docker, AWS cloud infrastructure, system monitoring, and DevOps practices. Building reliable, scalable infrastructure through automation.';
+  'Portfolio of Hasintha Pasindu, a DevOps Intern and IT undergraduate with hands-on experience in AWS cloud operations, Linux troubleshooting, monitoring, CI/CD, automation, and cloud-native engineering tools.';
 const canonicalURL = 'https://hasinthapasindu.me';
 const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
 ---
@@ -52,7 +52,7 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <title>{pageTitle}</title>
     <meta name="title" content={pageTitle} />
     <meta name="description" content={pageDescription} />
-    <meta name="keywords" content="Hasintha Pasindu Madhuwantha, Infrastructure Automation, CI/CD Pipelines, System Monitoring, Kubernetes, Docker, AWS, Cloud Infrastructure, DevOps, Production Support, Site Reliability Engineering, GitOps, Terraform, Ansible, Prometheus, Grafana" />
+    <meta name="keywords" content="Hasintha Pasindu, DevOps Intern, AWS Cloud Operations, Linux, CI/CD, Automation, Monitoring, Cloud Engineering, Platform Engineering, SRE" />
     <meta name="author" content="Hasintha Pasindu Madhuwantha" />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href={canonicalURL} />
@@ -68,7 +68,7 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <meta property="og:image" content={siteImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer" />
+    <meta property="og:image:alt" content="Hasintha Pasindu - DevOps Intern and Cloud Engineering portfolio" />
     <meta property="og:site_name" content="Hasintha Pasindu Madhuwantha Portfolio" />
     <meta property="og:locale" content="en_US" />
     
@@ -78,7 +78,7 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <meta name="twitter:title" content={pageTitle} />
     <meta name="twitter:description" content={pageDescription} />
     <meta name="twitter:image" content={siteImage} />
-    <meta name="twitter:image:alt" content="Hasintha Pasindu Madhuwantha - Infrastructure & Automation Engineer" />
+    <meta name="twitter:image:alt" content="Hasintha Pasindu - DevOps Intern and Cloud Engineering portfolio" />
     <meta name="twitter:creator" content="@hasinthapasindu" />
     
     <!-- Additional SEO Meta Tags -->
@@ -113,24 +113,22 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
           "alternateName": ["Hasintha Pasindu", "Hasintha Madhuwantha"],
           "url": canonicalURL,
           "image": siteImage,
-          "jobTitle": "Infrastructure & Automation Engineer",
+          "jobTitle": "DevOps Intern",
           "worksFor": {
             "@type": "Organization",
-            "name": "Freelance"
+            "name": "MillenniumIT ESP"
           },
           "knowsAbout": [
-            "Infrastructure Automation",
-            "CI/CD Pipelines",
+            "AWS Cloud Operations",
+            "Linux Troubleshooting",
+            "CI/CD",
             "DevOps",
             "Kubernetes",
             "Docker",
             "AWS",
             "Cloud Infrastructure",
             "System Monitoring",
-            "Site Reliability Engineering",
-            "GitOps",
-            "Terraform",
-            "Ansible"
+            "Platform Engineering"
           ],
           "sameAs": [
             "https://github.com/Hasintha01",
@@ -196,8 +194,8 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <!-- About Me Section -->
     <About interests={interests} />
 
-    <!-- Skills & Tools Section -->
-    <Skills technologies={technologies} expertise={expertise} />
+    <!-- Professional Experience Section -->
+    <Experience />
 
     <!-- Featured Projects Section -->
     <Projects projects={projects} />
@@ -205,11 +203,14 @@ const siteImage = 'https://hasinthapasindu.me/images/hp-profile.jpg';
     <!-- Homelab Showcase Section -->
     <Homelab services={homelabServices} />
 
+    <!-- Skills & Tools Section -->
+    <Skills technologies={technologies} expertise={expertise} />
+
     <!-- Blog Section -->
     <Blog articles={articles} />
 
-    <!-- Philosophy Section -->
-    <Philosophy principles={principles} />
+    <!-- Resume Section -->
+    <Resume />
 
     <!-- Contact Section -->
     <Contact contactLinks={contactLinks} />

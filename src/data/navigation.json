@@ -9,9 +9,9 @@
     },
     {
       "id": "nav-2",
-      "label": "SKILLS",
-      "href": "#skills",
-      "decorationColor": "decoration-teal-400"
+      "label": "EXPERIENCE",
+      "href": "#experience",
+      "decorationColor": "decoration-purple-400"
     },
     {
       "id": "nav-3",
@@ -27,15 +27,27 @@
     },
     {
       "id": "nav-5",
-      "label": "BLOG",
+      "label": "SKILLS",
+      "href": "#skills",
+      "decorationColor": "decoration-teal-400"
+    },
+    {
+      "id": "nav-6",
+      "label": "ARTICLES",
       "href": "#blog",
       "decorationColor": "decoration-yellow-400"
     },
     {
-      "id": "nav-6",
+      "id": "nav-7",
       "label": "CONTACT",
       "href": "#contact",
       "decorationColor": "decoration-teal-400"
+    },
+    {
+      "id": "nav-8",
+      "label": "RESUME",
+      "href": "#resume",
+      "decorationColor": "decoration-pink-400"
     }
   ]
 }

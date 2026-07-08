@@ -69,7 +69,7 @@ const Navigation: React.FC<NavigationProps> = ({ links }) => {
         </a>
 
         {/* Desktop Navigation links */}
-        <ul className="hidden md:flex gap-4 lg:gap-8 text-sm font-semibold">
+        <ul className="hidden md:flex gap-3 lg:gap-5 text-xs lg:text-sm font-semibold">
           {links.map((link) => (
             <li key={link.id}>
               <a
