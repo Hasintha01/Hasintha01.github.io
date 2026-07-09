@@ -3,7 +3,7 @@
   "projects": [
     {
       "id": "project-weather-dashboard",
-      "title": "Weather Dashboard w/ DevOps",
+      "title": "Containerized Weather Dashboard with CI/CD",
       "description": "Multi-stage Docker builds with GitHub Actions CI/CD. Multi-platform container images with nginx reverse proxy. Includes API uptime monitoring and automated deployment.",
       "icon": "folder-git-2",
       "bgGradient": "from-purple-200 to-purple-400",
@@ -15,7 +15,7 @@
     },
     {
       "id": "project-2",
-      "title": "MERN Inventory System w/ DevOps",
+      "title": "AWS-Deployed Inventory Management Platform",
       "description": "Full-stack inventory management with Docker and GitHub Actions CI/CD. Deployed to AWS EC2 with automated backups and monitoring. MongoDB backend with React frontend.",
       "icon": "database",
       "bgGradient": "from-teal-200 to-teal-400",
@@ -27,8 +27,8 @@
     },
     {
       "id": "project-monitoring",
-      "title": "Portfolio Monitoring Infrastructure",
-      "description": "Enterprise-grade monitoring for a static site using GitHub Actions. Automated uptime checks, performance auditing, Web Vitals tracking, and CI/CD quality gates. 100% free and open-source.",
+      "title": "Portfolio Reliability and Observability Pipeline",
+      "description": "A portfolio reliability and observability pipeline built with production-oriented practices. It uses GitHub Actions for scheduled uptime checks, performance audits, Web Vitals tracking, and CI/CD quality gates.",
       "icon": "terminal",
       "bgGradient": "from-orange-200 to-orange-400",
       "category": "OBSERVABILITY",
@@ -39,7 +39,7 @@
     },
     {
       "id": "project-logwatcher",
-      "title": "LogWatcher - Automated Log Monitoring",
+      "title": "Real-Time Log Monitoring and Alerting Platform",
       "description": "Real-time log monitoring system with automated alerting. Detects critical keywords, handles log rotation, and sends multi-channel notifications. Includes Flask dashboard for alert visualization and filtering.",
       "icon": "activity",
       "bgGradient": "from-green-200 to-green-400",
@@ -51,14 +51,26 @@
     },
     {
       "id": "project-cloudbackup",
-      "title": "CloudBackupAutomator - AWS S3 Backup Solution",
-      "description": "Production-ready automated backup system with AES-256 encryption and incremental backups. Features interactive restore, progress tracking, and secure credential management. Designed for cron/Task Scheduler automation.",
+      "title": "Encrypted AWS Backup Automation System",
+      "description": "An automated backup reference implementation with AES-256 encryption and incremental backups. It includes interactive restore, progress tracking, secure credential management, and cron or Task Scheduler automation.",
       "icon": "cloud",
       "bgGradient": "from-blue-200 to-blue-400",
       "category": "CLOUD ENGINEERING",
       "categoryBg": "bg-blue-400",
       "technologies": ["PYTHON", "AWS S3", "BOTO3", "ENCRYPTION"],
       "githubUrl": "https://github.com/Hasintha01/CloudBackupAutomator",
+      "demoUrl": null
+    },
+    {
+      "id": "project-internal-platform",
+      "title": "Serverless Operations Handover Platform",
+      "description": "Contributed to a sanitized internal cloud-native platform that supports operational handovers, role-based access, session continuity, automated processing, notifications, and task continuity. My work included workflow development and debugging, serverless backend enhancements, UI refactoring, CI/CD support, testing, and technical documentation.",
+      "icon": "cloud",
+      "bgGradient": "from-pink-200 to-purple-300",
+      "category": "PROFESSIONAL CASE STUDY",
+      "categoryBg": "bg-pink-300",
+      "technologies": ["REACT", "TYPESCRIPT", "AWS SERVERLESS", "CI/CD"],
+      "githubUrl": null,
       "demoUrl": null
     }
   ]

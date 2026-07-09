@@ -93,4 +93,16 @@ describe('Homelab Component', () => {
     const cards = container.querySelectorAll('.border-3, .border-4');
     expect(cards.length).toBeGreaterThan(0);
   });
+
+  it('separates planned enhancements from running services', () => {
+    render(<Homelab services={[...mockServices, {
+      id: 'service-5',
+      name: 'Alertmanager',
+      description: 'Alert routing',
+      bgColor: 'bg-red-50',
+      status: 'planned',
+    }]} />);
+    expect(screen.getByText('PLANNED ENHANCEMENTS')).toBeInTheDocument();
+    expect(screen.getByText('PLANNED')).toBeInTheDocument();
+  });
 });

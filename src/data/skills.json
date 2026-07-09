@@ -3,41 +3,39 @@
   "technologies": [
     {
       "id": "tech-1",
-      "name": "Linux",
-      "category": "Operating System"
+      "name": "AWS EC2 · S3 · IAM · Lambda · CloudWatch · EKS",
+      "category": "Cloud"
     },
     {
       "id": "tech-2",
-      "name": "Docker",
-      "category": "Containerization"
+      "name": "Linux · Docker · Terraform",
+      "category": "Infrastructure"
     },
     {
       "id": "tech-3",
-      "name": "AWS",
-      "category": "Cloud Platform"
+      "name": "Prometheus · Grafana · Zabbix · Log Analysis",
+      "category": "Monitoring"
     },
     {
       "id": "tech-4",
-      "name": "Zabbix",
-      "category": "Monitoring"
+      "name": "Git · GitHub Actions · CI/CD",
+      "category": "Delivery"
     },
     {
       "id": "tech-5",
-      "name": "Prometheus",
-      "category": "Monitoring"
+      "name": "Alert Investigation · Deployment Support",
+      "category": "Operations"
     },
     {
       "id": "tech-6",
-      "name": "Terraform",
-      "category": "IaC"
+      "name": "Troubleshooting · Documentation",
+      "category": "Operations"
     }
   ],
   "expertise": [
-      "CI/CD Pipeline Automation",
-      "Infrastructure as Code",
-      "System Monitoring & Logging",
-      "Cloud Deployments",
-      "Production Support & Troubleshooting",
-      "Linux System Administration"
+      "Cloud operations and deployment support",
+      "Infrastructure automation and CI/CD workflows",
+      "Monitoring, alert investigation, and log analysis",
+      "Linux troubleshooting and operational documentation"
   ]
 }

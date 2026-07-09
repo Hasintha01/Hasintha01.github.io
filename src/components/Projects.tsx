@@ -24,6 +24,7 @@ const projectIconMap: Record<string, React.ReactNode> = {
   'project-monitoring': <Terminal size={80} strokeWidth={3} />, // Monitoring Infrastructure
   'project-logwatcher': <Activity size={80} strokeWidth={3} />, // LogWatcher
   'project-cloudbackup': <Cloud size={80} strokeWidth={3} />, // CloudBackupAutomator
+  'project-internal-platform': <Cloud size={80} strokeWidth={3} />,
 };
 
 interface ProjectsProps {
@@ -85,14 +86,21 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
                   {/* Action buttons */}
                   <div className="flex flex-col sm:flex-row gap-2 sm:gap-4">
                     {/* View on GitHub button */}
-                    <a
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="border-4 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold sm:hover:bg-white sm:hover:text-black active:bg-gray-900 active:text-white transition-colors inline-block text-center"
-                    >
-                      VIEW ON GITHUB →
-                    </a>
+                    {project.githubUrl && (
+                      <a
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="border-4 border-black bg-black text-white px-4 sm:px-6 py-2 font-bold sm:hover:bg-white sm:hover:text-black active:bg-gray-900 active:text-white transition-colors inline-block text-center"
+                      >
+                        VIEW ON GITHUB →
+                      </a>
+                    )}
+                    {!project.githubUrl && (
+                      <span className="border-4 border-black bg-gray-100 px-4 sm:px-6 py-2 font-bold inline-block text-center">
+                        SANITIZED CASE STUDY
+                      </span>
+                    )}
                     
                     {/* Live Demo button (only if demoUrl exists) */}
                     {project.demoUrl && (

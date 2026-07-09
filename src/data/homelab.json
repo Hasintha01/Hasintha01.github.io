@@ -5,37 +5,43 @@
       "id": "service-1",
       "name": "Prometheus",
       "description": "Metrics collection & time-series storage",
-      "bgColor": "bg-orange-50"
+      "bgColor": "bg-orange-50",
+      "status": "running"
     },
     {
       "id": "service-2",
       "name": "Grafana",
       "description": "Visualization & alerting dashboards",
-      "bgColor": "bg-pink-50"
+      "bgColor": "bg-pink-50",
+      "status": "running"
     },
     {
       "id": "service-3",
       "name": "Node Exporter",
       "description": "System metrics from endpoint servers",
-      "bgColor": "bg-blue-50"
+      "bgColor": "bg-blue-50",
+      "status": "running"
     },
     {
       "id": "service-4",
       "name": "PostgreSQL",
       "description": "External database for Grafana",
-      "bgColor": "bg-indigo-50"
+      "bgColor": "bg-indigo-50",
+      "status": "running"
     },
     {
       "id": "service-5",
       "name": "Alertmanager",
-      "description": "Alert routing & notification (planned)",
-      "bgColor": "bg-red-50"
+      "description": "Alert routing & notification",
+      "bgColor": "bg-red-50",
+      "status": "planned"
     },
     {
       "id": "service-6",
       "name": "Grafana Loki",
-      "description": "Centralized logging (planned)",
-      "bgColor": "bg-purple-50"
+      "description": "Centralized logging",
+      "bgColor": "bg-purple-50",
+      "status": "planned"
     }
   ],
   "architecture": [
@@ -66,8 +72,8 @@
       "label": "Architecture"
     },
     {
-      "value": "Production",
-      "label": "Grade Stack"
+      "value": "Production-Style",
+      "label": "Observability"
     }
   ]
 }

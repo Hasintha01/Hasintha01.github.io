@@ -25,7 +25,7 @@ describe('Skills Component', () => {
 
   it('renders the section title', () => {
     render(<Skills technologies={mockTechnologies} expertise={mockExpertise} />);
-    expect(screen.getByText(/TECH STACK & EXPERTISE/i)).toBeInTheDocument();
+    expect(screen.getByText(/TECHNICAL SKILLS/i)).toBeInTheDocument();
   });
 
   it('renders all technology items', () => {

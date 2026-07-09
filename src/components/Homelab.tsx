@@ -31,6 +31,32 @@ interface HomelabProps {
 }
 
 const Homelab: React.FC<HomelabProps> = ({ services }) => {
+  const runningServices = services.filter((service) => service.status !== 'planned');
+  const plannedServices = services.filter((service) => service.status === 'planned');
+
+  const renderService = (service: HomelabService, planned = false) => {
+    const iconElement = homelabIconMap[service.id];
+    return (
+      <div
+        key={service.id}
+        className={`border-2 sm:border-3 border-black ${service.bgColor} p-3 sm:p-4 transition-all group ${planned ? 'border-dashed opacity-80' : 'hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5'}`}
+      >
+        <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
+          <div className="border-2 border-black bg-white p-1.5 sm:p-2">
+            {React.isValidElement(iconElement)
+              ? React.cloneElement(iconElement, { size: 24, className: 'sm:w-7 sm:h-7 md:w-8 md:h-8' } as any)
+              : iconElement}
+          </div>
+          <div>
+            <div className="font-black text-sm sm:text-base md:text-lg">{service.name}</div>
+            {planned && <span className="text-[10px] font-black tracking-wider">PLANNED</span>}
+          </div>
+        </div>
+        <p className="text-xs sm:text-sm text-gray-700">{service.description}</p>
+      </div>
+    );
+  };
+
   return (
     <section id="homelab" className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 max-w-7xl mx-auto">
       {/* Section title */}
@@ -96,8 +122,8 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
               <div className="text-xs sm:text-sm font-semibold">Architecture</div>
             </div>
             <div>
-              <div className="text-2xl sm:text-3xl font-black">Production</div>
-              <div className="text-xs sm:text-sm font-semibold">Grade Stack</div>
+              <div className="text-2xl sm:text-3xl font-black">Production-Style</div>
+              <div className="text-xs sm:text-sm font-semibold">Observability</div>
             </div>
           </div>
         </div>
@@ -109,35 +135,21 @@ const Homelab: React.FC<HomelabProps> = ({ services }) => {
           <div className="border-3 sm:border-4 border-black bg-yellow-400 p-1.5 sm:p-2">
             <Settings size={20} strokeWidth={3} className="sm:w-6 sm:h-6 md:w-7 md:h-7" />
           </div>
-          <span className="leading-tight">SERVICES RUNNING</span>
+          <span className="leading-tight">RUNNING SERVICES</span>
         </h3>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
-          {services.map((service) => {
-            const iconElement = homelabIconMap[service.id];
-            return (
-              <div 
-                key={service.id} 
-                className={`border-2 sm:border-3 border-black ${service.bgColor} p-3 sm:p-4 
-                           hover:shadow-[3px_3px_0px_0px_#000] sm:hover:shadow-[4px_4px_0px_0px_#000] hover:-translate-x-0.5 hover:-translate-y-0.5 
-                           transition-all cursor-pointer group active:shadow-none active:translate-x-0 active:translate-y-0`}
-              >
-                <div className="flex items-center gap-2 sm:gap-3 mb-1.5 sm:mb-2">
-                  <div className="border-2 border-black bg-white p-1.5 sm:p-2 group-hover:bg-black group-hover:text-white transition-colors">
-                    {React.isValidElement(iconElement)
-                      ? React.cloneElement(iconElement, {
-                          size: 24,
-                          className: 'sm:w-7 sm:h-7 md:w-8 md:h-8'
-                        } as any)
-                      : iconElement}
-                  </div>
-                  <div className="font-black text-sm sm:text-base md:text-lg">{service.name}</div>
-                </div>
-                <p className="text-xs sm:text-sm text-gray-700">{service.description}</p>
-              </div>
-            );
-          })}
+          {runningServices.map((service) => renderService(service))}
         </div>
+
+        {plannedServices.length > 0 && (
+          <div className="mt-7 border-t-3 border-black pt-6">
+            <h4 className="text-lg sm:text-xl font-black mb-4">PLANNED ENHANCEMENTS</h4>
+            <div className="grid sm:grid-cols-2 gap-3 sm:gap-4">
+              {plannedServices.map((service) => renderService(service, true))}
+            </div>
+          </div>
+        )}
 
         {/* CTA Button */}
         <div className="mt-6 sm:mt-7 md:mt-8 text-center">

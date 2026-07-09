@@ -16,7 +16,7 @@ export interface Project {
   category: string;
   categoryBg: string;
   technologies: string[];
-  githubUrl: string;
+  githubUrl?: string | null;
   demoUrl?: string | null;
 }
 
@@ -48,6 +48,7 @@ export interface HomelabService {
   icon?: string;
   description: string;
   bgColor: string;
+  status?: 'running' | 'planned';
 }
 
 /**
