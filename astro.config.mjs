@@ -14,7 +14,6 @@ export default defineConfig({
     sitemap({
       changefreq: 'weekly',
       priority: 0.7,
-      lastmod: new Date(),
     }),
   ],
 
@@ -27,14 +26,6 @@ export default defineConfig({
         compress: {
           drop_console: true, // Remove console.logs in production
           drop_debugger: true,
-        },
-      },
-      // Optimize chunk splitting
-      rollupOptions: {
-        output: {
-          manualChunks: {
-            'react-vendor': ['react', 'react-dom'],
-          },
         },
       },
     },

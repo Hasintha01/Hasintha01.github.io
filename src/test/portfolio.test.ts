@@ -5,7 +5,6 @@
 
 import { describe, it, expect } from 'vitest';
 import {
-  lastUpdated,
   navLinks,
   technologies,
   expertise,
@@ -18,14 +17,6 @@ import {
 } from '../data/portfolio';
 
 describe('Portfolio Data Module', () => {
-  describe('lastUpdated', () => {
-    it('exports a valid lastUpdated date string', () => {
-      expect(lastUpdated).toBeDefined();
-      expect(typeof lastUpdated).toBe('string');
-      expect(lastUpdated.length).toBeGreaterThan(0);
-    });
-  });
-
   describe('navLinks', () => {
     it('exports navigation links array', () => {
       expect(Array.isArray(navLinks)).toBe(true);

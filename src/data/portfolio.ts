@@ -1,8 +1,4 @@
 /**
- * Last portfolio updated date
- */
-export const lastUpdated = 'April 18, 2026';
-/**
  * Portfolio data configuration
  * Centralized data source loading from JSON files
  * Provides type-safe access to all portfolio content
@@ -51,7 +47,7 @@ export const projects: Project[] = projectsData.projects;
 /**
  * Homelab services (loaded from JSON)
  */
-export const homelabServices: HomelabService[] = homelabData.services;
+export const homelabServices: HomelabService[] = homelabData.services as HomelabService[];
 
 /**
  * Blog articles (loaded from JSON)

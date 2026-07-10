@@ -12,16 +12,26 @@
   
   // Store vitals data
   const vitals = {};
+
+  function formatMetricValue(metric) {
+    return metric.name === 'CLS' ? Number(metric.value.toFixed(3)) : Math.round(metric.value);
+  }
+
+  function getAnalyticsValue(metric) {
+    return metric.name === 'CLS' ? Math.round(metric.value * 1000) : Math.round(metric.value);
+  }
   
   // Send vitals to analytics (if available)
   function sendToAnalytics(metric) {
-    vitals[metric.name] = Math.round(metric.value);
+    const formattedValue = formatMetricValue(metric);
+    const analyticsValue = getAnalyticsValue(metric);
+    vitals[metric.name] = formattedValue;
     
     // Send to Google Analytics if available
     if (window.gtag) {
       gtag('event', metric.name, {
         event_category: 'Web Vitals',
-        value: Math.round(metric.value),
+        value: analyticsValue,
         event_label: metric.id,
         non_interaction: true,
       });
@@ -32,7 +42,7 @@
       window.plausible('Web Vitals', {
         props: {
           metric: metric.name,
-          value: Math.round(metric.value),
+          value: formattedValue,
           rating: metric.rating
         }
       });
@@ -40,7 +50,7 @@
     
     // Log to console in development
     if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
-      console.log(`[Web Vitals] ${metric.name}:`, Math.round(metric.value), metric.rating);
+      console.log(`[Web Vitals] ${metric.name}:`, formattedValue, metric.rating);
     }
   }
   
@@ -50,11 +60,12 @@
       const po = new PerformanceObserver((list) => {
         const entries = list.getEntries();
         const lastEntry = entries[entries.length - 1];
+        const value = lastEntry.renderTime || lastEntry.loadTime;
         sendToAnalytics({
           name: 'LCP',
-          value: lastEntry.renderTime || lastEntry.loadTime,
+          value,
           id: 'lcp-' + Date.now(),
-          rating: lastEntry.renderTime < 2500 ? 'good' : lastEntry.renderTime < 4000 ? 'needs-improvement' : 'poor'
+          rating: value < 2500 ? 'good' : value < 4000 ? 'needs-improvement' : 'poor'
         });
       });
       po.observe({ entryTypes: ['largest-contentful-paint'] });
